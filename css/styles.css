@@ -30,6 +30,12 @@ main section .container_products .products {
     row-gap: 24px;
 }
 
+main section .container_products div .bi-sliders:hover {
+    cursor: pointer;
+    color: var(--color_primary);
+    transition: .3s;
+}
+
 main section .container_products div h3 {
     font-size: 14px;
     font-weight: bold;
