@@ -21,6 +21,89 @@ main {
     margin: 0 auto;
 }
 
+main section .container_products_featured {
+    margin-top: 40px;
+}
+
+main section .container_products_featured .product_slider {
+    overflow: auto;
+}
+
+main section .container_products_featured .products_featured {
+    margin-top: 10px;
+    width: 150%;
+    gap: 5px;
+    padding-bottom: 15px;
+}
+
+main section .container_products_featured .product_featured {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    background-size: cover;
+    padding-bottom: 8px;
+}
+
+main section .container_products_featured .one {
+    background-image: url("../images/masVendidos.png");
+}
+
+main section .container_products_featured .two {
+    background-image: url("../images/consolas.png");
+}
+
+main section .container_products_featured .three {
+    background-image: url("../images/notebook.png");
+}
+
+main section .container_products_featured .four {
+    background-image: url("../images/joysticks.png");
+}
+
+main section .container_products_featured .products_featured .featured_call {
+    width: 85%;
+    margin: 0 auto;
+    padding: 3px;
+    border-radius: 4px;
+    background-color: var(--color_tertiary);
+    position: relative;
+    cursor: pointer;
+}
+
+
+main section .container_products_featured .products_featured .featured_call:hover {
+    color: var(--color_tertiary);
+}
+
+main section .container_products_featured .products_featured .featured_call:hover .progress {
+    width: 100%;
+    background-color: var(--color_primary);
+    transition: .4s;
+    padding: 3px;
+    border-radius: 4px;
+}
+
+main section .container_products_featured .products_featured .featured_call h5 {
+    font-size: 8px;
+    font-weight: bold;
+    padding: 0 3px;
+    z-index: 1;
+}
+
+main section .container_products_featured .products_featured .featured_call i {
+    font-size: 10px;
+    padding: 0 3px;
+    z-index: 1;
+}
+
+main section .container_products_featured .products_featured .featured_call .progress {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 main section .container_products {
     margin: 40px 0;
 }
@@ -36,7 +119,7 @@ main section .container_products div .bi-sliders:hover {
     transition: .3s;
 }
 
-main section .container_products div h3 {
+h3 {
     font-size: 14px;
     font-weight: bold;
 }
@@ -118,6 +201,27 @@ main section .container_products .product .bi-heart:hover {
 }
 
 @media (min-width:767px) {
+    main section .container_products_featured .products_featured {
+        width: 100%;
+    }
+
+    main section .container_products_featured .product_featured {
+        width: 150px;
+        height: 150px;
+        padding-bottom: 10px;
+    }
+
+    main section .container_products_featured .products_featured .featured_call {
+        padding: 6px;
+    }
+
+    main section .container_products_featured .products_featured .featured_call h5 {
+        font-size: 12px;
+    }
+
+    main section .container_products_featured .products_featured .featured_call i {
+        font-size: 14px;
+    }
 
     main section .container_products .products {
         row-gap: 26px;
@@ -132,7 +236,7 @@ main section .container_products .product .bi-heart:hover {
         margin-bottom: 38px;
     }
 
-    main section .container_products div h3 {
+    h3 {
         font-size: 16px;
     }
 
@@ -143,10 +247,18 @@ main section .container_products .product .bi-heart:hover {
     main section .container_products .product .product_feature .product_detail-cart i {
         font-size: 13px;
     }
-
 }
 
 @media (min-width:989px) {
+    main section .container_products_featured .product_featured {
+        width: 270px;
+        height: 270px;
+        padding-bottom: 17px;
+    }
+
+    main section .container_products_featured .products_featured .featured_call {
+        padding: 12px;
+    }
 
     main section .container_products .products {
         row-gap: 22px;
@@ -213,5 +325,4 @@ main section .container_products .product .bi-heart:hover {
         top: -18px;
         right: 11px;
     }
-
 }
