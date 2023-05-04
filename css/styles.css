@@ -45,6 +45,16 @@ main section .container_products .products .product {
     background-color: var(--color_tertiary);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    position: relative;
+}
+
+main section .container_products .products .product .bi-tag-fill {
+    position: absolute;
+    top: -18px;
+    right: 10px;
+    font-size: 22px;
+    transform: rotate(225deg);
+    color: var(--color_primary);
 }
 
 main section .container_products .product .product_image {
@@ -83,6 +93,24 @@ main section .container_products .product .product_feature a {
     font-weight: bold;
 }
 
+main section .container_products .product .bi-heart {
+    font-size: 13px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+main section .container_products .product .product_feature .bi-cart {
+    font-size: 13px;
+}
+
+main section .container_products .product .bi-cart:hover,
+main section .container_products .product .bi-heart:hover {
+    cursor: pointer;
+    color: var(--color_primary);
+    transition: .2s;
+}
+
 @media (min-width:767px) {
 
     main section .container_products .products {
@@ -96,6 +124,11 @@ main section .container_products .product .product_feature a {
     main section .container_products div i {
         font-size: 18px;
     }
+
+    main section .container_products .product .product_feature .product_detail-cart i {
+        font-size: 13px;
+    }
+
 }
 
 @media (min-width:989px) {
@@ -111,19 +144,60 @@ main section .container_products .product .product_feature a {
         border-radius: 12px;
     }
 
+    main section .container_products .products .product:hover .bi-heart,
+    main section .container_products .products .product:hover .bi-cart {
+        transform: translateX(0);
+        transition: .3s;
+        opacity: 1;
+    }
+
+    main section .container_products .product .product_image {
+        margin-bottom: 41px;
+    }
+
     main section .container_products .product .product_image img {
         width: 125px;
     }
 
-    main section .container_products .product h5 {
+    main section .container_products .product .product_feature h5 {
         font-size: 14px;
     }
 
-    main section .container_products .product p {
+    main section .container_products .product .product_feature p {
         font-size: 14px;
     }
 
-    main section .container_products .product a {
+    main section .container_products .product .product_feature a {
         font-size: 14px;
     }
+
+    main section .container_products .products .product .bi-tag-fill {
+        position: absolute;
+        top: -18px;
+        right: 10px;
+        font-size: 22px;
+        transform: rotate(225deg);
+        color: var(--color_primary);
+    }
+
+    main section .container_products .product .bi-heart {
+        font-size: 15px;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    main section .container_products .product .product_feature .bi-cart {
+        font-size: 15px;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    main section .container_products .products .product .bi-tag-fill {
+        top: -18px;
+        right: 11px;
+    }
+
 }
