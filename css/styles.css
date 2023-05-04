@@ -15,3 +15,115 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section .container_products {
+    margin: 40px 0;
+}
+
+main section .container_products .products {
+    margin-top: 10px;
+    row-gap: 24px;
+}
+
+main section .container_products div h3 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+main section .container_products div i {
+    font-weight: bold;
+}
+
+main section .container_products .products .product {
+    width: 130px;
+    height: 180px;
+    background-color: var(--color_tertiary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+main section .container_products .product .product_image {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+main section .container_products .product .product_image img {
+    width: 80px;
+}
+
+main section .container_products .product .product_feature h5 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+main section .container_products .product .product_feature .product_feature-discount {
+    margin-top: 5px;
+    gap: 3px;
+}
+
+main section .container_products .product .product_feature .product_feature-discount .discount {
+    text-decoration: line-through;
+    font-weight: 400;
+}
+
+main section .container_products .product .product_feature p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+main section .container_products .product .product_feature a {
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--color_primary);
+    font-weight: bold;
+}
+
+@media (min-width:767px) {
+
+    main section .container_products .products {
+        row-gap: 10px;
+    }
+
+    main section .container_products div h3 {
+        font-size: 16px;
+    }
+
+    main section .container_products div i {
+        font-size: 18px;
+    }
+}
+
+@media (min-width:989px) {
+
+    main section .container_products .products {
+        margin-top: 10px;
+        row-gap: 24px;
+    }
+
+    main section .container_products .products .product {
+        width: 180px;
+        height: 255px;
+        border-radius: 12px;
+    }
+
+    main section .container_products .product .product_image img {
+        width: 125px;
+    }
+
+    main section .container_products .product h5 {
+        font-size: 14px;
+    }
+
+    main section .container_products .product p {
+        font-size: 14px;
+    }
+
+    main section .container_products .product a {
+        font-size: 14px;
+    }
+}
