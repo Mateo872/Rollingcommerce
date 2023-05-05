@@ -1,5 +1,7 @@
 import Product from "./addProduct.js";
 
+let listProducts = JSON.parse(localStorage.getItem("listProducts")) || [];
+
 function createProduct() {
   let newProduct = new Product(
     "Astro A30",
