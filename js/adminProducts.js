@@ -1,7 +1,7 @@
 import Product from "./addProduct.js";
 
 function createProduct() {
-  let nuevaPeli = new Product(
+  let newProduct = new Product(
     "Astro A30",
     "Los mejores auriculares",
     "urlImage",
@@ -29,7 +29,7 @@ function loadProduct(e) {
     imagePreviewThree.value
   );
   if (data.length === 0) {
-    let newProduct = new Pelicula(
+    let newProduct = new Product(
       title.value,
       description.value,
       image.value,
@@ -41,7 +41,7 @@ function loadProduct(e) {
       imagePreviewThree.value
     );
 
-    listProducts.push(nuevaPeli);
+    listProducts.push(newProduct);
 
     saveLS();
   } else {
