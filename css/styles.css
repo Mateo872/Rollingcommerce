@@ -514,3 +514,32 @@ main section .container_products .product .bi-heart:hover {
         right: 11px;
     }
 }
+
+.container-card {
+    overflow-x: scroll;
+    white-space: nowrap;
+    display: flex;
+  }
+  
+  .card-similar-product {
+    width: 230px;
+   height: 260px;
+    background-color: var(--color_tertiary);
+
+  }
+  
+  .card-similar-product img {
+    width: 100%;
+    height: 200px;
+    
+  }
+  
+  .card-similar-product h3 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .card-similar-product p {
+    font-size: 16px;
+    margin-top: 5px;
+  }
