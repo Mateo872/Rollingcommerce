@@ -253,8 +253,6 @@ main section .container_products .product .bi-heart:hover {
 
 @media (min-width:767px) {
     .container_banner {
-        position: relative;
-        overflow: hidden;
         padding: 60px 0;
     }
 
@@ -328,18 +326,55 @@ main section .container_products .product .bi-heart:hover {
 }
 
 @media (min-width:989px) {
-    main .container_banner .carousel_desc {
-        width: 65%;
-        font-size: 14px;
+    .container_banner {
+        padding: 150px 0;
     }
 
-    main .container_banner div p {
-        font-size: 14px;
+    .container_banner .banner_circle {
+        width: 1000px;
+        height: 1000px;
+        right: -500px;
+        bottom: -500px;
     }
 
-    main .container_banner img {
-        width: 240px;
-        order: 1;
+    .container_banner .banner img {
+        width: 440px;
+    }
+
+    .container_banner .banner h2 {
+        font-size: 32px;
+    }
+
+    .container_banner .banner .carousel_desc {
+        font-size: 20px;
+    }
+
+    .container_banner .banner .bi-plus {
+        padding: 6px;
+    }
+
+    .container_banner .banner .add_cart {
+        cursor: pointer;
+        padding: 12px;
+        border-radius: 10px;
+        border: 2px solid var(--color_primary);
+    }
+
+    .container_banner .banner .add_cart:hover {
+        transition: .3s;
+        background-color: var(--color_primary);
+        color: var(--color_tertiary);
+    }
+
+    .container_banner .banner .add_cart:hover .bi-plus {
+        background-color: var(--color_tertiary);
+        color: var(--color_primary);
+        font-weight: bold;
+    }
+
+    .container_banner .banner .banner_cart {
+        font-size: 16px;
+        font-weight: bold;
     }
 
     main section .container_products_featured .product_featured {
