@@ -334,7 +334,7 @@ main section .container_products .product .bi-heart:hover {
   }
   
   .card-similar-product {
-    width: 200px;
+    width: 230px;
    height: 260px;
     background-color: var(--color_tertiary);
 
