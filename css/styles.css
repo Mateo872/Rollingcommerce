@@ -21,6 +21,48 @@ section {
     margin: 0 auto;
 }
 
+main .container_services {
+    margin: 20px auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    padding: 15px 1px;
+}
+
+main .container_services .services {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .container_services .service {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color_tertiary);
+    border-radius: 10px;
+    scroll-snap-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+main .container_services .service i {
+    color: var(--color_primary);
+    font-size: 20px;
+}
+
+main .container_services .service_desc h4 {
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--color_secondary);
+}
+
+main .container_services .service_desc p {
+    font-size: 9.6px;
+    color: var(--color_secondary);
+    opacity: 7;
+}
+
 .container_banner {
     position: relative;
     overflow: hidden;
@@ -252,6 +294,8 @@ main section .container_products .product .bi-heart:hover {
 }
 
 @media (min-width:767px) {
+    main .container_services .services {
+        width: 100%;
     .container_banner {
         padding: 60px 0;
     }
@@ -326,6 +370,20 @@ main section .container_products .product .bi-heart:hover {
 }
 
 @media (min-width:989px) {
+    main .container_services .services .service {
+        padding: 16px 40px;
+    }
+
+    main .container_services .services .service i {
+        font-size: 32px;
+    }
+
+    main .container_services .services .service h4 {
+        font-size: 16px;
+    }
+
+    main .container_services .services .service p {
+        font-size: 12.8px;
     .container_banner {
         padding: 150px 0;
     }
