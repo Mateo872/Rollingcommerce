@@ -249,6 +249,48 @@ main section .container_products .product .bi-heart:hover {
 }
 
 @media (min-width:767px) {
+    main .container_banner {
+        width: 95vw;
+        margin-left: 0px;
+        padding: 60px 0;
+    }
+
+    main .banner {
+        margin-left: -40px;
+    }
+
+    main .container_banner .banner_circle {
+        width: 600px;
+        height: 600px;
+        right: -300px;
+        bottom: -280px;
+    }
+
+    main .container_banner h2 {
+        font-size: 24px;
+    }
+
+    main .container_banner .carousel_desc {
+        width: 65%;
+        font-size: 14px;
+    }
+
+    main .container_banner div p {
+        font-size: 14px;
+    }
+
+    main .container_banner .bi-plus {
+        height: 25px;
+        width: 25px;
+        background-color: var(--color_primary);
+        border-radius: 100%;
+        color: var(--color_tertiary);
+    }
+
+    main .container_banner img {
+        width: 240px;
+    }
+
     main section .container_products_featured .products_featured {
         width: 100%;
     }
