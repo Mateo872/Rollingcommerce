@@ -9,6 +9,7 @@ export default class Product {
   #imagePreviewOne;
   #imagePreviewTwo;
   #imagePreviewThree;
+  #state;
   constructor(
     title,
     description,
@@ -30,6 +31,7 @@ export default class Product {
     this.#imagePreviewOne = imagePreviewOne;
     this.#imagePreviewTwo = imagePreviewTwo;
     this.#imagePreviewThree = imagePreviewThree;
+    this.#state = false;
   }
 
   get code() {
@@ -72,6 +74,10 @@ export default class Product {
     return this.#imagePreviewThree;
   }
 
+  get state() {
+    return this.#state;
+  }
+
   set code(code) {
     this.#code = code;
   }
@@ -112,6 +118,10 @@ export default class Product {
     this.#imagePreviewThree = imagePreviewThree;
   }
 
+  set state(state) {
+    this.#state = state;
+  }
+
   toJSON() {
     return {
       code: this.code,
@@ -124,6 +134,7 @@ export default class Product {
       imagePreviewOne: this.imagePreviewOne,
       imagePreviewTwo: this.imagePreviewTwo,
       imagePreviewThree: this.imagePreviewThree,
+      state: this.state,
     };
   }
 }
