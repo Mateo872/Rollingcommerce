@@ -49,27 +49,28 @@ function loadProduct(e) {
   console.log('creando la producto')
   let data = dataValidate(
     title.value,
-    price.value,
+    // price.value,
     characteristics.value,
+    image.value,
     imagePreviewOne.value,
     imagePreviewTwo.value,
     imagePreviewThree.value,
     description.value,
-    category.value,
-    stock.value,
+    // category.value,
+    // stock.value,
   );
   if (data.length === 0) {
     let newProduct = new Product(
       title.value,
       description.value,
       image.value,
-      price.value,
-      category.value,
+      // price.value,
+      // category.value,
       characteristics.value,
       imagePreviewOne.value,
       imagePreviewTwo.value,
       imagePreviewThree.value,
-      stock.value
+      // stock.value
     );
 
     listProducts.push(newProduct);
