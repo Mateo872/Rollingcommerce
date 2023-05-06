@@ -19,7 +19,7 @@ filterAccept.addEventListener("click", overlayClose);
 function overlayClose(e) {
   if (
     e.target.className.includes("filter_overlay") ||
-    e.target.textContent === "Listo"
+    e.target.innerText === "Listo"
   ) {
     filterOverlay.style.visibility = "hidden";
 
