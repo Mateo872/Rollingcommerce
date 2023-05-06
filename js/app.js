@@ -16,12 +16,17 @@ filterBtn.addEventListener("click", () => {
 filterOverlay.addEventListener("click", overlayClose);
 filterAccept.addEventListener("click", overlayClose);
 
-function overlayClose() {
-  filterOverlay.style.visibility = "hidden";
+function overlayClose(e) {
+  if (
+    e.target.className.includes("filter_overlay") ||
+    e.target.innerText === "Listo"
+  ) {
+    filterOverlay.style.visibility = "hidden";
 
-  if (window.innerWidth < 989) {
-    filterContainer.style.transform = "translateY(110%)";
-  } else {
-    filterContainer.style.transform = "translateX(-100%)";
+    if (window.innerWidth < 989) {
+      filterContainer.style.transform = "translateY(110%)";
+    } else {
+      filterContainer.style.transform = "translateX(-100%)";
+    }
   }
 }
