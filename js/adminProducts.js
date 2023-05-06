@@ -1,7 +1,36 @@
 import Product from "./addProduct.js";
+import { dataValidate } from "./helpers.js";
+
+
+const btnAdd = document.getElementById('btnAdd');
+
+const title = document.getElementById('title');
+const code = document.getElementById('code');
+const image = document.getElementById('image');
+const imagePreviewOne = document.getElementById('image1');
+const imagePreviewTwo = document.getElementById('image2');
+const imagePreviewThree = document.getElementById('image3');
+const price = document.getElementById('price');
+const description = document.getElementById('description');
+const characteristics = document.getElementById('characteristics');
+const stock = document.getElementById('stock');
+const category = document.getElementById('category')
+const form = document.getElementById('form');
+const msjFormulario = document.getElementById('msjForm');
+
+const modalProduct = new bootstrap.Modal(document.querySelector('#modalAdd'));
+
+btnAdd.addEventListener('click', showModalProduct);
+form.addEventListener('submit', loadProduct);
+
+function showModalProduct(){
+  //abrir la ventana modal
+  modalProduct.show();
+  console.log('aqui vamos a crear una peli')
+}
 
 function createProduct() {
-  let nuevaPeli = new Product(
+  let newProduct = new Product(
     "Astro A30",
     "Los mejores auriculares",
     "urlImage",
@@ -17,19 +46,20 @@ function createProduct() {
 function loadProduct(e) {
   e.preventDefault();
 
+  console.log('creando la producto')
   let data = dataValidate(
     title.value,
-    description.value,
-    image.value,
     price.value,
-    category.value,
     characteristics.value,
     imagePreviewOne.value,
     imagePreviewTwo.value,
-    imagePreviewThree.value
+    imagePreviewThree.value,
+    description.value,
+    category.value,
+    stock.value,
   );
   if (data.length === 0) {
-    let newProduct = new Pelicula(
+    let newProduct = new Product(
       title.value,
       description.value,
       image.value,
@@ -38,13 +68,17 @@ function loadProduct(e) {
       characteristics.value,
       imagePreviewOne.value,
       imagePreviewTwo.value,
-      imagePreviewThree.value
+      imagePreviewThree.value,
+      stock.value
     );
 
-    listProducts.push(nuevaPeli);
+    listProducts.push(newProduct);
+    modalProduct.hide();
 
     saveLS();
   } else {
+    msjForm.className = 'alert alert-danger mt-3';
+    msjForm.innerHTML = data;
   }
 }
 
