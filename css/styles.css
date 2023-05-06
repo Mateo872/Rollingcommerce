@@ -347,7 +347,7 @@ main section .container_products .product .bi-heart:hover {
     width: 90%;
   }
   .imgRollingC{
-    max-width: 100px;
+    max-width: 200px;
   }
   .colorLabelLogin{
     background-color: rgb(222, 221, 221);
