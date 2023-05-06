@@ -619,6 +619,18 @@ main section .container_products .product .bi-heart:hover {
         font-size: 13px;
     }
 
+    .filter_overlay .container_filter .filter {
+        margin-bottom: 15px;
+    }
+
+    .filter_overlay .container_filter .filter:last-child {
+        margin-bottom: 0px;
+    }
+
+    .filter_overlay .container_filter .filters {
+        padding: 0 17px 0;
+    }
+
     .filter_overlay .container_filter .filter .filter_input {
         gap: 10px;
     }
