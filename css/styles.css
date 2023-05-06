@@ -322,6 +322,45 @@ main section .container_products .product .bi-heart:hover {
     font-weight: bold;
 }
 
+.filter_overlay .container_filter .filters {
+    padding: 0 17px 17px;
+}
+
+.filter_overlay .container_filter .filter h5 {
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.filter_overlay .container_filter .filter .filter_input {
+    margin-top: 14px;
+    gap: 2px;
+}
+
+.filter_overlay .container_filter .filter .filter_input .input label {
+    font-size: 11px;
+}
+
+.filter_overlay .container_filter .filters .buttons {
+    margin-top: 20px;
+}
+
+.filter_overlay .container_filter .filters .buttons button {
+    padding: 8px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.filter_overlay .container_filter .filters .buttons .button_secondary {
+    background-color: rgba(64, 87, 109, .07)
+}
+
+.filter_overlay .container_filter .filters .buttons .button_primary {
+    background-color: var(--color_primary);
+    color: var(--color_tertiary);
+}
+
 @media (min-width:767px) {
     main .container_services .services {
         width: 100%;
