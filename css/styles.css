@@ -298,12 +298,16 @@ main section .container_products .product .bi-heart:hover {
     left: 0;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
 }
 
 .filter_overlay .container_filter {
+    width: 100vw;
     margin-top: 25px;
     background-color: var(--color_tertiary);
-    border-radius: 12px;
+    border-radius: 12px 12px 0 0;
+    transform: translateY(110%);
+    transition: .3s;
 }
 
 .filter_overlay .container_filter .filter_cta {
@@ -320,9 +324,11 @@ main section .container_products .product .bi-heart:hover {
     font-size: 14px;
     color: var(--color_primary);
     font-weight: bold;
+    cursor: pointer;
 }
 
 .filter_overlay .container_filter .filters {
+    margin-top: 20px;
     padding: 0 17px 17px;
 }
 
@@ -333,7 +339,7 @@ main section .container_products .product .bi-heart:hover {
 }
 
 .filter_overlay .container_filter .filter .filter_input {
-    margin-top: 14px;
+    margin-top: 8px;
     gap: 2px;
 }
 
@@ -341,24 +347,33 @@ main section .container_products .product .bi-heart:hover {
     font-size: 11px;
 }
 
-.filter_overlay .container_filter .filters .buttons {
-    margin-top: 20px;
+.filter_overlay .container_filter .buttons {
+    padding: 0 17px 17px;
 }
 
-.filter_overlay .container_filter .filters .buttons button {
+.filter_overlay .container_filter .buttons button {
     padding: 8px;
     border: 2px solid transparent;
     border-radius: 5px;
     font-size: 14px;
+    font-weight: bold;
 }
 
-.filter_overlay .container_filter .filters .buttons .button_secondary {
+.filter_overlay .container_filter .buttons .button_secondary {
     background-color: rgba(64, 87, 109, .07)
 }
 
-.filter_overlay .container_filter .filters .buttons .button_primary {
+.filter_overlay .container_filter .buttons .button_primary {
     background-color: var(--color_primary);
     color: var(--color_tertiary);
+}
+
+.filter_overlay .container_filter .buttons .button_primary:hover {
+    border: 2px solid var(--color_primary);
+    background-color: var(--color_tertiary);
+    color: var(--color_primary);
+    transition: .3s;
+    cursor: pointer;
 }
 
 @media (min-width:767px) {
@@ -581,6 +596,49 @@ main section .container_products .product .bi-heart:hover {
     main section .container_products .products .product .bi-tag-fill {
         top: -18px;
         right: 11px;
+    }
+
+    .filter_overlay .container_filter {
+        margin-top: 0;
+        width: 280px;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: .3s;
+        border-radius: 2px;
+        overflow-y: scroll;
+        position: relative;
+    }
+
+    .filter_overlay .container_filter .filter_cta {
+        position: sticky;
+        top: 0;
+        background-color: var(--color_tertiary);
+    }
+
+    .filter_overlay .container_filter .filter h5 {
+        font-size: 13px;
+    }
+
+    .filter_overlay .container_filter .filter .filter_input {
+        gap: 10px;
+    }
+
+    .filter_overlay .container_filter .filter .filter_input .input input {
+        cursor: pointer;
+    }
+
+    .filter_overlay .container_filter .filter .filter_input .input label {
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .filter_overlay .container_filter .buttons {
+        margin-top: 0;
+        position: sticky;
+        bottom: 0;
+        right: 0;
+        background-color: var(--color_tertiary);
+        padding: 15px;
     }
 }
 
