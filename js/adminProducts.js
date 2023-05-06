@@ -1,53 +1,73 @@
 import Product from "./addProduct.js";
 
-function createProduct() {
-  let nuevaPeli = new Product(
-    "Astro A30",
-    "Los mejores auriculares",
-    "urlImage",
-    499,
-    "Auriculares",
-    "La batería dura 27 h.",
-    "image1",
-    "image2",
-    "image3"
-  );
+let createForm = document.getElementById("form");
+let title = document.getElementById("nombre");
+let image = document.getElementById("imagenProducto");
+let price = document.getElementById("precio");
+let category = document.getElementById("categoria");
+let description = document.getElementById("descripcion");
+
+/* listas de product */
+let listProducts = [];
+
+/* listener */
+createForm.addEventListener("submit", createProduct);
+
+function createProduct(e) {
+    e.preventDefault();
+    let nuevoProduct = new Product(
+        undefined,
+        title.value,
+        description.value,
+        image.value,
+        price.value,
+        category.value
+
+        // characteristics.value,
+        // imagePreviewOne.value,
+        // imagePreviewTwo.value,
+        // imagePreviewThree.value
+    );
+    // console.log(nuevoProduct);
+    listProducts.push(nuevoProduct);
+
+    saveLS();
 }
 
 function loadProduct(e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  let data = dataValidate(
-    title.value,
-    description.value,
-    image.value,
-    price.value,
-    category.value,
-    characteristics.value,
-    imagePreviewOne.value,
-    imagePreviewTwo.value,
-    imagePreviewThree.value
-  );
-  if (data.length === 0) {
-    let newProduct = new Pelicula(
-      title.value,
-      description.value,
-      image.value,
-      price.value,
-      category.value,
-      characteristics.value,
-      imagePreviewOne.value,
-      imagePreviewTwo.value,
-      imagePreviewThree.value
+    let data = dataValidate(
+        title.value,
+        description.value,
+        image.value,
+        price.value,
+        category.value,
+        characteristics.value,
+        imagePreviewOne.value,
+        imagePreviewTwo.value,
+        imagePreviewThree.value
     );
+    if (data.length === 0) {
+        let newProduct = new Product(
+            title.value,
+            description.value,
+            image.value,
+            price.value,
+            category.value,
+            characteristics.value,
+            imagePreviewOne.value,
+            imagePreviewTwo.value,
+            imagePreviewThree.value
+        );
 
-    listProducts.push(nuevaPeli);
+        listProducts.push(nuevoProduct);
 
-    saveLS();
-  } else {
-  }
+        saveLS();
+    } else {
+    }
 }
 
 function saveLS() {
-  localStorage.setItem("listProducts", JSON.stringify(listProducts));
+    localStorage.setItem("listProducts", JSON.stringify(listProducts));
 }

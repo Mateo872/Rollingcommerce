@@ -18,54 +18,101 @@
         <title>Rollingcommerce</title>
     </head>
     <body>
-      <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                  <img class="rounded-circle" src="../img/Logo.jpg" alt="" width="60" height="44">
-                  <span style="color: red;">Rolling</span><span style="color: black;">Commerce</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Categoría 1</a></li>
-                                <li><a class="dropdown-item" href="#">Categoría 2</a></li>
-                                <li><a class="dropdown-item" href="#">Categoría 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Search">
-                                <button class="btn" type="submit"><i class="bi bi-search"></i></button>
-                            </form>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="bi bi-person-fill"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <button id="theme-toggler" class="btn"><i class="bi bi-moon-fill"></i></button>
-                        </li>
-                    </ul>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img
+                            class="rounded-circle"
+                            src="../img/Logo.jpg"
+                            alt=""
+                            width="60"
+                            height="44"
+                        />
+                        <span style="color: red">Rolling</span
+                        ><span style="color: black">Commerce</span>
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse justify-content-end"
+                        id="navbarNavDropdown"
+                    >
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="navbarDropdownMenuLink"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Productos
+                                </a>
+                                <ul
+                                    class="dropdown-menu"
+                                    aria-labelledby="navbarDropdownMenuLink"
+                                >
+                                    <li>
+                                        <a class="dropdown-item" href="#">Categoría 1</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Categoría 2</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Categoría 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <form class="d-flex">
+                                    <input
+                                        class="form-control me-2"
+                                        type="search"
+                                        placeholder="Buscar productos"
+                                        aria-label="Search"
+                                    />
+                                    <button class="btn" type="submit">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </form>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"
+                                    ><i class="bi bi-cart-fill"></i
+                                ></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"
+                                    ><i class="bi bi-person-fill"></i
+                                ></a>
+                            </li>
+                            <li class="nav-item">
+                                <button id="theme-toggler" class="btn">
+                                    <i class="bi bi-moon-fill"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
         <main class="container my-5">
             <article class="row">
                 <div class="col d-flex align-items-center">
@@ -86,13 +133,16 @@
                     </button>
                 </div>
             </article>
-            <section class="row mt-4 justify-content-center" id="seccionDetalle">
+            <section
+                class="container row mt-4 mx-auto justify-content-between"
+                id="seccionDetalle"
+            >
                 <!-- card -->
-                <div class="card col-lg-3 col-md-3 m-2">
+                <div class="card col-lg-3 col-md-5 m-2">
                     <div class="col-12 g-0">
                         <div class="col position-relative">
                             <img
-                                src="../img/Rectangle 37.png"
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_760937-MLA53603548204_022023-F.webp"
                                 class="card-img-top"
                                 alt="producto"
                             />
@@ -111,13 +161,15 @@
                         </div>
                         <div class="col my-3">
                             <div class="card-body">
-                                <h5 class="card-title fs-2">Astro 360</h5>
+                                <h5 class="card-title fs-2">
+                                    Silla Gamer Escritorio Reclinable 806 C/2
+                                </h5>
                                 <p class="card-text">
-                                    Una breve descripcion del producto
+                                    Material Del Tapizado:Cuero sintético
                                 </p>
 
                                 <p class="card-text fw-bold">
-                                    <small class="fs-4"> $1000</small>
+                                    <small class="fs-4"> $63.835</small>
                                 </p>
                                 <p class="card-text">
                                     <small># 1</small>
@@ -126,11 +178,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-md-3 m-2">
+                <div class="card col-lg-3 col-md-5 m-2">
                     <div class="col-12 g-0">
                         <div class="col position-relative">
                             <img
-                                src="../img/Rectangle 37.png"
+                                src="https://pixelstore.com.ar/wp-content/uploads/2022/03/playstation-5.jpg"
                                 class="card-img-top"
                                 alt="producto"
                             />
@@ -149,26 +201,30 @@
                         </div>
                         <div class="col my-3">
                             <div class="card-body">
-                                <h5 class="card-title fs-2">Astro 360</h5>
+                                <h5 class="card-title fs-2">
+                                    Consola PlayStation 5 Standar 825 Gb
+                                </h5>
                                 <p class="card-text">
-                                    Una breve descripcion del producto
+                                    Experimenta la velocidad del PlayStation 5 con una SSD
+                                    de velocidad mega rápida, una inmersión más profunda
+                                    con soporte para respuesta háptica
                                 </p>
 
                                 <p class="card-text fw-bold">
-                                    <small class="fs-4"> $1000</small>
+                                    <small class="fs-4"> $419.900</small>
                                 </p>
                                 <p class="card-text">
-                                    <small># 1</small>
+                                    <small># 2</small>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-md-3 m-2">
+                <div class="card col-lg-3 col-md-5 m-2">
                     <div class="col-12 g-0">
                         <div class="col position-relative">
                             <img
-                                src="../img/Rectangle 37.png"
+                                src="https://http2.mlstatic.com/D_NQ_NP_837576-MLA51649182983_092022-O.webp"
                                 class="card-img-top"
                                 alt="producto"
                             />
@@ -187,26 +243,29 @@
                         </div>
                         <div class="col my-3">
                             <div class="card-body">
-                                <h5 class="card-title fs-2">Astro 360</h5>
+                                <h5 class="card-title fs-2">
+                                    Pc Armada Cpu Intel I5 16gb Ssd 512gb M.2
+                                </h5>
                                 <p class="card-text">
-                                    Una breve descripcion del producto
+                                    -Procesador Intel Core i5-10400 BX8070110400 de 6
+                                    núcleos y 4.3GHz de frecuencia con gráfica integrada
                                 </p>
 
                                 <p class="card-text fw-bold">
-                                    <small class="fs-4"> $1000</small>
+                                    <small class="fs-4"> $287.895</small>
                                 </p>
                                 <p class="card-text">
-                                    <small># 1</small>
+                                    <small># 3</small>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-md-3 m-2">
+                <div class="card col-lg-3 col-md-5 m-2">
                     <div class="col-12 g-0">
                         <div class="col position-relative">
                             <img
-                                src="../img/Rectangle 37.png"
+                                src="https://http2.mlstatic.com/D_NQ_NP_747760-MLA32688642537_102019-O.webp"
                                 class="card-img-top"
                                 alt="producto"
                             />
@@ -225,26 +284,30 @@
                         </div>
                         <div class="col my-3">
                             <div class="card-body">
-                                <h5 class="card-title fs-2">Astro 360</h5>
+                                <h5 class="card-title fs-2">
+                                    Auriculares Gamer Con Micrófono Pc/ps4
+                                </h5>
                                 <p class="card-text">
-                                    Una breve descripcion del producto
+                                    Ofrecemos productos originales Iglufive, con garantía
+                                    de calidad al mejor precio. Somos una empresa con más
+                                    de 10 años en el mercado
                                 </p>
 
                                 <p class="card-text fw-bold">
-                                    <small class="fs-4"> $1000</small>
+                                    <small class="fs-4"> $3.950</small>
                                 </p>
                                 <p class="card-text">
-                                    <small># 1</small>
+                                    <small># 4</small>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-md-3 m-2">
+                <div class="card col-lg-3 col-md-5 m-2">
                     <div class="col-12 g-0">
                         <div class="col position-relative">
                             <img
-                                src="../img/Rectangle 37.png"
+                                src="https://http2.mlstatic.com/D_NQ_NP_640945-MLA47778929198_102021-O.webp"
                                 class="card-img-top"
                                 alt="producto"
                             />
@@ -263,13 +326,19 @@
                         </div>
                         <div class="col my-3">
                             <div class="card-body">
-                                <h5 class="card-title fs-2">Astro 360</h5>
+                                <h5 class="card-title fs-2">
+                                    Apple iPhone 13 Pro (512 GB)
+                                </h5>
                                 <p class="card-text">
-                                    Una breve descripcion del producto
+                                    Nuevo sistema de cámaras Pro de 12 MP (teleobjetivo,
+                                    gran angular y ultra gran angular), escáner LiDAR,
+                                    rango de zoom óptico de 6x, fotografía macro, Estilos
+                                    Fotográficos, video ProRes2, HDR Inteligente 4, modo
+                                    Noche, Apple ProRAW y
                                 </p>
 
                                 <p class="card-text fw-bold">
-                                    <small class="fs-4"> $1000</small>
+                                    <small class="fs-4"> $1.392.999 </small>
                                 </p>
                                 <p class="card-text">
                                     <small># 1</small>
@@ -294,6 +363,7 @@
                     <div class="modal-content">
                         <div class="modal-body">
                             <div class="modal-header">
+                                <h3>Subir Producto</h3>
                                 <button
                                     type="button"
                                     class="btn-close"
@@ -301,11 +371,15 @@
                                     aria-label="Close"
                                 ></button>
                             </div>
-                            <img
+                            <!-- <img
                                 src="../img/Rectangle 37.png"
                                 class="card-img-top"
                                 alt="producto"
-                            />
+                            /> -->
+                            <!-- <i
+                                class="bi bi-cloud-arrow-up fs-1 fw-bold"
+                                style="color: #ee332c; font-size: large;"
+                            ></i> -->
                             <form id="form" class="my-4">
                                 <div class="mb-3">
                                     <label class="col-form-label"
@@ -317,6 +391,18 @@
                                         id="nombre"
                                         required
                                         placeholder="Ej: PlayStation"
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="col-form-label"
+                                        >Pon el link de imagen tu producto</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="imagenProducto"
+                                        required
+                                        placeholder="https://Imagendesilla.jpg.png"
                                     />
                                 </div>
 
@@ -379,42 +465,70 @@
                 </div>
             </div>
         </main>
-        <footer class=" mt-auto py-3 bg-black text-white">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4 text-center">
-                <h3 id="h3">INFORMACIÓN</h3>
-                <ul class="list-unstyled py-3">
-                  <li class="py-1"><a href="#" class="footer-link text-decoration-none">Acerca de nosotros</a></li>
-                  <li class="py-1"><a href="#" class="footer-link">Información de entrega</a></li>
-                  <li class="py-1"><a href="#" class="footer-link">Políticas de privacidad</a></li>
-                  <li class="py-1"><a href="#" class="footer-link">Términos y condiciones</a></li>
-                </ul>
-              </div>
-              <div class="col-md-4 text-center">
-                <h3 id="h3">MI CUENTA</h3>
-                <ul class="list-unstyled py-3" >
-                  <li class="py-1"><a href="#" class="footer-link">Historial de pedidos</a></li>
-                  <li class="py-1"><a href="#" class="footer-link">Boletín</a></li>
-                  <li class="py-1"><a href="#" class="footer-link">Reembolsos</a></li>
-                </ul>
-              </div>
-              <div class="col-md-4 text-center">
-                <h3 id="h3" class="text-red">BOLETÍN INFORMATIVO</h3>
-                <p class="text-white text-center p-3 m-0">Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones y ofertas exclusivas.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Ingrese el correo electrónico">
+        <footer class="mt-auto py-3 bg-black text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <h3 id="h3">INFORMACIÓN</h3>
+                        <ul class="list-unstyled py-3">
+                            <li class="py-1">
+                                <a href="#" class="footer-link text-decoration-none"
+                                    >Acerca de nosotros</a
+                                >
+                            </li>
+                            <li class="py-1">
+                                <a href="#" class="footer-link">Información de entrega</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#" class="footer-link"
+                                    >Políticas de privacidad</a
+                                >
+                            </li>
+                            <li class="py-1">
+                                <a href="#" class="footer-link">Términos y condiciones</a>
+                            </li>
+                        </ul>
                     </div>
-                    <button class="btn btn-danger mt-3" type="submit">Enviar</button>
-                </form>
+                    <div class="col-md-4 text-center">
+                        <h3 id="h3">MI CUENTA</h3>
+                        <ul class="list-unstyled py-3">
+                            <li class="py-1">
+                                <a href="#" class="footer-link">Historial de pedidos</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#" class="footer-link">Boletín</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="#" class="footer-link">Reembolsos</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h3 id="h3" class="text-red">BOLETÍN INFORMATIVO</h3>
+                        <p class="text-white text-center p-3 m-0">
+                            Suscríbete a nuestros boletines ahora y mantente al día con
+                            nuevas colecciones y ofertas exclusivas.
+                        </p>
+                        <form>
+                            <div class="form-group">
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="Ingrese el correo electrónico"
+                                />
+                            </div>
+                            <button class="btn btn-danger mt-3" type="submit">
+                                Enviar
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            
-            </div>
-          </div>
         </footer>
 
         <script src="../js/app.js"></script>
+        <script type="module" src="../js/adminProducts.js"></script>
+
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
