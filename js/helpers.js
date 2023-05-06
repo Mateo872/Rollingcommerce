@@ -8,7 +8,6 @@ export function characters(text, min, max){
     }
 }
 
-
 function validateURLImage(value){
     let patron = /^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)$/;
     if(patron.test(value)){
@@ -21,17 +20,37 @@ function validateURLImage(value){
 }
 
 function validateCategory(text){
-    if(text.length > 0 && (text === 'auriculares' || text === 'consola' || text === 'pc' || text === 'silla' || text === 'celulares' || text === 'tv')){
-        console.log('genero valido');
+    if(text.length > 0 && (text === 'Auriculares' || text === 'Consola' || text === 'Pc' || text === 'Silla' || text === 'Celulares' || text === 'Tv')){
+        console.log('categoría valida');
         return true;
     }else{
-        console.log('genero invalido');
+        console.log('categoria invalida');
         return false;
     }
 }
 
+function validatePrice(value){
+    let patron = /^\d*(\.\d{1})?\d{0,1}$/;
+    if(patron.test(value)){
+        console.log('precio valido');
+        return true;
+    }else{
+        console.log('el precio no paso la expresion regular');
+        return false;
+    }
+}
+function validateStock(value){
+    let patron = /^[0-9]{1,3}$/;
+    if(patron.test(value)){
+        console.log('digito de stock valido');
+        return true;
+    }else{
+        console.log('stock invalido');
+        return false;
+    }
+}
 
-export function dataValidate(title, description, characteristics, image, imagePreviewOne, imagePreviewTwo, imagePreviewThree, category){
+export function dataValidate(title, description, characteristics, image, imagePreviewOne, imagePreviewTwo, imagePreviewThree, category, price, stock){
     let data='';
     if(!characters(title, 3, 100)){
         data += 'Corregir el campo del titulo debe contener entre 3 y 100 caracteres <br>';
@@ -55,8 +74,16 @@ export function dataValidate(title, description, characteristics, image, imagePr
         data += 'Corregir la URL de la imagen 3, la extension debe ser .jpg, .gif o .png <br>'
     }
     if(!validateCategory(category)){
-        resumen += 'Seleccione un genero de la lista de opciones <br>'
+        data += 'Seleccione una categoría de la lista de opciones <br>'
     }
+    if(!validatePrice(price)){
+        data += 'Número de precio invalido <br>'
+    }
+    if(!validateStock(stock)){
+        data += 'Número de stock invalido <br>'
+    }
+
+
 
     if(data.length !== 0 ){
         return data;

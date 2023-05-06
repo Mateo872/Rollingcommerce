@@ -9,6 +9,7 @@ export default class Product {
   #imagePreviewOne;
   #imagePreviewTwo;
   #imagePreviewThree;
+  #stock;
   #state;
   constructor(
     title,
@@ -19,7 +20,8 @@ export default class Product {
     characteristics,
     imagePreviewOne,
     imagePreviewTwo,
-    imagePreviewThree
+    imagePreviewThree,
+    stock
   ) {
     this.#code = uuidv4();
     this.#title = title;
@@ -31,6 +33,7 @@ export default class Product {
     this.#imagePreviewOne = imagePreviewOne;
     this.#imagePreviewTwo = imagePreviewTwo;
     this.#imagePreviewThree = imagePreviewThree;
+    this.#stock = stock;
     this.#state = false;
   }
 
@@ -73,7 +76,9 @@ export default class Product {
   get imagePreviewThree() {
     return this.#imagePreviewThree;
   }
-
+  get stock() {
+    return this.#stock;
+  }
   get state() {
     return this.#state;
   }
@@ -117,6 +122,9 @@ export default class Product {
   set imagePreviewThree(imagePreviewThree) {
     this.#imagePreviewThree = imagePreviewThree;
   }
+  set stock(stock) {
+    this.#stock = stock;
+  }
 
   set state(state) {
     this.#state = state;
@@ -134,6 +142,7 @@ export default class Product {
       imagePreviewOne: this.imagePreviewOne,
       imagePreviewTwo: this.imagePreviewTwo,
       imagePreviewThree: this.imagePreviewThree,
+      stock: this.stock,
       state: this.state,
     };
   }

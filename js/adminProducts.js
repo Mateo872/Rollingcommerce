@@ -16,7 +16,7 @@ const characteristics = document.getElementById('characteristics');
 const stock = document.getElementById('stock');
 const category = document.getElementById('category')
 const form = document.getElementById('form');
-const msjFormulario = document.getElementById('msjForm');
+const msjForm = document.getElementById('msjForm');
 
 const modalProduct = new bootstrap.Modal(document.querySelector('#modalAdd'));
 
@@ -49,28 +49,28 @@ function loadProduct(e) {
   console.log('creando la producto')
   let data = dataValidate(
     title.value,
-    // price.value,
+    price.value,
     characteristics.value,
     image.value,
     imagePreviewOne.value,
     imagePreviewTwo.value,
     imagePreviewThree.value,
     description.value,
-    // category.value,
-    // stock.value,
+    category.value,
+    stock.value,
   );
   if (data.length === 0) {
     let newProduct = new Product(
       title.value,
       description.value,
       image.value,
-      // price.value,
-      // category.value,
+      price.value,
+      category.value,
       characteristics.value,
       imagePreviewOne.value,
       imagePreviewTwo.value,
       imagePreviewThree.value,
-      // stock.value
+      stock.value
     );
 
     listProducts.push(newProduct);
@@ -82,7 +82,6 @@ function loadProduct(e) {
     msjForm.innerHTML = data;
   }
 }
-
 function saveLS() {
   localStorage.setItem("listProducts", JSON.stringify(listProducts));
 }
