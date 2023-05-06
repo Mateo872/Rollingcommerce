@@ -30,3 +30,7 @@ function overlayClose(e) {
     }
   }
 }
+
+// const cartBtn = document.querySelector(".bi-cart");
+
+// cartBtn.addEventListener("click", () => console.log(2));
