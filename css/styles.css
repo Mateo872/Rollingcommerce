@@ -78,7 +78,7 @@ main .container_cart .cart_slider .cart_items i {
 
 main .container_cart .cart_slider .cart_items i:hover {
     transform: scale(.95);
-    transition: .3s;
+    transition: .1s;
     cursor: pointer;
 }
 
@@ -483,6 +483,28 @@ main section .container_products .product .bi-heart:hover {
 }
 
 @media (min-width:767px) {
+    main .container_cart {
+        width: 65%;
+        margin-top: 75px;
+        left: 65%;
+    }
+
+    main .container_cart h5 {
+        font-size: 16px;
+    }
+
+    main .container_cart .cart_slider .cart_items .cart_image {
+        width: 65px;
+    }
+
+    main .container_cart .cart_slider .cart_items .cart_desc .cart_item-title {
+        font-size: 15px;
+    }
+
+    main .container_cart .cart_slider .cart_items .cart_desc .cart_desc-price {
+        font-size: 15px;
+    }
+
     main .container_services .services {
         width: 100%;
     }
@@ -561,6 +583,27 @@ main section .container_products .product .bi-heart:hover {
 }
 
 @media (min-width:989px) {
+    main .container_cart {
+        width: 30%;
+        left: 83.5%;
+    }
+
+    main .container_cart .cart_slider .cart_items .cart_image {
+        width: 68px;
+    }
+
+    main .container_cart .cart_slider .cart_items .cart_desc .cart_item-title {
+        font-size: 16px;
+    }
+
+    main .container_cart .cart_slider .cart_items i {
+        font-size: 20px;
+    }
+
+    main .container_cart .cart_slider .cart_items .cart_desc .cart_desc-price {
+        font-size: 15px;
+    }
+
     main .container_services .services .service {
         padding: 16px 40px;
     }
