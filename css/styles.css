@@ -23,9 +23,21 @@ header {
     top: 0;
 }
 
+main {
+    margin-top: 56px;
+}
+
+
 section {
     width: 90%;
     margin: 0 auto;
+}
+
+.cart_overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 99;
 }
 
 main .container_cart {
@@ -40,6 +52,11 @@ main .container_cart {
     z-index: 2;
     transform: translateX(-50%);
 }
+
+.cart_display {
+    visibility: hidden;
+}
+
 
 main .container_cart .cart_slider {
     max-height: 205px;
@@ -585,7 +602,7 @@ main section .container_products .product .bi-heart:hover {
 @media (min-width:989px) {
     main .container_cart {
         width: 30%;
-        left: 83.5%;
+        left: 83.7%;
     }
 
     main .container_cart .cart_slider .cart_items .cart_image {
