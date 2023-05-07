@@ -9,7 +9,7 @@ export function characters(text, min, max){
 }
 
 function validateURLImage(value){
-    let patron = /^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)$/;
+    let patron = /^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png|webp)$/;
     if(patron.test(value)){
         console.log('url valida');
         return true;
