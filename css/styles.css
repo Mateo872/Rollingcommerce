@@ -780,9 +780,7 @@ main section .container_products .product .bi-heart:hover {
     }
 
     .filter_overlay .container_filter .filter_cta {
-        position: sticky;
-        top: 0;
-        background-color: var(--color_tertiary);
+        margin-top: 56px;
     }
 
     .filter_overlay .container_filter .filter h5 {
@@ -852,13 +850,14 @@ main section .container_products .product .bi-heart:hover {
     font-size: 16px;
     margin-top: 5px;
 }
+
 /* css del footer */
 .footer-link {
     color: white;
     list-style: none;
-  text-decoration: none;
-  }
-  h3{
+    text-decoration: none;
+}
+
+h3 {
     color: red;
-  }
-  
+}
