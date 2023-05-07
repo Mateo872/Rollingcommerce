@@ -72,6 +72,7 @@ function loadProduct(e) {
       imagePreviewThree.value,
       stock.value
     );
+    console.log(newProduct);
 
     // listProducts.push(newProduct);
     modalProduct.hide();
