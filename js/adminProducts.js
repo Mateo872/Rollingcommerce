@@ -49,14 +49,15 @@ function loadProduct(e) {
   console.log('creando la producto')
   let data = dataValidate(
     title.value,
-    price.value,
+    description.value,
     characteristics.value,
+    image.value,
     imagePreviewOne.value,
     imagePreviewTwo.value,
     imagePreviewThree.value,
-    description.value,
     category.value,
-    stock.value,
+    price.value,
+    stock.value
   );
   if (data.length === 0) {
     let newProduct = new Product(
@@ -72,16 +73,16 @@ function loadProduct(e) {
       stock.value
     );
 
-    listProducts.push(newProduct);
+    // listProducts.push(newProduct);
     modalProduct.hide();
 
-    saveLS();
+      // saveLS();
   } else {
     msjForm.className = 'alert alert-danger mt-3';
     msjForm.innerHTML = data;
   }
 }
 
-function saveLS() {
-  localStorage.setItem("listProducts", JSON.stringify(listProducts));
-}
+// function saveLS() {
+//   localStorage.setItem("listProducts", JSON.stringify(listProducts));
+// }
