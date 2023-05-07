@@ -23,7 +23,7 @@ export default class Product {
     imagePreviewThree,
     stock
   ) {
-    this.#code = 0;
+    this.#code = uuidv4();
     this.#title = title;
     this.#description = description;
     this.#image = image;
