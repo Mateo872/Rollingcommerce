@@ -209,7 +209,9 @@ main .container_services .service_desc p {
 }
 
 .container_banner .banner img {
-    width: 240px;
+    width: 200px;
+    height: 110px;
+    object-fit: cover;
 }
 
 .container_banner .banner h2 {
@@ -534,12 +536,13 @@ main section .container_products .product .bi-heart:hover {
         width: 650px;
         height: 650px;
         right: -300px;
-        bottom: -350px;
+        bottom: -380px;
         z-index: -1;
     }
 
     .container_banner .banner img {
         width: 350px;
+        height: 180px;
     }
 
     .container_banner .banner h2 {
@@ -650,6 +653,7 @@ main section .container_products .product .bi-heart:hover {
 
     .container_banner .banner img {
         width: 440px;
+        height: 260px;
     }
 
     .container_banner .banner h2 {
