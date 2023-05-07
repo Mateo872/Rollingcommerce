@@ -20,52 +20,88 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img class="rounded-circle" src="../img/Logo.jpg" alt="" width="60" height="44">
-                <span style="color: red;">Rolling</span><span style="color: black;">Commerce</span>
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                  <ul class="navbar-nav">
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Productos
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              <li><a class="dropdown-item" href="#">Categoría 1</a></li>
-                              <li><a class="dropdown-item" href="#">Categoría 2</a></li>
-                              <li><a class="dropdown-item" href="#">Categoría 3</a></li>
-                          </ul>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Nosotros</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Contacto</a>
-                      </li>
-                      <li class="nav-item">
-                          <form class="d-flex">
-                              <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Search">
-                              <button class="btn" type="submit"><i class="bi bi-search"></i></button>
-                          </form>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i></a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#"><i class="bi bi-person-fill"></i></a>
-                      </li>
-                      <li class="nav-item">
-                          <button id="theme-toggler" class="btn"><i class="bi bi-moon-fill"></i></button>
-                      </li>
-                  </ul>
-              </div>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              class="rounded-circle"
+              src="../images/Logo.jpg"
+              alt=""
+              width="60"
+              height="47"
+            />
+        <span style="color: #EE332C;"> Rolling</span>   <span>Commerce</span> 
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Productos
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <li><a class="dropdown-item" href="#">Categoría 1</a></li>
+                  <li><a class="dropdown-item" href="#">Categoría 2</a></li>
+                  <li><a class="dropdown-item" href="#">Categoría 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <form class="d-flex">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Buscar productos"
+                    aria-label="Search"
+                  />
+                  <button class="btn" type="submit">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </form>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-person-fill"></i></a>
+              </li>
+              <li class="nav-item">
+                <button id="theme-toggler" class="btn ">
+                  <i class="bi bi-moon-fill"></i>
+                </button>
+              </li>
+            </ul>
           </div>
+        </div>
       </nav>
-  </header>
+    </header>
     <main>
       <section class="card mt-4 mb-3 border-0 container">
         <div class="row g-0">
@@ -92,7 +128,7 @@
           <div class="col-md-6 col-lg-6">
             <div class="card-body my-lg-5 mx-3">
               <p class="d-flex justify-content-end me-3"><i class="bi bi-heart text-danger fs-4"></i></p>
-              <h3>Auriculares gamer inalámbricos <br> Astro A30 blanco</h3>
+              <h4>Auriculares gamer inalámbricos <br> Astro A30 blanco</h4>
               <p class="display-6">$499</p>
               <p>
                 ¡Experimentá la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los Astro A30 no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.
@@ -115,8 +151,43 @@
           <li>Tamaño de altavoz: 40 mm.</li>
         </ul>
       </section>
+      <section class="container pt-4">
+        <h5>Productos similares</h5>
+        <div class="container-card my-3 ps-1">
+          <div class="card  card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded">
+            <img src="../img/Auricular.png" class="img-fluid">
+            <h6 class="pt-2 mb-0">Astro30</h6>
+            <p class="fw-semibold pb-1 mb-0">$499</p>
+            <a href="#" class="mb-0 text-danger text-decoration-none fw-semibold">Ver más</a>
+          </div>
+          <div class="card  card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded">
+            <img src="../img/Auricular.png" class="img-fluid">
+            <h6 class="pt-2 mb-0">Astro30</h6>
+            <p class="fw-semibold pb-1 mb-0">$499</p>
+            <a href="#" class="mb-0 text-danger text-decoration-none fw-semibold">Ver más</a>
+          </div>
+          <div class="card  card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded">
+            <img src="../img/Auricular.png" class="img-fluid">
+            <h6 class="pt-2 mb-0">Astro30</h6>
+            <p class="fw-semibold pb-1 mb-0">$499</p>
+            <a href="#" class="mb-0 text-danger text-decoration-none fw-semibold">Ver más</a>
+          </div>
+          <div class="card  card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded">
+            <img src="../img/Auricular.png" class="img-fluid">
+            <h6 class="pt-2 mb-0">Astro30</h6>
+            <p class="fw-semibold pb-1 mb-0">$499</p>
+            <a href="#" class="mb-0 text-danger text-decoration-none fw-semibold">Ver más</a>
+          </div>
+          <div class="card  card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded">
+            <img src="../img/Auricular.png" class="img-fluid">
+            <h6 class="pt-2 mb-0">Astro30</h6>
+            <p class="fw-semibold pb-1 mb-0">$499</p>
+            <a href="#" class="mb-0 text-danger text-decoration-none fw-semibold">Ver más</a>
+          </div>
+        </div>
+        
+      </section>
     </main>
-<<<<<<< HEAD
     <footer class=" mt-auto py-3 bg-black text-white">
       <div class="container">
         <div class="row">
@@ -151,8 +222,6 @@
         </div>
       </div>
     </footer>
-=======
->>>>>>> navbar
     <script src="../js/app.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
