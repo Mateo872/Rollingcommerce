@@ -16,7 +16,7 @@ const characteristics = document.getElementById('characteristics');
 const stock = document.getElementById('stock');
 const category = document.getElementById('category')
 const form = document.getElementById('form');
-const msjFormulario = document.getElementById('msjForm');
+const msjForm = document.getElementById('msjForm');
 
 const modalProduct = new bootstrap.Modal(document.querySelector('#modalAdd'));
 
