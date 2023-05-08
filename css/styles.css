@@ -961,8 +961,3 @@ footer {
   .colorLabelLogin{
     background-color: rgb(222, 221, 221);
   }
-@media (max-width: 525px)
-{
-    .modal-dialog-side {
-        width: 100%;
->>>>>>> login
