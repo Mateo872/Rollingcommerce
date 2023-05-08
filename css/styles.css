@@ -372,15 +372,6 @@ main section .container_products .products .product {
     position: relative;
 }
 
-main section .container_products .products .product .bi-tag-fill {
-    position: absolute;
-    top: -18px;
-    right: 10px;
-    font-size: 22px;
-    transform: rotate(225deg);
-    color: var(--color_primary);
-}
-
 main section .container_products .product .product_image {
     width: 100%;
     margin-bottom: 15px;
@@ -393,16 +384,6 @@ main section .container_products .product .product_image img {
 
 main section .container_products .product .product_feature h5 {
     font-size: 12px;
-    font-weight: 400;
-}
-
-main section .container_products .product .product_feature .product_feature-discount {
-    margin-top: 5px;
-    gap: 3px;
-}
-
-main section .container_products .product .product_feature .product_feature-discount .discount {
-    text-decoration: line-through;
     font-weight: 400;
 }
 
@@ -777,15 +758,6 @@ main section .container_products .product .bi-heart:hover {
         font-size: 14px;
     }
 
-    main section .container_products .products .product .bi-tag-fill {
-        position: absolute;
-        top: -18px;
-        right: 10px;
-        font-size: 22px;
-        transform: rotate(225deg);
-        color: var(--color_primary);
-    }
-
     main section .container_products .product .bi-heart {
         font-size: 15px;
         position: absolute;
@@ -799,11 +771,6 @@ main section .container_products .product .bi-heart:hover {
         font-size: 15px;
         transform: translateX(100%);
         opacity: 0;
-    }
-
-    main section .container_products .products .product .bi-tag-fill {
-        top: -18px;
-        right: 11px;
     }
 
     .filter_overlay .container_filter {
