@@ -146,6 +146,10 @@ function loadProduct(e) {
     cleanProductForm();
 
     modalProduct.hide();
+    let productIndex = listProducts.length -1;
+    createCard(newProduct, productIndex);
+
+    Swal.fire('Se agregó un nuevo producto', 'El producto ingresado fue creado correctamente', 'success');
 
       // saveLS();
   } else {
