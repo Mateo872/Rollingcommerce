@@ -501,6 +501,29 @@ main section .container_products .product .bi-heart:hover {
     cursor: pointer;
 }
 
+.container_banner_offers {
+    width: 100%;
+    min-height: 200px;
+    background-image: url("../images/bannerOffers.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.container_banner_offers .banner_offers .banner_title h4 {
+    margin-bottom: 10px;
+    color: var(--color_tertiary);
+}
+
+.container_banner_offers .banner_offers .counter .counter-date {
+    font-weight: bold;
+    color: var(--color_tertiary);
+}
+
+.container_banner_offers .banner_offers .counter .counter-date span {
+    font-size: 12px;
+    font-weight: 300;
+}
+
 @media (min-width:767px) {
     header .container-fluid .header_title {
         display: block;
@@ -608,6 +631,30 @@ main section .container_products .product .bi-heart:hover {
 
     main section .container_products .product .product_feature .product_detail-cart i {
         font-size: 13px;
+    }
+
+    .container_banner_offers {
+        position: relative;
+    }
+
+    .container_banner_offers .banner_offers .banner_title h4 {
+        font-size: 32px;
+    }
+
+    .container_banner_offers .banner_offers .counter .counter-date p {
+        font-size: 24px;
+    }
+
+    .container_banner_offers .banner_offers .counter .counter-date span {
+        font-size: 20px;
+    }
+
+    .container_banner_offers .banner_offers img {
+        width: 150px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 35px;
     }
 
     footer .form-footer {
@@ -825,6 +872,32 @@ main section .container_products .product .bi-heart:hover {
         background-color: var(--color_tertiary);
         padding: 15px;
     }
+
+    .container_banner_offers {
+        height: 300px;
+    }
+
+    .container_banner_offers .banner_offers .banner_title h4 {
+        font-size: 40px;
+    }
+
+    .container_banner_offers .banner_offers .counter .counter-date p {
+        font-size: 32px;
+    }
+
+    .container_banner_offers .banner_offers .counter .counter-date span {
+        font-size: 16px;
+        margin-top: -10px;
+    }
+
+    .container_banner_offers .banner_offers img {
+        width: 200px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 45px;
+    }
+
 
     footer .form-footer .input-email {
         font-size: 14px;
