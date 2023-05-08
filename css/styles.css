@@ -21,6 +21,16 @@ header {
     z-index: 2;
     position: fixed;
     top: 0;
+    background-color: var(--color_tertiary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+header .container-fluid .header_title {
+    display: none;
+}
+
+header .container-fluid .header_title-modified {
+    color: var(--color_primary);
 }
 
 main {
@@ -42,7 +52,7 @@ section {
 
 main .container_cart {
     width: 95%;
-    margin-top: 62px;
+    margin-top: 80px;
     background-color: var(--color_tertiary);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
@@ -502,9 +512,13 @@ main section .container_products .product .bi-heart:hover {
 }
 
 @media (min-width:767px) {
+    header .container-fluid .header_title {
+        display: block;
+    }
+
     main .container_cart {
         width: 65%;
-        margin-top: 75px;
+        margin-top: 95px;
         left: 65%;
     }
 
