@@ -917,3 +917,24 @@ footer {
 #h3 {
     color: red;
 }
+
+.btnColor{
+    
+    background-color: #EE332C;
+    border-radius: 50%;
+
+  }
+  .btnLogin{
+    background-color: #EE332C;
+    color: white;
+    width: 90%;
+  }
+  .imgRollingC{
+    max-width: 200px;
+  }
+  .colorLabelLogin{
+    background-color: rgb(222, 221, 221);
+  }
+  .modal-backdrop {
+    z-index: -1;
+  }
