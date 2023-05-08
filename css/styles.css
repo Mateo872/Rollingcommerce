@@ -878,7 +878,7 @@ main section .container_products .product .bi-heart:hover {
     }
 
     .container_banner_offers .banner_offers .banner_title h4 {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .container_banner_offers .banner_offers .counter .counter-date p {
@@ -991,23 +991,27 @@ footer {
     color: red;
 }
 
-.btnColor{
-    
+.btnColor {
+
     background-color: #EE332C;
     border-radius: 50%;
 
-  }
-  .btnLogin{
+}
+
+.btnLogin {
     background-color: #EE332C;
     color: white;
     width: 90%;
-  }
-  .imgRollingC{
+}
+
+.imgRollingC {
     max-width: 200px;
-  }
-  .colorLabelLogin{
+}
+
+.colorLabelLogin {
     background-color: rgb(222, 221, 221);
-  }
-  .modal-backdrop {
+}
+
+.modal-backdrop {
     z-index: -1;
-  }
+}
