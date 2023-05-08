@@ -111,7 +111,7 @@ function createProduct() {
 function loadProduct(e) {
   e.preventDefault();
 
-  console.log('creando la producto')
+  console.log('creando el producto')
   let data = dataValidate(
     title.value,
     description.value,
