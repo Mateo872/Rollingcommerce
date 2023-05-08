@@ -34,6 +34,60 @@ if(!listProducts){
 
 console.log(listProducts);
 
+initialLoad();
+
+function initialLoad(){
+  if(listProducts.length > 0){
+    listProducts.map((product, index) => createCard(product, index))
+  }
+}
+
+function createCard(product, index){
+  let productCardData = document.getElementById('productCard')
+  console.log(productCardData);
+  productCardData.innerHTML += `<div class="card col-lg-3 col-md-5 m-2 img-fluid rounded-3 border-3 shadow">
+  <div class="col-12 g-0">
+  <div class="col position-relative">
+      <img
+          src="${product.image}"
+          class="card-img-top"
+          alt="producto"
+      />
+      <div class="position-absolute top-0 end-0">
+          <div class="m-2">
+              <i
+                  class="bi bi-trash3-fill fs-5"
+                  style="color: #ee332c"
+              ></i>
+              <i
+                  class="bi bi-pencil-fill fs-5 ms-2"
+                  style="color: #ee332c"
+              ></i>
+          </div>
+      </div>
+  </div>
+  <div class="col my-3">
+      <div class="card-body">
+          <h5 class="card-title fs-2">
+              ${product.title}
+          </h5>
+          <p class="card-text">
+              ${product.description}
+          </p>
+
+          <p class="card-text fw-bold">
+              <small class="fs-4">$${product.price}</small>
+          </p>
+          <p class="card-text">
+              <small># ${index+1}</small>
+          </p>
+      </div>
+  </div>
+</div>
+</div> 
+  `
+}
+
 function showModalProduct(){
   //abrir la ventana modal
   modalProduct.show();
@@ -92,6 +146,10 @@ function loadProduct(e) {
     cleanProductForm();
 
     modalProduct.hide();
+    let productIndex = listProducts.length -1;
+    createCard(newProduct, productIndex);
+
+    Swal.fire('Se agregó un nuevo producto', 'El producto ingresado fue creado correctamente', 'success');
 
       // saveLS();
   } else {
