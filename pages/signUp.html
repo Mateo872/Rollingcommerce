@@ -111,7 +111,7 @@
                       <div class="modal-header d-flex justify-content-around">
                         <div class="text-center mt-5">
                           <img
-                            src="./images/Logo.jpg"
+                            src="../images/Logo.jpg"
                             alt="Logo Rolling commerce"
                             class="img-fluid imgRollingC"
                           />
@@ -210,7 +210,7 @@
                         <input
                           type="text"
                           id="Nombre"
-                          class="form-control form-control-lg"
+                          class="form-control form-control-lg colorLabelLogin"
                         />
                         <label class="form-label" for="nombre"
                           >Nombre</label
@@ -221,7 +221,7 @@
                         <input
                           type="email"
                           id="mail"
-                          class="form-control form-control-lg"
+                          class="form-control form-control-lg colorLabelLogin"
                         />
                         <label class="form-label" for="mail"
                           >Email</label
@@ -232,7 +232,7 @@
                         <input
                           type="password"
                           id="contraseña"
-                          class="form-control form-control-lg"
+                          class="form-control form-control-lg colorLabelLogin"
                         />
                         <label class="form-label" for="contraseña"
                           >Contraseña</label
@@ -243,7 +243,7 @@
                         <input
                           type="password"
                           id="repetirContraseña"
-                          class="form-control form-control-lg"
+                          class="form-control form-control-lg colorLabelLogin" 
                         />
                         <label class="form-label" for="repetirContraseña"
                           >Repetir contraseña</label
@@ -270,9 +270,9 @@
                       <div class="d-flex justify-content-center">
                         <button
                           type="button"
-                          class="btn btn-danger btn-block btn-lg gradient-custom-4 text-body"
+                          class="btn btnLogin"
                         >
-                          Regístrate
+                          Crear cuenta
                         </button>
                       </div>
 
@@ -280,91 +280,8 @@
                         Ya tienes tu cuenta?
                         <button type="button" class="btn btn-link" data-bs-toggle="modal"
                         data-bs-target="#login">Ingresa aquí</button>
-                        <div
-                  class="modal fade"
-                  id="logidivn"
-                  tabindex="-1"
-                  role="dialog"
-                  aria-labelledby="myModalLogin"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-dialog-side" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header d-flex justify-content-around">
-                        <div class="text-center mt-5">
-                          <img
-                            src="../images/Logo.jpg"
-                            alt="Logo Rolling commerce"
-                            class="img-fluid imgRollingC"
-                          />
-
-                          <div class="d-flex mt-2">
-                            <h4 class="modal-title w-100 text-danger mt-3">
-                              Rolling
-                            </h4>
-                            <h4 class="modal-title w-100 mt-3">Commerce</h4>
-                          </div>
-                        </div>
-                        <button
-                          type="button"
-                          class="btn-close btnColor position-absolute top-0 end-0 m-3"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <h4 class="modal-title text-center w-100 mt-3">
-                        INICIAR SESION
-                      </h4>
-                      <form>
-                        <div class="modal-body mx-3">
-                          <div class="md-form">
-                            <i class="fas fa-envelope prefix grey-text"></i>
-                            <input
-                              type="email"
-                              id="email"
-                              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                              required
-                              minlength="12"
-                              maxlength="35"
-                              class="form-control validate colorLabelLogin"
-                              placeholder="Email"
-                            />
-                            <label
-                              data-error="wrong"
-                              data-success="right"
-                              for="email"
-                            ></label>
-                          </div>
-
-                          <div class="md-form">
-                            <i class="fas fa-lock prefix grey-text"></i>
-                            <input
-                              type="password"
-                              id="pass"
-                              minlength="8"
-                              maxlength="20"
-                              class="form-control validate colorLabelLogin"
-                              placeholder="Contraseña"
-                            />
-                            <label
-                              data-error="wrong"
-                              data-success="right"
-                              for="pass" ></label
-
-                            >
-                          </div>
-                        </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                          <button type="submit" class="btn btnLogin">
-                            Iniciar sesión
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                      </p>
-                    </form>
+                    </p>
+                </form>
                   </div>
                 </div>
               </div>
