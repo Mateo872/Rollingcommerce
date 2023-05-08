@@ -38,11 +38,11 @@ initialLoad();
 
 function initialLoad(){
   if(listProducts.length > 0){
-    listProducts.map((product) => createCard(product))
+    listProducts.map((product, index) => createCard(product, index))
   }
 }
 
-function createCard(product){
+function createCard(product, index){
   let productCardData = document.getElementById('productCard')
   console.log(productCardData);
   productCardData.innerHTML += `<div class="card col-lg-3 col-md-5 m-2 img-fluid rounded-3 border-3 shadow">
@@ -79,7 +79,7 @@ function createCard(product){
               <small class="fs-4">$${product.price}</small>
           </p>
           <p class="card-text">
-              <small># ${product.code}</small>
+              <small># ${index+1}</small>
           </p>
       </div>
   </div>
