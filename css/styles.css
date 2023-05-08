@@ -388,6 +388,7 @@ main section .container_products .product .product_image {
 
 main section .container_products .product .product_image img {
     width: 80px;
+    height: 50px;
 }
 
 main section .container_products .product .product_feature h5 {
@@ -611,6 +612,11 @@ main section .container_products .product .bi-heart:hover {
         margin-bottom: 38px;
     }
 
+    main section .container_products .product .product_image img {
+        width: 125px;
+        height: 70px;
+    }
+
     h3 {
         font-size: 16px;
     }
@@ -756,6 +762,7 @@ main section .container_products .product .bi-heart:hover {
 
     main section .container_products .product .product_image img {
         width: 125px;
+        height: 80px;
     }
 
     main section .container_products .product .product_feature h5 {
