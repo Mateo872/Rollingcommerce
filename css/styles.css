@@ -858,7 +858,7 @@ main section .container_products .product .bi-heart:hover {
     list-style: none;
   text-decoration: none;
   }
-  h3{
+ #h3{
     color: red;
   }
   
