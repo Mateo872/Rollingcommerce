@@ -855,16 +855,13 @@ main section .container_products .product .bi-heart:hover {
 .footer-link {
     color: white;
     list-style: none;
-<<<<<<< HEAD
   text-decoration: none;
   }
  #h3{
-=======
     text-decoration: none;
 
 }
 
 #h3 {
->>>>>>> 045cf001037b58a30ed7de6937f8903714d3caca
     color: red;
 }
