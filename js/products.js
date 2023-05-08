@@ -283,4 +283,61 @@ const products = [
             "hhttps://http2.mlstatic.com/D_NQ_NP_733298-MLA48622693993_122021-O.webp",
         ],
     },
+    {
+        name: "Auriculares Harman JBL Tune 760NC JBLT760NC",
+        price: 50,
+        description:
+            "JBL, marca de renombre mundial en el mercado de audio, es desde hace más 70 años una referente por la alta calidad de sus productos. Su gama de auriculares es variada, ya que la compañía ofrece produtos in-ear, over-ear, on-ear, deportivos e inalámbricos. Cualquiera de estos es una buena opción para hacerte disfrutar de tu música preferida...",
+        characteristics: [
+            "Es inalámbrico: Sí.",
+            "Con cancelación de ruido: Sí.",
+            "Duración de la batería: 35 h.",
+            "Con micrófono: Sí",
+        ],
+        category: "auriculares",
+        stock: 10,
+        images: [
+            "https://http2.mlstatic.com/D_NQ_NP_796107-MLA48750424811_012022-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_961753-MLA48750424812_012022-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_796107-MLA48750424811_012022-O.webp",
+        ],
+    },
+    {
+        name: "Auriculares Sony WH-XB910N",
+        price: 80,
+        description:
+            "Sony, sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductores. Esto hace que puedas notar un gran sonido desde su primer uso...",
+        characteristics: [
+            "Es inalámbrico: Sí.",
+            "Con cancelación de ruido: Sí.",
+            "Duración de la batería: 30 h.",
+            "Con micrófono: Sí",
+        ],
+        category: "auriculares",
+        stock: 5,
+        images: [
+            "https://http2.mlstatic.com/D_NQ_NP_720416-MLA52221299687_102022-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_791368-MLA52221299689_102022-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_917558-MLA52221299693_102022-O.webp",
+        ],
+    },
+    {
+        name: "Auriculares Kotion G2000",
+        price: 20,
+        description:
+            "Sony, sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductores. Esto hace que puedas notar un gran sonido desde su primer uso...",
+        characteristics: [
+            "Es inalámbrico: No.",
+            "Con luz LED: Sí.",
+            "Con micrófono: Sí",
+            "Con pilas: No",
+        ],
+        category: "auriculares",
+        stock: 30,
+        images: [
+            "https://http2.mlstatic.com/D_NQ_NP_710834-MLA43710746221_102020-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_908504-MLA43711110372_102020-O.webp",
+            "https://http2.mlstatic.com/D_NQ_NP_799596-MLA43710746222_102020-O.webp",
+        ],
+    },
 ];
