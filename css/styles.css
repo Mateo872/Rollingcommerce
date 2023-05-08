@@ -854,5 +854,11 @@ main section .container_products .product .bi-heart:hover {
 .footer-link {
     color: white;
     list-style: none;
+  text-decoration: none;
+  }
+ #h3{
     text-decoration: none;
 }
+
+#h3 {
+    color: red;

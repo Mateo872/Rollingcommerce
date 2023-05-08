@@ -24,12 +24,12 @@
           <a class="navbar-brand" href="#">
             <img
               class="rounded-circle"
-              src="logo.png"
+              src="../images/Logo.jpg"
               alt=""
-              width="30"
-              height="24"
+              width="60"
+              height="47"
             />
-            RollingCommerce
+        <span style="color: #EE332C;"> Rolling</span>   <span>Commerce</span> 
           </a>
           <button
             class="navbar-toggler"
@@ -78,23 +78,101 @@
                   <input
                     class="form-control me-2"
                     type="search"
-                    placeholder="Buscar"
+                    placeholder="Buscar productos"
                     aria-label="Search"
                   />
-                  <button class="btn btn-outline-danger" type="submit">
+                  <button class="btn" type="submit">
                     <i class="bi bi-search"></i>
                   </button>
                 </form>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><i class="bi bi-cart"></i></a>
+                <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i></a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-person-fill"></i></a>
+                
+                <button type="button" class="btn bi bi-person nav-link" data-bs-toggle="modal" data-bs-target="#login"></button>
+                <div
+                  class="modal fade"
+                  id="login"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="myModalLogin"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-side" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header d-flex justify-content-around">
+                        <div class="text-center mt-5">
+                          <img src="./img/Logo.jpg" alt="Logo Rolling commerce" class=" img-fluid imgRollingC">
+                          
+                          <div class="d-flex mt-2">
+                            <h4 class="modal-title w-100 text-danger mt-3">
+                              Rolling
+                            </h4>
+                            <h4 class="modal-title w-100 mt-3"> Commerce 
+                            </h4>
+
+                          </div>
+
+                        </div>
+                        <button type="button" class="btn-close btnColor position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <h4 class="modal-title text-center w-100 mt-3">INICIAR SESION</h4>
+                      <form action="">
+
+                        <div class="modal-body mx-3">
+                          <div class="md-form">
+                            <i class="fas fa-envelope prefix grey-text"></i>
+                            <input
+                              type="email"
+                              id="email"
+                              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required
+                              minlength="12"
+                              maxlength="35"
+                              class="form-control validate colorLabelLogin"
+                              placeholder="Email"
+                              
+                            />
+                            <label
+                              data-error="wrong"
+                              data-success="right"
+                              for="email"
+                              ></label
+                            >
+                          </div>
+  
+                          <div class="md-form">
+                            <i class="fas fa-lock prefix grey-text"></i>
+                            <input
+                              type="password"
+                              id="pass"
+                              minlength="8"
+                              maxlength="20"
+                              class="form-control validate colorLabelLogin"
+                              placeholder="Contraseña"
+                            />
+                            <label
+                              data-error="wrong"
+                              data-success="right"
+                              for="pass" ></label
+                            >
+                          </div>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                          <button type="submit" class="btn btnLogin">Iniciar sesión</button>
+                          <a href="" class="mt-3">Regístrate</a>
+                        </div>
+                      </div>
+                      </form>
+                  </div>
+                </div>
                 <a class="nav-link" href="#"><i class="bi bi-person"></i></a>
               </li>
               <li class="nav-item">
-                <button id="theme-toggler" class="btn btn-outline-secondary">
-                  <i class="bi bi-moon"></i>
+                <button id="theme-toggler" class="btn ">
+                  <i class="bi bi-moon-fill"></i>
                 </button>
               </li>
             </ul>
@@ -559,5 +637,39 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <footer class=" mt-auto py-3 bg-black text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <h3 id="h3">INFORMACIÓN</h3>
+            <ul class="list-unstyled py-3">
+              <li class="py-1"><a href="#" class="footer-link text-decoration-none">Acerca de nosotros</a></li>
+              <li class="py-1"><a href="#" class="footer-link text-decoration-none">Información de entrega</a></li>
+              <li class="py-1"><a href="#" class="footer-link text-decoration-none">Políticas de privacidad</a></li>
+              <li class="py-1"><a href="#" class="footer-link text-decoration-none">Términos y condiciones</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 text-center">
+            <h3 id="h3">MI CUENTA</h3>
+            <ul class="list-unstyled py-3" >
+              <li class="py-1"><a href="#" class="footer-link text-decoration-none">Historial de pedidos</a></li>
+              <li class="py-1"><a href="#" class="footer-link text-decoration-none">Boletín</a></li>
+              <li class="py-1"><a href="#" class="footer-link text-decoration-none">Reembolsos</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 text-center">
+            <h3 id="h3" class="text-decoration-none">BOLETÍN INFORMATIVO</h3>
+            <p class="text-white text-center p-3 m-0">Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones y ofertas exclusivas.</p>
+            <form>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Ingrese el correo electrónico">
+                </div>
+                <button class="btn btn-danger mt-3" type="submit">Enviar</button>
+            </form>
+        </div>
+        
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
