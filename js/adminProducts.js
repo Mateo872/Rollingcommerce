@@ -17,11 +17,22 @@ const stock = document.getElementById('stock');
 const category = document.getElementById('category')
 const form = document.getElementById('form');
 const msjForm = document.getElementById('msjForm');
-
 const modalProduct = new bootstrap.Modal(document.querySelector('#modalAdd'));
 
 btnAdd.addEventListener('click', showModalProduct);
 form.addEventListener('submit', loadProduct);
+
+let listProducts = localStorage.getItem('listProducts');
+
+if(!listProducts){
+  listProducts = [];
+}else{
+  listProducts = JSON.parse(listProducts).map((product)=> new Product(
+    product.title, product.description, product.image, product.price, product.category, product.characteristics, product.imagePreviewOne, product.imagePreviewTwo, product.imagePreviewThree, product.stock
+  ))
+}
+
+console.log(listProducts);
 
 function showModalProduct(){
   //abrir la ventana modal
@@ -74,7 +85,12 @@ function loadProduct(e) {
     );
     console.log(newProduct);
 
-    // listProducts.push(newProduct);
+    listProducts.push(newProduct);
+
+    saveLocalstorage();
+
+    cleanProductForm();
+
     modalProduct.hide();
 
       // saveLS();
@@ -84,6 +100,11 @@ function loadProduct(e) {
   }
 }
 
-// function saveLS() {
-//   localStorage.setItem("listProducts", JSON.stringify(listProducts));
-// }
+function saveLocalstorage(){
+  localStorage.setItem("listProducts", JSON.stringify(listProducts));
+}
+function cleanProductForm(){
+  form.reset()
+}
+
+
