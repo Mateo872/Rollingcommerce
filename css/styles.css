@@ -961,3 +961,6 @@ footer {
   .colorLabelLogin{
     background-color: rgb(222, 221, 221);
   }
+  .modal-backdrop {
+    z-index: -1;
+  }
