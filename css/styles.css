@@ -50,6 +50,14 @@ section {
     z-index: 99;
 }
 
+.h1 {
+    color: var(--color_primary);
+}
+
+.title_value {
+    font-weight: bold;
+}
+
 main .container_cart {
     width: 95%;
     margin-top: 80px;
