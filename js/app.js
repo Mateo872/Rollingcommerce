@@ -31,7 +31,7 @@ function overlayClose(e) {
   }
 }
 
-const cartBtn = document.querySelector(".bi-cart"),
+const cartBtn = document.querySelector(".bi-cart-fill"),
   containerOverlay = document.querySelector(".cart_overlay"),
   navbarNavDropdown = document.querySelector("#navbarNavDropdown"),
   navbarToggler = document.querySelector(".navbar-toggler"),
