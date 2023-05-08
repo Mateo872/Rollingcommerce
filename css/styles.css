@@ -600,6 +600,7 @@ main section .container_products .product .bi-heart:hover {
     main section .container_products .product .product_feature .product_detail-cart i {
         font-size: 13px;
     }
+   
 }
 
 @media (min-width:989px) {
@@ -766,6 +767,37 @@ main section .container_products .product .bi-heart:hover {
     main section .container_products .products .product .bi-tag-fill {
         top: -18px;
         right: 11px;
+    }
+}
+  
+  .modal-dialog-side {
+    position: fixed;
+    left: 0;
+    transform: translate(0, -50%);
+    margin:  auto;
+    width: 500px;
+  }
+
+  .btnColor{
+    background-color: #EE332C;
+    border-radius: 50%;
+
+  }
+  .btnLogin{
+    background-color: #EE332C;
+    color: white;
+    width: 90%;
+  }
+  .imgRollingC{
+    max-width: 200px;
+  }
+  .colorLabelLogin{
+    background-color: rgb(222, 221, 221);
+  }
+@media (max-width: 525px)
+{
+    .modal-dialog-side {
+        width: 100%;
     }
 
     .filter_overlay .container_filter {
