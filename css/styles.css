@@ -780,7 +780,7 @@ main section .container_products .product .bi-heart:hover {
     }
 
     .filter_overlay .container_filter .filter_cta {
-        margin-top: 56px;
+        margin-top: 75px;
     }
 
     .filter_overlay .container_filter .filter h5 {
@@ -854,11 +854,13 @@ main section .container_products .product .bi-heart:hover {
 .footer-link {
     color: white;
     list-style: none;
-  text-decoration: none;
-  }
- #h3{
+    text-decoration: none;
+}
+
+#h3 {
     text-decoration: none;
 }
 
 #h3 {
     color: red;
+}
