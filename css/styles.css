@@ -600,6 +600,15 @@ main section .container_products .product .bi-heart:hover {
     main section .container_products .product .product_feature .product_detail-cart i {
         font-size: 13px;
     }
+
+    footer .form-footer {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    footer .text_newsletter {
+        width: 100%;
+    }
 }
 
 @media (min-width:989px) {
@@ -820,6 +829,22 @@ main section .container_products .product .bi-heart:hover {
         background-color: var(--color_tertiary);
         padding: 15px;
     }
+
+    footer .form-footer .input-email {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+
+    footer .form-footer .input-email::placeholder {
+        font-size: 14px;
+        color: #ddd;
+    }
+
+    footer .text_newsletter {
+        width: 80%;
+        margin-left: 0;
+        font-size: 14px;
+    }
 }
 
 .container-card {
@@ -851,10 +876,42 @@ main section .container_products .product .bi-heart:hover {
     margin-top: 5px;
 }
 
+
+footer {
+    padding: 24px 0;
+}
+
 .footer-link {
     color: white;
     list-style: none;
     text-decoration: none;
+}
+
+.form-footer {
+    width: 60%;
+    margin: 5px auto;
+}
+
+.form-footer .input-email {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    border-bottom: 2px solid var(--color_primary);
+    color: var(--color_tertiary);
+    font-size: 10px;
+    padding: 10px 0;
+    border-radius: 0;
+}
+
+.form-footer .input-email::placeholder {
+    font-size: 10px;
+    color: #ddd;
+}
+
+.text_newsletter {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 12px;
 }
 
 #h3 {
