@@ -76,14 +76,14 @@
                 <a class="nav-link" href="#">Contacto</a>
               </li>
               <li class="nav-item">
-                <form class="d-flex">
+                <form class="d-flex" data-form>
                   <input
                     class="form-control me-2"
-                    type="search"
+                    type="text"
                     placeholder="Buscar productos"
-                    aria-label="Search"
+                    data-search
                   />
-                  <button class="btn" type="submit">
+                  <button class="btn" type="submit" data-button>
                     <i class="bi bi-search"></i>
                   </button>
                 </form>
@@ -431,10 +431,10 @@
             <h3 class="mb-0">Todos los productos</h3>
             <i class="bi bi-sliders"></i>
           </div>
-          <div class="products d-flex justify-content-between flex-wrap" id="cards">
-       
-            
-          </div>
+          <div
+            class="products d-flex justify-content-between flex-wrap"
+            id="cards"
+          ></div>
           <div class="filter_overlay vw-100 vh-100 d-flex align-items-end">
             <div class="container_filter">
               <div
