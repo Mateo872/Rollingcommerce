@@ -13,7 +13,7 @@ function addProduct(product) {
   } else {
     textEmpty.classList.add("d-none");
     product.map((product) => {
-      const { image, title, price, code } = product;
+      const { image, title, price, id } = product;
 
       productsContainer.innerHTML += `
       <div class="product d-flex flex-column justify-content-between p-3">
@@ -27,7 +27,7 @@ function addProduct(product) {
                 <p class="price mb-0">$${price}</p>
                 </div>
                 <div class="product_detail d-flex justify-content-between align-items-center">
-                <a href="../pages/detailProduct.html?id=${code}" class="mb-0">
+                <a href="../pages/detailProduct.html?id=${id}" class="mb-0">
                     Ver más
                 </a>
                 <i class="bi bi-cart"></i>

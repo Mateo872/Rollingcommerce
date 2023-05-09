@@ -11,7 +11,7 @@ const productsContainer = document.querySelector("[data-products-container]"),
 const productFiltered = products.filter((product) => product.id === +id);
 
 productFiltered.map((product) => {
-  const { images, name, price, description, characteristics, stock, category } =
+  const { image, title, price, description, characteristics, stock, category } =
     product;
 
   productsContainer.innerHTML = `
@@ -20,7 +20,7 @@ productFiltered.map((product) => {
   <div class="mx-3">
     <p>En stock 66</p>
     <img
-      src="${images[0]}"
+      src="${image}"
       class="img-fluid rounded-3 border-3 shadow"
       alt="auricular"
     />
@@ -30,27 +30,27 @@ productFiltered.map((product) => {
       <div class="col-md-4">
         <button class="btn border-0">
           <img
-            src="${images[1]}"
+            src="${image}"
             class="img-fluid rounded-3 border-3 shadow image_detail"
-            alt="${name}"
+            alt="${title}"
           />
         </button>
       </div>
       <div class="col-md-4">
         <button class="btn border-0">
           <img
-            src="${images[2]}"
+            src="${image}"
             class="img-fluid rounded-3 border-3 shadow image_detail"
-            alt="${name}"
+            alt="${title}"
           />
         </button>
       </div>
       <div class="col-md-4">
         <button class="btn border-0">
           <img
-            src="${images[1]}"
+            src="${image}"
             class="img-fluid rounded-3 border-3 shadow image_detail"
-            alt="${name}"
+            alt="${title}"
           />
         </button>
       </div>
@@ -63,7 +63,7 @@ productFiltered.map((product) => {
       <i class="bi bi-heart text-danger fs-4"></i>
     </p>
     <h4>
-     ${name}
+     ${title}
     </h4>
     <p class="display-6">$${price}</p>
     <p class="">${category}</p>
@@ -80,7 +80,7 @@ productFiltered.map((product) => {
   `;
 
   productsCharacteristics.innerHTML = `
-  <h4>Características de ${name}</h4>
+  <h4>Características de ${title}</h4>
         <ul>
           <li>${characteristics[0]}</li>
           <li>${characteristics[1]}</li>
@@ -107,12 +107,12 @@ dataCategory = products.filter(
 );
 
 dataCategory.map((product) => {
-  const { images, name, price, id } = product;
+  const { image, title, price, id } = product;
 
   productsSimilar.innerHTML += `
     <div class="card card-similar-product shadow p-3 rounded d-flex flex-column justify-content-between ">
-      <img src="${images[0]}" class="img-fluid" />
-      <h6 class="pt-2 mb-0 text-truncate">${name}</h6>
+      <img src="${image}" class="img-fluid" />
+      <h6 class="pt-2 mb-0 text-truncate">${title}</h6>
       <p class="fw-semibold pb-1 mb-0">$${price}</p>
       <a href="../pages/detailProduct.html?id=${id}" class="mb-0 text-danger text-decoration-none fw-semibold">
         Ver más

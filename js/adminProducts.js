@@ -3,6 +3,7 @@ import { dataValidate } from "./helpers.js";
 
 let products = [
   {
+    id: 1,
     title: "Nintendo Switch",
     price: 499,
     description:
@@ -18,6 +19,7 @@ let products = [
     image: "../images/nintendoSwitch.png",
   },
   {
+    id: 2,
     title: "Xbox Series S",
     price: 899,
     description:
@@ -33,6 +35,7 @@ let products = [
     image: "../images/xbox.png",
   },
   {
+    id: 3,
     title: "Playstation 5",
     price: 890,
     description:
@@ -48,6 +51,7 @@ let products = [
     image: "../images/ps5.png",
   },
   {
+    id: 4,
     title: "Silla gamer Esports Sillon",
     price: 299,
     description:
@@ -63,6 +67,7 @@ let products = [
     image: "../images/sillaGamer.png",
   },
   {
+    id: 5,
     title: "Silla de escritorio DeSillas pro gamer Legend",
     price: 599,
     description:
@@ -78,6 +83,7 @@ let products = [
     image: "../images/sillaGamer2.png",
   },
   {
+    id: 6,
     title: "Silla de escritorio Baires4 PS4",
     price: 299,
     description:
@@ -93,6 +99,7 @@ let products = [
     image: "../images/sillaGamer3.png",
   },
   {
+    id: 7,
     title: "Pc Armada Gamer Amd Ryzen 5 4650g",
     price: 699,
     description: "Pc Armada Gamer Amd Ryzen 5 4650g 16g Vega 7 240g Ssd.",
@@ -109,6 +116,7 @@ let products = [
     image: "../images/computadora.png",
   },
   {
+    id: 8,
     title: "Pc Armada Gamer Amd Ryzen 5 5600g",
     price: 799,
     description: "Pc Armada Gamer Amd Ryzen 5 5600g 16gb 480gb Ssd Mother Am4.",
@@ -123,6 +131,7 @@ let products = [
     image: "../images/computadora2.png",
   },
   {
+    id: 9,
     title: "Computadora Pc Cpu Solarmax Intel Core I5",
     price: 199,
     description: "Computadora Pc Cpu Solarmax Intel Core I5 11va 32gb 480 Ssd.",
@@ -137,6 +146,7 @@ let products = [
     image: "../images/computadora3.png",
   },
   {
+    id: 10,
     title: "Samsung Galaxy S23 Sgb 256g",
     price: 500,
     description:
@@ -153,6 +163,7 @@ let products = [
       "https://http2.mlstatic.com/D_NQ_NP_683227-MLA53448432818_012023-O.webp",
   },
   {
+    id: 11,
     title: "Apple iPhone 13 Pro",
     price: 800,
     description:
@@ -169,6 +180,7 @@ let products = [
       "https://http2.mlstatic.com/D_NQ_NP_640945-MLA47778929198_102021-O.webp",
   },
   {
+    id: 12,
     title: "Motorola Edge 30 Neo",
     price: 200,
     description:
@@ -185,6 +197,7 @@ let products = [
       "https://http2.mlstatic.com/D_NQ_NP_942467-MLA52542787717_112022-O.webp",
   },
   {
+    id: 13,
     title: "Smart TV Samsung Series 7 K 50 pulgadas 220V - 240V",
     price: 180,
     description:
@@ -201,6 +214,7 @@ let products = [
       "https://http2.mlstatic.com/D_NQ_NP_787221-MLA48007684849_102021-O.webp",
   },
   {
+    id: 14,
     title: "Smart Tv Motorola Mt50g22 Led Full Hd 50 220v",
     price: 180,
     description:
@@ -217,6 +231,7 @@ let products = [
       "https://http2.mlstatic.com/D_NQ_NP_849715-MLA54897442270_042023-O.webp",
   },
   {
+    id: 15,
     title: "Smart TV Philips 7000 Series 50PUD7406/77 LED",
     price: 24,
     description:
@@ -233,6 +248,7 @@ let products = [
       "https://http2.mlstatic.com/D_NQ_NP_745854-MLA48622828334_122021-O.webp",
   },
   {
+    id: 16,
     title: "Auriculares Harman JBL Tune 760NC JBLT760NC",
     price: 50,
     description:
@@ -249,6 +265,7 @@ let products = [
       "https://http2.mlstatic.com/D_NQ_NP_796107-MLA48750424811_012022-O.webp",
   },
   {
+    id: 17,
     title: "Auriculares Sony WH-XB910N",
     price: 80,
     description:
@@ -265,6 +282,7 @@ let products = [
       "https://http2.mlstatic.com/D_NQ_NP_720416-MLA52221299687_102022-O.webp",
   },
   {
+    id: 18,
     title: "Auriculares Kotion G2000",
     price: 20,
     description:
@@ -457,34 +475,40 @@ function cleanProductForm() {
 // }
 
 window.deleteProduct = (code) => {
-  Swal.fire({
-    title: "Está seguro que desea borrar el producto?",
-    text: "No se puede revertir este proceso",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Eliminar",
-    cancelButtonText: "Cancelar",
-  }).then((result) => {
-    if (result.isConfirmed) {
-      console.log(code);
-      console.log("aqui borro el producto");
-      let positionProduct = products.findIndex(
-        (product) => product.code === code
-      );
-      console.log(positionProduct);
-      products.splice(positionProduct, 1);
-      saveLocalstorage();
-      let productCardData = document.getElementById("productCard");
-      // console.log(productCardData.children[positionProduct]);
-      productCardData.removeChild(productCardData.children[positionProduct]);
+  Sw;
+  id: 1,
+    al
+      .fire({
+        title: "Está seguro que desea borrar el producto?",
+        text: "No se puede revertir este proceso",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Eliminar",
+        cancelButtonText: "Cancelar",
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          console.log(code);
+          console.log("aqui borro el producto");
+          let positionProduct = products.findIndex(
+            (product) => product.code === code
+          );
+          console.log(positionProduct);
+          products.splice(positionProduct, 1);
+          saveLocalstorage();
+          let productCardData = document.getElementById("productCard");
+          // console.log(productCardData.children[positionProduct]);
+          productCardData.removeChild(
+            productCardData.children[positionProduct]
+          );
 
-      Swal.fire(
-        "Producto eliminado",
-        "El producto selecionado fue eliminado correctamente.",
-        "success"
-      );
-    }
-  });
+          Swal.fire(
+            "Producto eliminado",
+            "El producto selecionado fue eliminado correctamente.",
+            "success"
+          );
+        }
+      });
 };
