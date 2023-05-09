@@ -776,6 +776,44 @@ main section .container_products .product .bi-heart:hover {
         font-size: 12.8px;
     }
 
+    main section .card {
+        width: 180px;
+        height: 255px;
+    }
+
+    #productCard {
+        gap: 8px;
+    }
+
+    main section .container_allProducts {
+        margin-top: 100px;
+    }
+
+    main section .cardProduct div img {
+        width: 125px;
+        height: 80px;
+    }
+
+    main section .cardProduct div h5 {
+        font-size: 14px;
+    }
+
+    main section .cardProduct div .desc {
+        font-size: 14px;
+    }
+
+    main section .cardProduct div .price {
+        font-size: 14px;
+    }
+
+    main section .cardProduct div small {
+        font-size: 14px;
+    }
+
+    main section .cardProduct i {
+        cursor: pointer;
+    }
+
     .image_detail {
         width: 180px;
         height: 180px;
@@ -1053,6 +1091,54 @@ main section .container_products .product .bi-heart:hover {
 
 .container-card {
     gap: 20px;
+}
+
+.cardProduct {
+    width: 130px;
+    height: 180px;
+    background-color: var(--color_tertiary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    position: relative;
+}
+
+.container_allProducts {
+    margin-top: 80px;
+}
+
+.container_card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardProduct div img {
+    width: 80px;
+    height: 50px;
+}
+
+.cardProduct div h5 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.cardProduct div .desc {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cardProduct div .price {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cardProduct div small {
+    font-size: 12px;
+    font-weight: bold;
+    opacity: .7;
 }
 
 .card-similar-product {
