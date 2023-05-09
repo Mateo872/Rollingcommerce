@@ -8,7 +8,7 @@ const productsContainer = document.querySelector("[data-products-container]"),
     "[data-products-characteristics]"
   );
 
-const productFiltered = products.filter((product) => product.id === +id);
+const productFiltered = products.filter((product) => product.code === id);
 
 productFiltered.map((product) => {
   const { image, title, price, description, characteristics, stock, category } =

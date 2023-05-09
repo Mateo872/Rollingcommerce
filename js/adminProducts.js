@@ -57,14 +57,15 @@ function initialLoad() {
 function createCard(product, index) {
   let productCardData = document.getElementById("productCard");
 
-  productCardData.innerHTML += `<div class="card col-lg-3 col-md-5 m-2 img-fluid rounded-3 border-3 shadow">
-  <div class="col-12 g-0">
-  <div class="col position-relative">
+  productCardData.innerHTML += `<div class="mt-4 cardProduct d-flex justify-content-between flex-wrap">
+  <div class="container_card py-3">
+  <div class="">
+      <div class="d-flex justify-content-center">
       <img
           src="${product.image}"
-          class="card-img-top"
           alt="producto"
       />
+      </div>
       <div class="position-absolute top-0 end-0">
           <div class="m-2">
               <i
@@ -80,19 +81,15 @@ function createCard(product, index) {
           </div>
       </div>
   </div>
-  <div class="col my-3">
-      <div class="card-body">
-          <h5 class="card-title fs-2">
+  <div>
+      <div class="product_feature">
+          <h5 class="m-0  mb-1">
               ${product.title}
           </h5>
-          <p class="card-text">
-              ${product.description}
+          <p class="m-0 fw-bold price mb-0">
+             $${product.price}
           </p>
-
-          <p class="card-text fw-bold">
-              <small class="fs-4">$${product.price}</small>
-          </p>
-          <p class="card-text">
+          <p class="m-0">
               <small># ${index + 1}</small>
           </p>
       </div>
