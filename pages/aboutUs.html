@@ -52,47 +52,11 @@
             id="navbarNavDropdown"
           >
             <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Productos
-                </a>
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <li><a class="dropdown-item" href="#">Categoría 1</a></li>
-                  <li><a class="dropdown-item" href="#">Categoría 2</a></li>
-                  <li><a class="dropdown-item" href="#">Categoría 3</a></li>
-                </ul>
-              </li>
               <li class="nav-item">
                 <a class="nav-link" href="../pages/aboutUs.html">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <form class="d-flex">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Buscar productos"
-                    aria-label="Search"
-                  />
-                  <button class="btn" type="submit">
-                    <i class="bi bi-search"></i>
-                  </button>
-                </form>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i></a>
+                <a class="nav-link" href="#footer">Contacto</a>
               </li>
               <li class="nav-item">
                 <button
@@ -136,7 +100,7 @@
                       <h4 class="modal-title text-center w-100 mt-3">
                         INICIAR SESION
                       </h4>
-                      <form action="">
+                      <form>
                         <div class="modal-body mx-3">
                           <div class="md-form">
                             <i class="fas fa-envelope prefix grey-text"></i>
@@ -184,11 +148,6 @@
                     </div>
                   </div>
                 </div>
-              </li>
-              <li class="nav-item">
-                <button id="theme-toggler" class="btn">
-                  <i class="bi bi-moon-fill"></i>
-                </button>
               </li>
             </ul>
           </div>
@@ -314,7 +273,7 @@
         </article>
       </section>
     </main>
-    <footer class="mt-auto bg-black text-dark">
+    <footer class="mt-auto bg-black text-white" id="footer">
       <div class="container">
         <div class="row">
           <div class="col-md-4 text-center text-md-start">
@@ -322,28 +281,28 @@
             <ul class="list-unstyled">
               <li class="py-1">
                 <a
-                  href="#"
+                  href="../pages/error404.html"
                   class="footer-link text-decoration-none text_newsletter"
                   >Acerca de nosotros</a
                 >
               </li>
               <li class="py-1">
                 <a
-                  href="#"
+                  href="../pages/error404.html"
                   class="footer-link text-decoration-none text_newsletter"
                   >Información de entrega</a
                 >
               </li>
               <li class="py-1">
                 <a
-                  href="#"
+                  href="../pages/error404.html"
                   class="footer-link text-decoration-none text_newsletter"
                   >Políticas de privacidad</a
                 >
               </li>
               <li class="py-1">
                 <a
-                  href="#"
+                  href="../pages/error404.html"
                   class="footer-link text-decoration-none text_newsletter"
                   >Términos y condiciones</a
                 >
@@ -355,21 +314,21 @@
             <ul class="list-unstyled">
               <li class="py-1">
                 <a
-                  href="#"
+                  href="../pages/error404.html"
                   class="footer-link text-decoration-none text_newsletter"
                   >Historial de pedidos</a
                 >
               </li>
               <li class="py-1">
                 <a
-                  href="#"
+                  href="../pages/error404.html"
                   class="footer-link text-decoration-none text_newsletter"
                   >Boletín</a
                 >
               </li>
               <li class="py-1">
                 <a
-                  href="#"
+                  href="../pages/error404.html"
                   class="footer-link text-decoration-none text_newsletter"
                   >Reembolsos</a
                 >
@@ -381,13 +340,16 @@
             <p class="text-white text-center text_newsletter text-md-start">
               Suscríbete a nuestros boletines ahora y mantente al día.
             </p>
-            <form class="form-footer">
+            <form class="form-footer" id="emailForm">
               <div class="form-group">
                 <input
                   type="email"
                   class="form-control w-100 input-email"
+                  id="emailInput"
                   placeholder="Ingrese el correo electrónico"
+                  maxlength="100"
                 />
+                <small id="emailError" class="form-text text-danger"></small>
               </div>
               <button class="btn btn-danger mt-3 w-100" type="submit">
                 Enviar
@@ -397,7 +359,7 @@
         </div>
       </div>
     </footer>
-    <script src="../js/cart.js"></script>
+    <script src="../js/validationFooter.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

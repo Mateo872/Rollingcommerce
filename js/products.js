@@ -1,5 +1,6 @@
 const products = [
   {
+    id: 1,
     name: "Nintendo Switch",
     price: 499,
     description:
@@ -19,6 +20,7 @@ const products = [
     ],
   },
   {
+    id: 2,
     name: "Xbox Series S",
     price: 899,
     description:
@@ -38,6 +40,7 @@ const products = [
     ],
   },
   {
+    id: 3,
     name: "Playstation 5",
     price: 890,
     description:
@@ -57,6 +60,7 @@ const products = [
     ],
   },
   {
+    id: 4,
     name: "Silla gamer Esports Sillon",
     price: 299,
     description:
@@ -76,6 +80,7 @@ const products = [
     ],
   },
   {
+    id: 5,
     name: "Silla de escritorio DeSillas pro gamer Legend",
     price: 599,
     description:
@@ -95,6 +100,7 @@ const products = [
     ],
   },
   {
+    id: 6,
     name: "Silla de escritorio Baires4 PS4",
     price: 299,
     description:
@@ -114,6 +120,7 @@ const products = [
     ],
   },
   {
+    id: 7,
     name: "Pc Armada Gamer Amd Ryzen 5 4650g",
     price: 699,
     description: "Pc Armada Gamer Amd Ryzen 5 4650g 16g Vega 7 240g Ssd.",
@@ -134,6 +141,7 @@ const products = [
     ],
   },
   {
+    id: 8,
     name: "Pc Armada Gamer Amd Ryzen 5 5600g",
     price: 799,
     description: "Pc Armada Gamer Amd Ryzen 5 5600g 16gb 480gb Ssd Mother Am4.",
@@ -152,6 +160,7 @@ const products = [
     ],
   },
   {
+    id: 9,
     name: "Computadora Pc Cpu Solarmax Intel Core I5",
     price: 199,
     description: "Computadora Pc Cpu Solarmax Intel Core I5 11va 32gb 480 Ssd.",
@@ -170,6 +179,7 @@ const products = [
     ],
   },
   {
+    id: 10,
     name: "Samsung Galaxy S23 Sgb 256g",
     price: 500,
     description:
@@ -189,6 +199,7 @@ const products = [
     ],
   },
   {
+    id: 11,
     name: "Apple iPhone 13 Pro",
     price: 800,
     description:
@@ -208,6 +219,7 @@ const products = [
     ],
   },
   {
+    id: 12,
     name: "Motorola Edge 30 Neo",
     price: 200,
     description:
@@ -227,6 +239,7 @@ const products = [
     ],
   },
   {
+    id: 13,
     name: "Smart TV Samsung Series 7 K 50 pulgadas 220V - 240V",
     price: 180,
     description:
@@ -246,6 +259,7 @@ const products = [
     ],
   },
   {
+    id: 14,
     name: "Smart Tv Motorola Mt50g22 Led Full Hd 50 220v",
     price: 180,
     description:
@@ -265,6 +279,7 @@ const products = [
     ],
   },
   {
+    id: 15,
     name: "Smart TV Philips 7000 Series 50PUD7406/77 LED",
     price: 24,
     description:
@@ -284,6 +299,7 @@ const products = [
     ],
   },
   {
+    id: 16,
     name: "Auriculares Harman JBL Tune 760NC JBLT760NC",
     price: 50,
     description:
@@ -303,6 +319,7 @@ const products = [
     ],
   },
   {
+    id: 17,
     name: "Auriculares Sony WH-XB910N",
     price: 80,
     description:
@@ -322,6 +339,7 @@ const products = [
     ],
   },
   {
+    id: 18,
     name: "Auriculares Kotion G2000",
     price: 20,
     description:
@@ -355,7 +373,7 @@ function addProduct(product) {
   } else {
     textEmpty.classList.add("d-none");
     product.map((product) => {
-      const { images, name, price, stock } = product;
+      const { images, name, price, id } = product;
 
       productsContainer.innerHTML += `
       <div class="product d-flex flex-column justify-content-between p-3">
@@ -369,7 +387,7 @@ function addProduct(product) {
                 <p class="price mb-0">$${price}</p>
                 </div>
                 <div class="product_detail d-flex justify-content-between align-items-center">
-                <a href="../pages/detailProduct.html" class="mb-0">
+                <a href="../pages/detailProduct.html?id=${id}" class="mb-0">
                     Ver más
                 </a>
                 <i class="bi bi-cart"></i>
@@ -386,17 +404,23 @@ const btnApply = document.querySelector("[data-apply]"),
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
+let filteredProducts = [];
+
 btnApply.addEventListener("click", () => {
-  const filteredProducts = getFilteredProducts();
+  filteredProducts = getFilteredProducts();
   addProduct(filteredProducts);
-  btnDelete.disabled = false;
+
+  if (checkboxesChecked() > 0) {
+    btnDelete.disabled = false;
+  }
 });
 
 btnDelete.addEventListener("click", () => {
-  checkboxes.forEach((checkbox) => (checkbox.checked = false));
   const allProducts = [...products];
-  addProduct(allProducts);
+  checkboxes.forEach((checkbox) => (checkbox.checked = false));
   btnDelete.disabled = true;
+  searchInput.value = "";
+  addProduct(allProducts);
 });
 
 const filterCategories = document.querySelectorAll(".filter_categories"),
@@ -405,7 +429,7 @@ const filterCategories = document.querySelectorAll(".filter_categories"),
   filterDiscount = document.querySelectorAll(".filter_discount");
 
 function getFilteredProducts() {
-  let filteredProducts = [...products];
+  filteredProducts = [...products];
 
   const selectedCategories = Array.from(filterCategories)
     .filter((input) => input.querySelector("input").checked)
@@ -456,4 +480,49 @@ function getFilteredProducts() {
   }
 
   return filteredProducts;
+}
+
+const searchInput = document.querySelector("[data-search]"),
+  form = document.querySelector("[data-form]"),
+  btnSearch = document.querySelector("[data-button]");
+
+form.addEventListener("submit", (e) => e.preventDefault());
+
+btnSearch.addEventListener("click", () => {
+  searchProduct({ key: "Enter" });
+});
+
+searchInput.addEventListener("keyup", searchProduct);
+
+function searchProduct(e) {
+  if (searchInput.value === "" && checkboxesChecked() === 0) {
+    addProduct(products);
+  }
+
+  if (e.key === "Enter") {
+    const value = searchInput.value;
+
+    if (checkboxesChecked() > 0 && filteredProducts.length > 0) {
+      filteredProducts = filteredProducts.filter((product) =>
+        product.name.toLowerCase().includes(value.toLowerCase())
+      );
+    } else {
+      filteredProducts = products.filter((product) =>
+        product.name.toLowerCase().includes(value.toLowerCase())
+      );
+    }
+
+    addProduct(filteredProducts);
+  }
+}
+
+function checkboxesChecked() {
+  let count = 0;
+
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+      count++;
+    }
+  });
+  return count;
 }

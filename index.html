@@ -14,9 +14,6 @@
             integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
             crossorigin="anonymous"
         />
-        <script src="
-        https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
-        "></script>
         <link rel="stylesheet" href="./css/styles.css" />
         <title>Rollingcommerce</title>
     </head>
@@ -190,6 +187,7 @@
                                                         <input
                                                             type="password"
                                                             id="pass"
+                                                            minlength="8"
                                                             maxlength="20"
                                                             class="form-control validate colorLabelLogin"
                                                             placeholder="Contraseña"
@@ -200,11 +198,6 @@
                                                             for="pass"
                                                         ></label>
                                                     </div>
-                                                    <div
-                                                        class="alert alert-danger mt-3 d-none"
-                                                        role="alert"
-                                                        id="msjFormIndex"
-                                                    ></div>
                                                 </div>
                                                 <div
                                                     class="modal-footer d-flex justify-content-center"
