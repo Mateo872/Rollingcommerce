@@ -103,14 +103,14 @@ dataCategory = products.filter(
 );
 
 dataCategory.map((product) => {
-  const { image, title, price, id } = product;
+  const { image, title, price, code } = product;
 
   productsSimilar.innerHTML += `
     <div class="card card-similar-product shadow p-3 rounded d-flex flex-column justify-content-between ">
       <img src="${image}" class="img-fluid" />
       <h6 class="pt-2 mb-0 text-truncate">${title}</h6>
       <p class="fw-semibold pb-1 mb-0">$${price}</p>
-      <a href="../pages/detailProduct.html?id=${id}" class="mb-0 text-danger text-decoration-none fw-semibold">
+      <a href="../pages/detailProduct.html?id=${code}" class="mb-0 text-danger text-decoration-none fw-semibold">
         Ver más
       </a>
       <i class="bi bi-cart"></i>

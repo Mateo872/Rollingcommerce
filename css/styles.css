@@ -320,6 +320,11 @@ main section .container_products_featured .product_featured {
     padding-bottom: 8px;
 }
 
+main section .container_products_featured .product_featured a {
+    color: var(--color_secondary);
+    text-decoration: none;
+}
+
 main section .container_products_featured .one {
     background-image: url("../images/masVendidos.png");
 }

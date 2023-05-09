@@ -51,6 +51,7 @@ btnApply.addEventListener("click", () => {
   if (checkboxesChecked() > 0) {
     btnDelete.disabled = false;
   }
+  updateAllProductsText();
 });
 
 btnDelete.addEventListener("click", () => {
@@ -134,11 +135,18 @@ btnSearch.addEventListener("click", () => {
 searchInput.addEventListener("keyup", searchProduct);
 
 function searchProduct(e) {
-  if (searchInput.value === "" && checkboxesChecked() === 0) {
+  const value = searchInput.value.trim();
+
+  if (value === "") {
     addProduct(products);
+    checkboxes.forEach((checkbox) => (checkbox.checked = false));
+    btnDelete.disabled = true;
+    updateAllProductsText();
   }
 
   if (e.key === "Enter") {
+    updateAllProductsText();
+
     const value = searchInput.value;
 
     if (checkboxesChecked() > 0 && filteredProducts.length > 0) {
@@ -155,10 +163,6 @@ function searchProduct(e) {
   }
 }
 
-checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener("change", updateAllProductsText);
-});
-
 function updateAllProductsText() {
   const selectedCategories = Array.from(filterCategories)
     .filter((input) => input.querySelector("input").checked)
@@ -169,6 +173,10 @@ function updateAllProductsText() {
   if (selectedCategories.length > 0) {
     allProductsText.textContent = selectedCategories.join(", ");
   } else {
+    allProductsText.textContent = "Todos los productos";
+  }
+
+  if (searchInput.value.length > 0) {
     allProductsText.textContent = "Todos los productos";
   }
 }
