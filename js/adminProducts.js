@@ -158,13 +158,34 @@ function cleanProductForm(){
 // }
 
 window.deleteProduct = (code)=>{
-  console.log(code)
-  console.log('aqui borro el producto')
-  let positionProduct = listProducts.findIndex(product => product.code === code)
-  console.log(positionProduct);
-  listProducts.splice(positionProduct,1);
-  saveLocalstorage();
-  let productCardData = document.getElementById('productCard');
-  // console.log(productCardData.children[positionProduct]);
-  productCardData.removeChild(productCardData.children[positionProduct]);
+
+  Swal.fire({
+    title: 'Está seguro que desea borrar el producto?',
+    text: "No se puede revertir este proceso",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Eliminar',
+    cancelButtonText: 'Cancelar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      console.log(code)
+      console.log('aqui borro el producto')
+      let positionProduct = listProducts.findIndex(product => product.code === code)
+      console.log(positionProduct);
+      listProducts.splice(positionProduct,1);
+      saveLocalstorage();
+      let productCardData = document.getElementById('productCard');
+      // console.log(productCardData.children[positionProduct]);
+      productCardData.removeChild(productCardData.children[positionProduct]);
+
+      Swal.fire(
+        'Producto eliminado',
+        'El producto selecionado fue eliminado correctamente.',
+        'success'
+      )
+    }
+  })
+
 }
