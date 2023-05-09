@@ -17,6 +17,8 @@ const form = document.getElementById("form");
 const msjForm = document.getElementById("msjForm");
 const modalProduct = new bootstrap.Modal(document.querySelector("#modalAdd"));
 
+let productStatus = true;
+
 btnAdd.addEventListener("click", showModalProduct);
 form.addEventListener("submit", loadProduct);
 
@@ -54,13 +56,15 @@ function initialLoad() {
 function createCard(product, index) {
   let productCardData = document.getElementById("productCard");
 
-  productCardData.innerHTML += `<div class="mt-4 cardProduct d-flex justify-content-between flex-wrap">
+  productCardData.innerHTML += `<div class="mt-4 cardProduct d-flex justify-content-between flex-wrap" data-code="${
+    product.code
+  }">
   <div class="container_card py-3">
   <div class="">
       <div class="d-flex justify-content-center">
       <img
           src="${product.image}"
-          alt="producto"
+          alt="${product.title}"
       />
       </div>
       <div class="position-absolute top-0 end-0">
@@ -72,7 +76,9 @@ function createCard(product, index) {
                   style="color: #ee332c"
               ></i>
               <i
-                  class="bi bi-pencil-fill fs-5 ms-2"
+                  class="bi bi-pencil-fill fs-5 ms-2" onclick = "editProduct('${
+                    product.code
+                  }')"
                   style="color: #ee332c"
               ></i>
           </div>
@@ -102,6 +108,10 @@ function showModalProduct() {
 
 function loadProduct(e) {
   e.preventDefault();
+
+  if (!productStatus) {
+    updateProduct();
+  }
 
   let data = dataValidate(
     title.value,
@@ -151,9 +161,54 @@ function loadProduct(e) {
   }
 }
 
+window.editProduct = (uniqueCode) => {
+  const product = products.find((prod) => prod.code === uniqueCode);
+
+  modalProduct.show();
+  code.value = product.code;
+  title.value = product.title;
+  description.value = product.description;
+  characteristics.value = product.characteristics;
+  image.value = product.image;
+  imagePreviewOne.value = product.imagePreviewOne;
+  imagePreviewTwo.value = product.imagePreviewTwo;
+  imagePreviewThree.value = product.imagePreviewThree;
+  category.value = product.category;
+  price.value = product.price;
+  stock.value = product.stock;
+  productStatus = false;
+};
+
+function updateProduct() {
+  let positionProduct = products.findIndex((prod) => prod.code === code.value);
+  products[positionProduct].title = title.value;
+  products[positionProduct].description = description.value;
+  products[positionProduct].characteristics = characteristics.value;
+  products[positionProduct].image = image.value;
+  products[positionProduct].imagePreviewOne = imagePreviewOne.value;
+  products[positionProduct].imagePreviewTwo = imagePreviewTwo.value;
+  products[positionProduct].imagePreviewThree = imagePreviewThree.value;
+  products[positionProduct].category = category.value;
+  products[positionProduct].price = price.value;
+  products[positionProduct].stock = stock.value;
+  saveLocalstorage();
+  cleanProductForm();
+  modalProduct.hide();
+  Swal.fire(
+    "Se editó un producto",
+    "El producto seleccionado fue editado correctamente",
+    "success"
+  );
+  const productCardData = document.getElementById("productCard");
+  productCardData.innerHTML = "";
+
+  products.forEach((product, index) => createCard(product, index));
+}
+
 function saveLocalstorage() {
   localStorage.setItem("listProducts", JSON.stringify(products));
 }
+
 function cleanProductForm() {
   form.reset();
 }
