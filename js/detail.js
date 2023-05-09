@@ -90,10 +90,6 @@ productFiltered.map((product) => {
   `;
 });
 
-// const productsCategories = products.filter(
-//   (product) => product.category === productFiltered.category
-// );
-
 let productCategory = [];
 
 productFiltered.forEach((product) => {
