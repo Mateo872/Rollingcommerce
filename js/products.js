@@ -355,7 +355,7 @@ function addProduct(product) {
   } else {
     textEmpty.classList.add("d-none");
     product.map((product) => {
-      const { images, name, price, stock } = product;
+      const { images, name, price } = product;
 
       productsContainer.innerHTML += `
       <div class="product d-flex flex-column justify-content-between p-3">
@@ -386,17 +386,23 @@ const btnApply = document.querySelector("[data-apply]"),
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
+let filteredProducts = [];
+
 btnApply.addEventListener("click", () => {
-  const filteredProducts = getFilteredProducts();
+  filteredProducts = getFilteredProducts();
   addProduct(filteredProducts);
-  btnDelete.disabled = false;
+
+  if (checkboxesChecked() > 0) {
+    btnDelete.disabled = false;
+  }
 });
 
 btnDelete.addEventListener("click", () => {
-  checkboxes.forEach((checkbox) => (checkbox.checked = false));
   const allProducts = [...products];
-  addProduct(allProducts);
+  checkboxes.forEach((checkbox) => (checkbox.checked = false));
   btnDelete.disabled = true;
+  searchInput.value = "";
+  addProduct(allProducts);
 });
 
 const filterCategories = document.querySelectorAll(".filter_categories"),
@@ -405,7 +411,7 @@ const filterCategories = document.querySelectorAll(".filter_categories"),
   filterDiscount = document.querySelectorAll(".filter_discount");
 
 function getFilteredProducts() {
-  let filteredProducts = [...products];
+  filteredProducts = [...products];
 
   const selectedCategories = Array.from(filterCategories)
     .filter((input) => input.querySelector("input").checked)
@@ -456,4 +462,49 @@ function getFilteredProducts() {
   }
 
   return filteredProducts;
+}
+
+const searchInput = document.querySelector("[data-search]"),
+  form = document.querySelector("[data-form]"),
+  btnSearch = document.querySelector("[data-button]");
+
+form.addEventListener("submit", (e) => e.preventDefault());
+
+btnSearch.addEventListener("click", () => {
+  searchProduct({ key: "Enter" });
+});
+
+searchInput.addEventListener("keyup", searchProduct);
+
+function searchProduct(e) {
+  if (searchInput.value === "" && checkboxesChecked() === 0) {
+    addProduct(products);
+  }
+
+  if (e.key === "Enter") {
+    const value = searchInput.value;
+
+    if (checkboxesChecked() > 0 && filteredProducts.length > 0) {
+      filteredProducts = filteredProducts.filter((product) =>
+        product.name.toLowerCase().includes(value.toLowerCase())
+      );
+    } else {
+      filteredProducts = products.filter((product) =>
+        product.name.toLowerCase().includes(value.toLowerCase())
+      );
+    }
+
+    addProduct(filteredProducts);
+  }
+}
+
+function checkboxesChecked() {
+  let count = 0;
+
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+      count++;
+    }
+  });
+  return count;
 }
