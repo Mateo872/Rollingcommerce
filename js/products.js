@@ -59,6 +59,7 @@ btnDelete.addEventListener("click", () => {
   btnDelete.disabled = true;
   searchInput.value = "";
   addProduct(allProducts);
+  updateAllProductsText();
 });
 
 const filterCategories = document.querySelectorAll(".filter_categories"),
@@ -151,6 +152,24 @@ function searchProduct(e) {
     }
 
     addProduct(filteredProducts);
+  }
+}
+
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", updateAllProductsText);
+});
+
+function updateAllProductsText() {
+  const selectedCategories = Array.from(filterCategories)
+    .filter((input) => input.querySelector("input").checked)
+    .map((input) => input.querySelector("label").textContent);
+
+  const allProductsText = document.querySelector("#allProducts");
+
+  if (selectedCategories.length > 0) {
+    allProductsText.textContent = selectedCategories.join(", ");
+  } else {
+    allProductsText.textContent = "Todos los productos";
   }
 }
 
