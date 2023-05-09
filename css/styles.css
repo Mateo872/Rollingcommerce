@@ -417,6 +417,12 @@ main section .container_products .product .bi-heart:hover {
     transition: .2s;
 }
 
+.text_empty {
+    font-size: 14px;
+    opacity: .7;
+    padding: 80px 0;
+}
+
 .filter_overlay {
     position: fixed;
     top: 0;
@@ -461,10 +467,6 @@ main section .container_products .product .bi-heart:hover {
     font-size: 11px;
     font-weight: bold;
     margin-bottom: 5px;
-}
-
-.filter_overlay .container_filter .filter span {
-    font-size: 11px;
 }
 
 .filter_overlay .container_filter .filter .filter_input {
@@ -840,10 +842,6 @@ main section .container_products .product .bi-heart:hover {
     }
 
     .filter_overlay .container_filter .filter h5 {
-        font-size: 13px;
-    }
-
-    .filter_overlay .container_filter .filter span {
         font-size: 13px;
     }
 
