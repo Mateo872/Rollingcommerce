@@ -435,13 +435,16 @@
             <p class="text-white text-center text_newsletter text-md-start">
               Suscríbete a nuestros boletines ahora y mantente al día.
             </p>
-            <form class="form-footer">
+            <form class="form-footer" id="emailForm">
               <div class="form-group">
                 <input
                   type="email"
                   class="form-control w-100 input-email"
+                  id="emailInput"
                   placeholder="Ingrese el correo electrónico"
+                  maxlength="100"
                 />
+                <small id="emailError" class="form-text text-danger"></small>
               </div>
               <button class="btn btn-danger mt-3 w-100" type="submit">
                 Enviar
@@ -451,6 +454,7 @@
         </div>
       </div>
     </footer>
+    <script src="../js/validationFooter.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/detail.js"></script>
     <script
