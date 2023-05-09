@@ -74,6 +74,11 @@ main .container_cart {
     visibility: hidden;
 }
 
+.image_detail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
 
 main .container_cart .cart_slider {
     max-height: 205px;
@@ -769,6 +774,11 @@ main section .container_products .product .bi-heart:hover {
 
     main .container_services .services .service p {
         font-size: 12.8px;
+    }
+
+    .image_detail {
+        width: 180px;
+        height: 180px;
     }
 
     .main_404 .container_error article img {
