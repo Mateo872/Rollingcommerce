@@ -19,6 +19,7 @@ const form = document.getElementById('form');
 const msjForm = document.getElementById('msjForm');
 const modalProduct = new bootstrap.Modal(document.querySelector('#modalAdd'));
 
+let productStatus = true; // true = crear producto, false = editar producto
 btnAdd.addEventListener('click', showModalProduct);
 form.addEventListener('submit', loadProduct);
 
@@ -49,7 +50,7 @@ function createCard(product, index){
   <div class="col-12 g-0">
   <div class="col position-relative">
       <img
-          src="${product.image}"
+          src="${product.image}" alt="${product.title}"
           class="card-img-top"
           alt="producto"
       />
@@ -60,7 +61,7 @@ function createCard(product, index){
                   style="color: #ee332c"
               ></i>
               <i
-                  class="bi bi-pencil-fill fs-5 ms-2"
+                  class="bi bi-pencil-fill fs-5 ms-2" onclick = "editProduct('${product.code}')"
                   style="color: #ee332c"
               ></i>
           </div>
@@ -97,8 +98,20 @@ function showModalProduct(){
 
 function loadProduct(e) {
   e.preventDefault();
+  if(productStatus){
+    //aqui se crea el producto
+    createProduct();
+  }else{
+    //edita peli
+    updateProduct();
 
-  console.log('creando el producto')
+  }
+  
+  
+}
+
+function createProduct(){
+  //validar datos
   let data = dataValidate(
     title.value,
     description.value,
@@ -189,3 +202,52 @@ window.deleteProduct = (code)=>{
   })
 
 }
+
+window.editProduct = (uniqueCode) =>{
+  const product = listProducts.find(prod => prod.code === uniqueCode)
+  console.log(product);
+  modalProduct.show();
+  code.value = product.code;
+  title.vaue = product.title;
+  description.value = product.description;
+  characteristics.value = product.characteristics
+  image.value = product.image;
+  imagePreviewOne.value = product.imagePreviewOne;
+  imagePreviewTwo.value = product.imagePreviewTwo;
+  imagePreviewThree.value = product.imagePreviewThree;
+  category.value = product.category;
+  price.value = product.price;
+  stock.value = product.stock;
+  //cambiar el estado de la variable bandera
+  productStatus = false;
+};
+
+function updateProduct(){
+  //validar los datos
+  //el producto que se esta editando
+  let positionProduct = listProducts.findIndex(prod => prod.code === code.value); //posición de donde esta el producto
+  console.log(positionProduct)
+  //actualizar las propiedades de ese producto
+  listProducts[positionProduct].title = title.value;
+  listProducts[positionProduct].description = description.value;
+  listProducts[positionProduct].characteristics = characteristics.value;
+  listProducts[positionProduct].image = image.value;
+  listProducts[positionProduct].imagePreviewOne = imagePreviewOne.value;
+  listProducts[positionProduct].imagePreviewTwo = imagePreviewTwo.value;
+  listProducts[positionProduct].imagePreviewThree = imagePreviewThree.value;
+  listProducts[positionProduct].category = category.value;
+  listProducts[positionProduct].price = price.value;
+  listProducts[positionProduct].stock = stock.value;
+  //actualizar el localstorage
+  saveLocalstorage();
+  //limpiar el formulario
+  cleanProductForm();
+  //cerrar modal
+  modalProduct.hide();
+  //mostrar un mensaje
+  Swal.fire('Se editó un producto', 'El producto seleccionado fue editado correctamente', 'success');
+  //actualiar la vista del admin
+  // let productCardData = document.getElementById('productCard');
+
+}
+
