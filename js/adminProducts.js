@@ -43,7 +43,7 @@ function initialLoad(){
 }
 
 function createCard(product, index){
-  let productCardData = document.getElementById('productCard')
+  let productCardData = document.getElementById('productCard');
   console.log(productCardData);
   productCardData.innerHTML += `<div class="card col-lg-3 col-md-5 m-2 img-fluid rounded-3 border-3 shadow">
   <div class="col-12 g-0">
@@ -160,5 +160,11 @@ function cleanProductForm(){
 window.deleteProduct = (code)=>{
   console.log(code)
   console.log('aqui borro el producto')
- 
+  let positionProduct = listProducts.findIndex(product => product.code === code)
+  console.log(positionProduct);
+  listProducts.splice(positionProduct,1);
+  saveLocalstorage();
+  let productCardData = document.getElementById('productCard');
+  // console.log(productCardData.children[positionProduct]);
+  productCardData.removeChild(productCardData.children[positionProduct]);
 }
