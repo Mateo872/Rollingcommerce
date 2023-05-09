@@ -28,7 +28,7 @@ if(!listProducts){
   listProducts = [];
 }else{
   listProducts = JSON.parse(listProducts).map((product)=> new Product(
-    product.title, product.description, product.image, product.price, product.category, product.characteristics, product.imagePreviewOne, product.imagePreviewTwo, product.imagePreviewThree, product.stock
+    product.code, product.title, product.description, product.image, product.price, product.category, product.characteristics, product.imagePreviewOne, product.imagePreviewTwo, product.imagePreviewThree, product.stock
   ))
 }
 
@@ -56,7 +56,7 @@ function createCard(product, index){
       <div class="position-absolute top-0 end-0">
           <div class="m-2">
               <i
-                  class="bi bi-trash3-fill fs-5"
+                  class="bi bi-trash3-fill fs-5" onclick ="deleteProduct('${product.code}')"
                   style="color: #ee332c"
               ></i>
               <i
@@ -113,6 +113,7 @@ function loadProduct(e) {
 
   console.log('creando el producto')
   let data = dataValidate(
+    undefined,
     title.value,
     description.value,
     characteristics.value,
@@ -165,4 +166,11 @@ function cleanProductForm(){
   form.reset()
 }
 
+// function deleteProduct(){
+  
+// }
 
+window.deleteProduct = (code)=>{
+  console.log(code, typeof code)
+  console.log('aqui borro el producto')
+}
