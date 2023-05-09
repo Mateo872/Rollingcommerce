@@ -447,6 +447,7 @@ const products = [
 const id = location.search.split("?id=")[1];
 
 const productsContainer = document.querySelector("[data-products-container]"),
+  productsSimilar = document.querySelector("[data-products-similar]"),
   productsCharacteristics = document.querySelector(
     "[data-products-characteristics]"
   );
@@ -454,7 +455,8 @@ const productsContainer = document.querySelector("[data-products-container]"),
 const productFiltered = products.filter((product) => product.id === +id);
 
 productFiltered.map((product) => {
-  const { images, name, price, description, characteristics, stock } = product;
+  const { images, name, price, description, characteristics, stock, category } =
+    product;
 
   productsContainer.innerHTML = `
   <div class="row g-0">
@@ -508,6 +510,7 @@ productFiltered.map((product) => {
      ${name}
     </h4>
     <p class="display-6">$${price}</p>
+    <p class="">${category}</p>
     <button class="btn btn-danger mt1 mb-3">
       Agregar al carrito
     </button>
@@ -527,5 +530,37 @@ productFiltered.map((product) => {
           <li>${characteristics[2]}</li>
           <li>${characteristics[3]}</li>
         </ul>
+  `;
+});
+
+// const productsCategories = products.filter(
+//   (product) => product.category === productFiltered.category
+// );
+
+let productCategory = [];
+
+productFiltered.forEach((product) => {
+  productCategory = product.category;
+});
+
+let dataCategory = [];
+
+dataCategory = products.filter(
+  (product) => product.category === productCategory
+);
+
+dataCategory.map((product) => {
+  const { images, name, price, id } = product;
+
+  productsSimilar.innerHTML += `
+    <div class="card card-similar-product shadow p-3 rounded d-flex flex-column justify-content-between ">
+      <img src="${images[0]}" class="img-fluid" />
+      <h6 class="pt-2 mb-0 text-truncate">${name}</h6>
+      <p class="fw-semibold pb-1 mb-0">$${price}</p>
+      <a href="../pages/detailProduct.html?id=${id}" class="mb-0 text-danger text-decoration-none fw-semibold">
+        Ver más
+      </a>
+      <i class="bi bi-cart"></i>
+      </div>
   `;
 });
