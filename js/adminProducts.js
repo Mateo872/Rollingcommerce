@@ -421,7 +421,6 @@ function loadProduct(e) {
     imagePreviewThree.value,
     category.value,
     price.value,
-    code.value,
     stock.value
   );
   if (data.length === 0) {
@@ -436,7 +435,6 @@ function loadProduct(e) {
       imagePreviewOne.value,
       imagePreviewTwo.value,
       imagePreviewThree.value,
-      code.value,
       stock.value
     );
 
