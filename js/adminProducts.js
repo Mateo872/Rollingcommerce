@@ -28,7 +28,7 @@ if(!listProducts){
   listProducts = [];
 }else{
   listProducts = JSON.parse(listProducts).map((product)=> new Product(
-  product.title, product.description, product.image, product.price, product.category, product.characteristics, product.imagePreviewOne, product.imagePreviewTwo, product.imagePreviewThree, product.stock
+  product.code, product.title, product.description, product.image, product.price, product.category, product.characteristics, product.imagePreviewOne, product.imagePreviewTwo, product.imagePreviewThree, product.stock
   ))
 }
 
@@ -43,7 +43,7 @@ function initialLoad(){
 }
 
 function createCard(product, index){
-  let productCardData = document.getElementById('productCard')
+  let productCardData = document.getElementById('productCard');
   console.log(productCardData);
   productCardData.innerHTML += `<div class="card col-lg-3 col-md-5 m-2 img-fluid rounded-3 border-3 shadow">
   <div class="col-12 g-0">
@@ -56,7 +56,7 @@ function createCard(product, index){
       <div class="position-absolute top-0 end-0">
           <div class="m-2">
               <i
-                  class="bi bi-trash3-fill fs-5" onclick ="deleteProduct(${product.code})"
+                  class="bi bi-trash3-fill fs-5" onclick = "deleteProduct('${product.code}')"
                   style="color: #ee332c"
               ></i>
               <i
@@ -94,26 +94,12 @@ function showModalProduct(){
   console.log('aqui vamos a crear una peli')
 }
 
-function createProduct() {
-  let newProduct = new Product(
-    "Astro A30",
-    "Los mejores auriculares",
-    "urlImage",
-    499,
-    "Auriculares",
-    "La batería dura 27 h.",
-    "image1",
-    "image2",
-    "image3"
-  );
-}
 
 function loadProduct(e) {
   e.preventDefault();
 
   console.log('creando el producto')
   let data = dataValidate(
-    undefined,
     title.value,
     description.value,
     characteristics.value,
@@ -127,6 +113,7 @@ function loadProduct(e) {
   );
   if (data.length === 0) {
     let newProduct = new Product(
+      undefined,
       title.value,
       description.value,
       image.value,
@@ -170,7 +157,35 @@ function cleanProductForm(){
   
 // }
 
-// window.deleteProduct = (code)=>{
-//   console.log(code, typeof code)
-//   console.log('aqui borro el producto')
-// }
+window.deleteProduct = (code)=>{
+
+  Swal.fire({
+    title: 'Está seguro que desea borrar el producto?',
+    text: "No se puede revertir este proceso",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Eliminar',
+    cancelButtonText: 'Cancelar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      console.log(code)
+      console.log('aqui borro el producto')
+      let positionProduct = listProducts.findIndex(product => product.code === code)
+      console.log(positionProduct);
+      listProducts.splice(positionProduct,1);
+      saveLocalstorage();
+      let productCardData = document.getElementById('productCard');
+      // console.log(productCardData.children[positionProduct]);
+      productCardData.removeChild(productCardData.children[positionProduct]);
+
+      Swal.fire(
+        'Producto eliminado',
+        'El producto selecionado fue eliminado correctamente.',
+        'success'
+      )
+    }
+  })
+
+}

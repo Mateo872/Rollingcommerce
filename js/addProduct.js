@@ -12,6 +12,7 @@ export default class Product {
   #stock;
   #state;
   constructor(
+    code = uuidv4(),
     title,
     description,
     image,
@@ -23,7 +24,7 @@ export default class Product {
     imagePreviewThree,
     stock
   ) {
-    this.#code = uuidv4();
+    this.#code = code;
     this.#title = title;
     this.#description = description;
     this.#image = image;
