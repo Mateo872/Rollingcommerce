@@ -3,7 +3,7 @@ const productsContainer = document.querySelector(".products"),
 
 const products = JSON.parse(localStorage.getItem("listProducts"));
 
-addProduct(products);
+// addProduct(products);
 
 function addProduct(product) {
   productsContainer.innerHTML = ``;
