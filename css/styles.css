@@ -74,6 +74,11 @@ main .container_cart {
     visibility: hidden;
 }
 
+.image_detail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
 
 main .container_cart .cart_slider {
     max-height: 205px;
@@ -771,6 +776,44 @@ main section .container_products .product .bi-heart:hover {
         font-size: 12.8px;
     }
 
+    .image_detail {
+        width: 180px;
+        height: 180px;
+    }
+
+    main section .card-similar-product {
+        width: 230px;
+        height: 300px;
+        background-color: var(--color_tertiary);
+    }
+
+    .card-similar-product i {
+        position: absolute;
+        right: 18px;
+        bottom: 18px;
+        z-index: 99;
+        cursor: pointer;
+        transition: .2s;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    main section .card-similar-product:hover .bi-cart {
+        transform: translateX(0);
+        transition: .3s;
+        opacity: 1;
+    }
+
+    main section .card-similar-product .bi-cart:hover {
+        color: var(--color_primary);
+        transition: .2s;
+    }
+
+    main section .card-similar-product img {
+        width: 100%;
+        height: 120px;
+    }
+
     .main_404 .container_error article img {
         width: 280px;
         position: absolute;
@@ -1009,22 +1052,28 @@ main section .container_products .product .bi-heart:hover {
 }
 
 .container-card {
-    overflow-x: scroll;
-    white-space: nowrap;
-    display: flex;
+    gap: 20px;
 }
 
 .card-similar-product {
     width: 230px;
-    height: 260px;
+    height: 280px;
     background-color: var(--color_tertiary);
+    position: relative;
+}
 
+.card-similar-product i {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    z-index: 99;
+    cursor: pointer;
+    transition: .2s;
 }
 
 .card-similar-product img {
     width: 100%;
-    height: 200px;
-
+    height: 120px;
 }
 
 .card-similar-product h3 {
