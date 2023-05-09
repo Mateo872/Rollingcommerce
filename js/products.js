@@ -11,7 +11,7 @@ const products = [
       "Tiene pantalla táctil.",
     ],
     category: "Consolas",
-    stock: 64,
+    stock: 3,
     images: [
       "../images/nintendoSwitch.png",
       "https://media.gettyimages.com/id/1087036102/nl/foto/a-nintendo-switch-console-fitted-with-a-pair-of-joy-con-controllers-taken-on-february-24-2017.jpg?s=612x612&w=gi&k=20&c=wc9Twe6meuWeI38o12-I4jg5W_eJUf3i3CSPXYlZrZg=",
@@ -30,7 +30,7 @@ const products = [
       "Cuenta con: 1 cable hdmi, 1 cable de alimentación ca.",
     ],
     category: "Consolas",
-    stock: 50,
+    stock: 3,
     images: [
       "../images/xbox.png",
       "https://http2.mlstatic.com/D_NQ_NP_634615-MLM46702291173_072021-O.webp",
@@ -49,7 +49,7 @@ const products = [
       "La duración de la batería de los controles depende del uso que se le dé al producto.",
     ],
     category: "Consolas",
-    stock: 49,
+    stock: 3,
     images: [
       "../images/ps5.png",
       "https://www.losandes.com.ar/resizer/SlpZYlj_huQvuxyLnpDfodJ53ks=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/RPP43CYPH5AYJILUVFCDGVC7JI.jpg",
@@ -68,7 +68,7 @@ const products = [
       "Base plástica reforzada.",
     ],
     category: "Sillas",
-    stock: 64,
+    stock: 3,
     images: [
       "../images/sillaGamer.png",
       "https://http2.mlstatic.com/D_NQ_NP_758856-MLA53706209111_022023-O.webp",
@@ -87,7 +87,7 @@ const products = [
       "Tiene apoya cabeza.",
     ],
     category: "Sillas",
-    stock: 34,
+    stock: 3,
     images: [
       "../images/sillaGamer2.png",
       "https://desillas.com/img/productos/TCQENU_1.jpg",
@@ -106,7 +106,7 @@ const products = [
       "Material del relleno: espuma.",
     ],
     category: "Sillas",
-    stock: 60,
+    stock: 3,
     images: [
       "../images/sillaGamer3.png",
       "https://http2.mlstatic.com/D_NQ_NP_752283-MLA43634990325_092020-O.jpg",
@@ -126,7 +126,7 @@ const products = [
       "Fuente: c/Gabinete.",
     ],
     category: "Computadoras",
-    stock: 64,
+    stock: 3,
     images: [
       "../images/computadora.png",
       "https://http2.mlstatic.com/D_NQ_NP_705907-MLA31604163024_072019-O.jpg",
@@ -144,7 +144,7 @@ const products = [
       "MOTHERBOARD AMD AM4.",
     ],
     category: "Computadoras",
-    stock: 10,
+    stock: 3,
     images: [
       "../images/computadora2.png",
       "https://front.dev.malditohard.com.ar/img/migration/PC-GAMER-AMD-RYZEN-5-5600G-B450M-16GB-480-SSD-600W-BLADE.webp",
@@ -162,7 +162,7 @@ const products = [
       "1 Puerto PS2 para Mouse o Teclado.",
     ],
     category: "Computadoras",
-    stock: 56,
+    stock: 3,
     images: [
       "../images/computadora3.png",
       "https://http2.mlstatic.com/D_NQ_NP_649489-MLA49225891236_022022-O.webp",
@@ -180,8 +180,8 @@ const products = [
       "Cámara trasera principal: 50 Mpx.",
       "Desbloqueo: Huella dactilar y reconocimiento facial.",
     ],
-    category: "celulares",
-    stock: 100,
+    category: "Celulares",
+    stock: 3,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_683227-MLA53448432818_012023-O.webp",
       "https://http2.mlstatic.com/D_NQ_NP_929707-MLA53448472625_012023-O.webp",
@@ -199,8 +199,8 @@ const products = [
       "Cámara trasera principal: 12 Mpx.",
       "Cámara frontal principal: 12 Mpx.",
     ],
-    category: "celulares",
-    stock: 20,
+    category: "Celulares",
+    stock: 3,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_640945-MLA47778929198_102021-O.webp",
       "https://http2.mlstatic.com/D_NQ_NP_785821-MLA47778953167_102021-O.webp",
@@ -218,8 +218,8 @@ const products = [
       "Cámara trasera principal: 64 Mpx.",
       "Desbloqueo: Huella dactilar y reconocimiento facial",
     ],
-    category: "celulares",
-    stock: 20,
+    category: "Celulares",
+    stock: 3,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_942467-MLA52542787717_112022-O.webp",
       "https://http2.mlstatic.com/D_NQ_NP_666049-MLA52542787715_112022-O.webp",
@@ -237,8 +237,8 @@ const products = [
       "Es smart: Sí.",
       "Cantidad de puertos HDMI: 3",
     ],
-    category: "tv",
-    stock: 50,
+    category: "Televisores",
+    stock: 3,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_787221-MLA48007684849_102021-O.webp",
       "https://http2.mlstatic.com/D_NQ_NP_926763-MLA48007684848_102021-O.webp",
@@ -256,8 +256,8 @@ const products = [
       "Es smart: Sí.",
       "Tipo de pantalla: LED",
     ],
-    category: "tv",
-    stock: 65,
+    category: "Televisores",
+    stock: 3,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_849715-MLA54897442270_042023-O.webp",
       "https://http2.mlstatic.com/D_NQ_NP_977816-MLA54686596047_032023-O.webp",
@@ -275,8 +275,8 @@ const products = [
       "Es smart: Sí.",
       "Cantidad de puertos HDMI: 4",
     ],
-    category: "tv",
-    stock: 65,
+    category: "Televisores",
+    stock: 3,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_745854-MLA48622828334_122021-O.webp",
       "hhttps://http2.mlstatic.com/D_NQ_NP_736407-MLA48622828333_122021-O.webp",
@@ -294,8 +294,8 @@ const products = [
       "Duración de la batería: 35 h.",
       "Con micrófono: Sí",
     ],
-    category: "auriculares",
-    stock: 10,
+    category: "Auriculares",
+    stock: 3,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_796107-MLA48750424811_012022-O.webp",
       "https://http2.mlstatic.com/D_NQ_NP_961753-MLA48750424812_012022-O.webp",
@@ -313,8 +313,8 @@ const products = [
       "Duración de la batería: 30 h.",
       "Con micrófono: Sí",
     ],
-    category: "auriculares",
-    stock: 5,
+    category: "Auriculares",
+    stock: 3,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_720416-MLA52221299687_102022-O.webp",
       "https://http2.mlstatic.com/D_NQ_NP_791368-MLA52221299689_102022-O.webp",
@@ -332,8 +332,8 @@ const products = [
       "Con micrófono: Sí",
       "Con pilas: No",
     ],
-    category: "auriculares",
-    stock: 30,
+    category: "Auriculares",
+    stock: 3,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_710834-MLA43710746221_102020-O.webp",
       "https://http2.mlstatic.com/D_NQ_NP_908504-MLA43711110372_102020-O.webp",
@@ -342,29 +342,118 @@ const products = [
   },
 ];
 
-const productsContainer = document.querySelector(".products");
+const productsContainer = document.querySelector(".products"),
+  textEmpty = document.querySelector(".text_empty");
 
-products.map((product) => {
-  const { images, name, price } = product;
+addProduct(products);
 
-  productsContainer.innerHTML += `
-  <div class="product d-flex flex-column justify-content-between p-3">
-        <i class="bi bi-heart"></i>
-        <div class="product_image d-flex justify-content-center">
-            <img src="${images[0]}" alt="${name}" />
-        </div>
-        <div class="product_feature">
-            <h5 class="mb-0 text-truncate">${name}</h5>
-            <div class="product_feature-discount d-flex">
-            <p class="price mb-0">$${price}</p>
+function addProduct(product) {
+  productsContainer.innerHTML = ``;
+
+  if (product.length === 0) {
+    textEmpty.classList.remove("d-none");
+  } else {
+    textEmpty.classList.add("d-none");
+    product.map((product) => {
+      const { images, name, price, stock } = product;
+
+      productsContainer.innerHTML += `
+      <div class="product d-flex flex-column justify-content-between p-3">
+            <i class="bi bi-heart"></i>
+            <div class="product_image d-flex justify-content-center">
+                <img src="${images[0]}" alt="${name}" />
             </div>
-            <div class="product_detail d-flex justify-content-between align-items-center">
-            <a href="../pages/detailProduct.html" class="mb-0">
-                Ver más
-            </a>
-            <i class="bi bi-cart"></i>
+            <div class="product_feature">
+                <h5 class="mb-0 text-truncate">${name}</h5>
+                <div class="product_feature-discount d-flex">
+                <p class="price mb-0">$${price}</p>
+                </div>
+                <div class="product_detail d-flex justify-content-between align-items-center">
+                <a href="../pages/detailProduct.html" class="mb-0">
+                    Ver más
+                </a>
+                <i class="bi bi-cart"></i>
+                </div>
             </div>
         </div>
-    </div>
-    `;
+        `;
+    });
+  }
+}
+
+const btnApply = document.querySelector("[data-apply]"),
+  btnDelete = document.querySelector("[data-delete]");
+
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+btnApply.addEventListener("click", () => {
+  const filteredProducts = getFilteredProducts();
+  addProduct(filteredProducts);
+  btnDelete.disabled = false;
 });
+
+btnDelete.addEventListener("click", () => {
+  checkboxes.forEach((checkbox) => (checkbox.checked = false));
+  const allProducts = [...products];
+  addProduct(allProducts);
+  btnDelete.disabled = true;
+});
+
+const filterCategories = document.querySelectorAll(".filter_categories"),
+  filterPrice = document.querySelectorAll(".filter_price"),
+  filterSort = document.querySelectorAll(".filter_sort"),
+  filterDiscount = document.querySelectorAll(".filter_discount");
+
+function getFilteredProducts() {
+  let filteredProducts = [...products];
+
+  const selectedCategories = Array.from(filterCategories)
+    .filter((input) => input.querySelector("input").checked)
+    .map((input) => input.querySelector("label").textContent);
+
+  if (selectedCategories.length > 0) {
+    filteredProducts = filteredProducts.filter((product) =>
+      selectedCategories.includes(product.category)
+    );
+  }
+
+  const selectedPrices = Array.from(filterPrice)
+    .filter((input) => input.querySelector("input").checked)
+    .map((input) => parseInt(input.querySelector("input").className));
+
+  if (selectedPrices.length > 0) {
+    filteredProducts = filteredProducts.filter((product) =>
+      selectedPrices.some((price) => product.price <= price)
+    );
+  }
+
+  const selectedSort = Array.from(filterSort).find(
+    (input) => input.querySelector("input").checked
+  );
+
+  if (selectedSort) {
+    const sortOption = selectedSort.querySelector("label").textContent;
+    if (sortOption === "Menor precio") {
+      filteredProducts = filteredProducts.sort((a, b) => a.price - b.price);
+    } else if (sortOption === "Mayor precio") {
+      filteredProducts = filteredProducts.sort((a, b) => b.price - a.price);
+    }
+  }
+
+  const selectedDiscount = Array.from(filterDiscount).find(
+    (input) => input.querySelector("input").checked
+  );
+  if (selectedDiscount) {
+    const discountOption = selectedDiscount.querySelector("label").textContent;
+
+    if (discountOption === "Sí") {
+      filteredProducts = filteredProducts.filter(
+        (product) => product.discount > 0
+      );
+    } else if (discountOption === "No") {
+      filteredProducts = filteredProducts;
+    }
+  }
+
+  return filteredProducts;
+}

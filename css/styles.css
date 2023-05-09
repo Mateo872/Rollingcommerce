@@ -417,6 +417,12 @@ main section .container_products .product .bi-heart:hover {
     transition: .2s;
 }
 
+.text_empty {
+    font-size: 14px;
+    opacity: .7;
+    padding: 80px 0;
+}
+
 .filter_overlay {
     position: fixed;
     top: 0;
