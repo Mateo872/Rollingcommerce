@@ -62,20 +62,22 @@ function validateEmail(email) {
     let patron = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
     if (patron.test(email)) {
-        console.log("Email correcto");
+        // console.log("Email correcto");
         return true;
     } else {
-        console.log("Email incorrecto");
+        // console.log("Email incorrecto");
         return false;
     }
 }
 function validatePasword(pass) {
-    let patron = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8}$/;
+    // console.log(pass);
+    let patron = /^[A-Za-z\d]{8,}$/;
+    console.log(patron.test(pass));
     if (patron.test(pass)) {
-        console.log("Email correcto");
+        // console.log("password correcto");
         return true;
     } else {
-        console.log("Email incorrecto");
+        // console.log("password incorrecto");
         return false;
     }
 }
@@ -147,13 +149,13 @@ export function dataLoginValidate(email, password) {
     }
     if (!validatePasword(password)) {
         data +=
-            "Corregir el password,debe tener entre 8 caracteres y no tener espacios ni carateres especiales.<br>";
+            "Corregir el password,debe tener a partir de 8 caracteres, entre letras y numeros y no tener espacios ni carateres especiales.<br>";
     }
 
     if (data.length !== 0) {
         return data;
     } else {
-        console.log("todo esta ok con el loguin");
+        console.log("todo esta ok con el login");
         return "";
     }
 }

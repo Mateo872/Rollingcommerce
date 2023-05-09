@@ -1,6 +1,14 @@
-import { dataValidate } from "./helpers";
+import { dataLoginValidate } from "./helpers.js";
+
+const formLogin = document.getElementById("form-login");
+const userEmail = document.getElementById("email");
+const userPassword = document.getElementById("pass");
+const msjForm = document.getElementById("msjFormIndex");
+const modalUser = new bootstrap.Modal(document.querySelector("#login"));
 
 let listProducts = JSON.parse(localStorage.getItem("listProducts")) || [];
+
+formLogin.addEventListener("submit", loadUser);
 
 listProducts.map((product) => {
     createCard(product);
@@ -29,6 +37,27 @@ function createCard(product) {
 `;
 }
 
+function loadUser(e) {
+    e.preventDefault();
+    // console.log("hice click en hacer user");
+
+    let data = dataLoginValidate(userEmail.value, userPassword.value);
+    if (data.length === 0) {
+        Swal.fire(
+            "Felicidades Te Registraste",
+            "Ya puedes acceder a tu cuenta",
+            "success"
+        );
+        formLogin.reset();
+        modalUser.hide();
+    } else {
+        msjForm.className = "alert alert-danger mt-3";
+        msjForm.innerHTML = data;
+        setTimeout(() => {
+            msjForm.className = "d-none";
+        }, 4000);
+    }
+}
 // window.detailProduct = (code) =>{
 //   // console.log(code);
 //   // console.log(window.location)
