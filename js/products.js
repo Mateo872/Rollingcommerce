@@ -180,7 +180,7 @@ const products = [
       "Cámara trasera principal: 50 Mpx.",
       "Desbloqueo: Huella dactilar y reconocimiento facial.",
     ],
-    category: "celulares",
+    category: "Celulares",
     stock: 100,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_683227-MLA53448432818_012023-O.webp",
@@ -199,7 +199,7 @@ const products = [
       "Cámara trasera principal: 12 Mpx.",
       "Cámara frontal principal: 12 Mpx.",
     ],
-    category: "celulares",
+    category: "Celulares",
     stock: 20,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_640945-MLA47778929198_102021-O.webp",
@@ -218,7 +218,7 @@ const products = [
       "Cámara trasera principal: 64 Mpx.",
       "Desbloqueo: Huella dactilar y reconocimiento facial",
     ],
-    category: "celulares",
+    category: "Celulares",
     stock: 20,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_942467-MLA52542787717_112022-O.webp",
@@ -237,7 +237,7 @@ const products = [
       "Es smart: Sí.",
       "Cantidad de puertos HDMI: 3",
     ],
-    category: "tv",
+    category: "Televisores",
     stock: 50,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_787221-MLA48007684849_102021-O.webp",
@@ -256,7 +256,7 @@ const products = [
       "Es smart: Sí.",
       "Tipo de pantalla: LED",
     ],
-    category: "tv",
+    category: "Televisores",
     stock: 65,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_849715-MLA54897442270_042023-O.webp",
@@ -275,7 +275,7 @@ const products = [
       "Es smart: Sí.",
       "Cantidad de puertos HDMI: 4",
     ],
-    category: "tv",
+    category: "Televisores",
     stock: 65,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_745854-MLA48622828334_122021-O.webp",
@@ -294,7 +294,7 @@ const products = [
       "Duración de la batería: 35 h.",
       "Con micrófono: Sí",
     ],
-    category: "auriculares",
+    category: "Auriculares",
     stock: 10,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_796107-MLA48750424811_012022-O.webp",
@@ -313,7 +313,7 @@ const products = [
       "Duración de la batería: 30 h.",
       "Con micrófono: Sí",
     ],
-    category: "auriculares",
+    category: "Auriculares",
     stock: 5,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_720416-MLA52221299687_102022-O.webp",
@@ -332,7 +332,7 @@ const products = [
       "Con micrófono: Sí",
       "Con pilas: No",
     ],
-    category: "auriculares",
+    category: "Auriculares",
     stock: 30,
     images: [
       "https://http2.mlstatic.com/D_NQ_NP_710834-MLA43710746221_102020-O.webp",
@@ -344,27 +344,70 @@ const products = [
 
 const productsContainer = document.querySelector(".products");
 
-products.map((product) => {
-  const { images, name, price } = product;
+addProduct(products);
 
-  productsContainer.innerHTML += `
-  <div class="product d-flex flex-column justify-content-between p-3">
-        <i class="bi bi-heart"></i>
-        <div class="product_image d-flex justify-content-center">
-            <img src="${images[0]}" alt="${name}" />
-        </div>
-        <div class="product_feature">
-            <h5 class="mb-0 text-truncate">${name}</h5>
-            <div class="product_feature-discount d-flex">
-            <p class="price mb-0">$${price}</p>
-            </div>
-            <div class="product_detail d-flex justify-content-between align-items-center">
-            <a href="../pages/detailProduct.html" class="mb-0">
-                Ver más
-            </a>
-            <i class="bi bi-cart"></i>
-            </div>
-        </div>
-    </div>
-    `;
-});
+function addProduct(product) {
+  productsContainer.innerHTML = ``;
+
+  product.map((product) => {
+    const { images, name, price } = product;
+
+    productsContainer.innerHTML += `
+    <div class="product d-flex flex-column justify-content-between p-3">
+          <i class="bi bi-heart"></i>
+          <div class="product_image d-flex justify-content-center">
+              <img src="${images[0]}" alt="${name}" />
+          </div>
+          <div class="product_feature">
+              <h5 class="mb-0 text-truncate">${name}</h5>
+              <div class="product_feature-discount d-flex">
+              <p class="price mb-0">$${price}</p>
+              </div>
+              <div class="product_detail d-flex justify-content-between align-items-center">
+              <a href="../pages/detailProduct.html" class="mb-0">
+                  Ver más
+              </a>
+              <i class="bi bi-cart"></i>
+              </div>
+          </div>
+      </div>
+      `;
+  });
+}
+
+const filterCategories = document.querySelectorAll(".filter_categories");
+
+let productsFiltered = [];
+
+filterCategories.forEach((input) =>
+  input.addEventListener("click", (e) => {
+    const category = e.currentTarget.querySelector("label").textContent;
+
+    productsFiltered = products.filter(
+      (product) => product.category === category
+    );
+    addProduct(productsFiltered);
+
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", () => {
+        const checkDisabled = Array.from(checkboxes).every(
+          (checkbox) => checkbox.disabled || !checkbox.checked
+        );
+
+        if (checkDisabled) {
+          addProduct(products);
+        }
+
+        if (checkbox.checked) {
+          checkboxes.forEach((check) => {
+            if (check !== checkbox) {
+              check.checked = false;
+            }
+          });
+        }
+      });
+    });
+  })
+);

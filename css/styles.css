@@ -463,6 +463,10 @@ main section .container_products .product .bi-heart:hover {
     margin-bottom: 5px;
 }
 
+.filter_overlay .container_filter .filter span {
+    font-size: 11px;
+}
+
 .filter_overlay .container_filter .filter .filter_input {
     margin-top: 8px;
     gap: 2px;
@@ -836,6 +840,10 @@ main section .container_products .product .bi-heart:hover {
     }
 
     .filter_overlay .container_filter .filter h5 {
+        font-size: 13px;
+    }
+
+    .filter_overlay .container_filter .filter span {
         font-size: 13px;
     }
 
