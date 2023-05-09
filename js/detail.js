@@ -11,7 +11,7 @@ const productsContainer = document.querySelector("[data-products-container]"),
 const productFiltered = products.filter((product) => product.code === id);
 
 productFiltered.map((product) => {
-  const { image, title, price, description, characteristics, stock, category } =
+  const { image, imagePreviewOne, imagePreviewTwo, imagePreviewThree, title, price, description, characteristics, stock, category } =
     product;
 
   productsContainer.innerHTML = `
@@ -30,7 +30,7 @@ productFiltered.map((product) => {
       <div class="col-md-4">
         <button class="btn border-0">
           <img
-            src="${image}"
+            src="${imagePreviewOne}"
             class="img-fluid rounded-3 border-3 shadow image_detail"
             alt="${title}"
           />
@@ -39,7 +39,7 @@ productFiltered.map((product) => {
       <div class="col-md-4">
         <button class="btn border-0">
           <img
-            src="${image}"
+            src="${imagePreviewTwo}"
             class="img-fluid rounded-3 border-3 shadow image_detail"
             alt="${title}"
           />
@@ -48,7 +48,7 @@ productFiltered.map((product) => {
       <div class="col-md-4">
         <button class="btn border-0">
           <img
-            src="${image}"
+            src="${imagePreviewThree}"
             class="img-fluid rounded-3 border-3 shadow image_detail"
             alt="${title}"
           />
