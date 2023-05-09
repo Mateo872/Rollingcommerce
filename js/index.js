@@ -1,13 +1,14 @@
-let listProducts =
-  JSON.parse(localStorage.getItem("listProducts")) || [];
+import { dataValidate } from "./helpers";
+
+let listProducts = JSON.parse(localStorage.getItem("listProducts")) || [];
 
 listProducts.map((product) => {
-  createCard(product);
+    createCard(product);
 });
 
 function createCard(product) {
-  let productCardData = document.getElementById('cards');
-  productCardData.innerHTML += `<div class="product d-flex flex-column justify-content-between p-3">
+    let productCardData = document.getElementById("cards");
+    productCardData.innerHTML += `<div class="product d-flex flex-column justify-content-between p-3">
   <i class="bi bi-heart"></i>
   <div class="product_image d-flex justify-content-center">
     <img src="${product.image}" />
@@ -25,7 +26,7 @@ function createCard(product) {
     </div>
   </div>
 </div>
-`
+`;
 }
 
 // window.detailProduct = (code) =>{
