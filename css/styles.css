@@ -37,7 +37,6 @@ main {
     margin-top: 56px;
 }
 
-
 section {
     width: 90%;
     margin: 0 auto;
@@ -202,6 +201,43 @@ main .container_services .service_desc p {
     font-size: 9.6px;
     color: var(--color_secondary);
     opacity: 7;
+}
+
+.main_404 {
+    overflow: hidden;
+}
+
+main .container_error article {
+    position: relative;
+}
+
+main .container_error article img {
+    width: 150px;
+    position: absolute;
+}
+
+main .container_error article .image-1 {
+    top: 0;
+    left: -70px;
+    transform: rotate(-20deg);
+}
+
+main .container_error article .image-2 {
+    width: 200px;
+    top: 10px;
+    right: -90px;
+    transform: rotate(20deg);
+}
+
+main .container_error article .image-3 {
+    width: 280px;
+    bottom: 40px;
+    left: -90px;
+    transform: rotate(20deg);
+}
+
+main .container_error article h1 {
+    font-size: 43px;
 }
 
 .container_banner {
@@ -561,6 +597,30 @@ main section .container_products .product .bi-heart:hover {
         width: 100%;
     }
 
+
+    .main_404 .container_error article img {
+        width: 280px;
+        position: absolute;
+    }
+
+    .main_404 .container_error article .image-1 {
+        left: -150px;
+    }
+
+    .main_404 .container_error article .image-2 {
+        top: 10px;
+    }
+
+    .main_404 .container_error article .image-3 {
+        width: 400px;
+        left: -200px;
+        bottom: -50px;
+    }
+
+    .main_404 .container_error article h1 {
+        font-size: 64px;
+    }
+
     .container_banner {
         padding: 60px 0;
     }
@@ -709,6 +769,32 @@ main section .container_products .product .bi-heart:hover {
 
     main .container_services .services .service p {
         font-size: 12.8px;
+    }
+
+    .main_404 .container_error article img {
+        width: 280px;
+        position: absolute;
+    }
+
+    .main_404 .container_error article .image-1 {
+        left: -200px;
+    }
+
+    .main_404 .container_error article .image-2 {
+        width: 400px;
+        top: 0px;
+        right: -240px;
+        transform: rotate(20deg);
+    }
+
+    .main_404 .container_error article .image-3 {
+        width: 400px;
+        left: -200px;
+        bottom: -90px;
+    }
+
+    .main_404 .container_error article h1 {
+        font-size: 80px;
     }
 
     .container_banner {

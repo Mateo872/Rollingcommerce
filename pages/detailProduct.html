@@ -1,416 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <title>Rollingcommerce</title>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <a
-            class="navbar-brand d-flex align-items-center"
-            href="../index.html"
-          >
-            <img
-              class="rounded-circle"
-              src="../images/Logo.jpg"
-              alt=""
-              width="60"
-              height="47"
-            />
-            <span class="header_title"
-              >Rolling<span class="header_title-modified">Commerce</span></span
-            >
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNavDropdown"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Productos
-                </a>
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <li><a class="dropdown-item" href="#">Categoría 1</a></li>
-                  <li><a class="dropdown-item" href="#">Categoría 2</a></li>
-                  <li><a class="dropdown-item" href="#">Categoría 3</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../pages/aboutUs.html">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <form class="d-flex">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Buscar productos"
-                    aria-label="Search"
-                  />
-                  <button class="btn" type="submit">
-                    <i class="bi bi-search"></i>
-                  </button>
-                </form>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i></a>
-              </li>
-              <li class="nav-item">
-                <button
-                  type="button"
-                  class="btn bi bi-person nav-link"
-                  data-bs-toggle="modal"
-                  data-bs-target="#login"
-                ></button>
-                <div
-                  class="modal fade"
-                  id="login"
-                  tabindex="-1"
-                  role="dialog"
-                  aria-labelledby="myModalLogin"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-dialog-side" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header d-flex justify-content-around">
-                        <div class="text-center mt-5">
-                          <img
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <title>Rollingcommerce</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a
+                        class="navbar-brand d-flex align-items-center"
+                        href="../index.html"
+                    >
+                        <img
+                            class="rounded-circle"
                             src="../images/Logo.jpg"
-                            alt="Logo Rolling commerce"
-                            class="img-fluid imgRollingC"
-                          />
+                            alt=""
+                            width="60"
+                            height="47"
+                        />
+                        <span class="header_title"
+                            >Rolling<span class="header_title-modified"
+                                >Commerce</span
+                            ></span
+                        >
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse justify-content-end"
+                        id="navbarNavDropdown"
+                    >
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/aboutUs.html"
+                                    >Nosotros</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footer">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"
+                                    ><i class="bi bi-cart-fill"></i
+                                ></a>
+                            </li>
+                            <li class="nav-item">
+                                <button
+                                    type="button"
+                                    class="btn bi bi-person nav-link"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#login"
+                                ></button>
+                                <div
+                                    class="modal fade"
+                                    id="login"
+                                    tabindex="-1"
+                                    role="dialog"
+                                    aria-labelledby="myModalLogin"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="modal-dialog modal-dialog-side"
+                                        role="document"
+                                    >
+                                        <div class="modal-content">
+                                            <div
+                                                class="modal-header d-flex justify-content-around"
+                                            >
+                                                <div class="text-center mt-5">
+                                                    <img
+                                                        src="../images/Logo.jpg"
+                                                        alt="Logo Rolling commerce"
+                                                        class="img-fluid imgRollingC"
+                                                    />
 
-                          <div class="d-flex mt-2">
-                            <h4 class="modal-title w-100 text-danger mt-3">
-                              Rolling
-                            </h4>
-                            <h4 class="modal-title w-100 mt-3">Commerce</h4>
-                          </div>
-                        </div>
-                        <button
-                          type="button"
-                          class="btn-close btnColor position-absolute top-0 end-0 m-3"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <h4 class="modal-title text-center w-100 mt-3">
-                        INICIAR SESION
-                      </h4>
-                      <form action="">
-                        <div class="modal-body mx-3">
-                          <div class="md-form">
-                            <i class="fas fa-envelope prefix grey-text"></i>
-                            <input
-                              type="email"
-                              id="email"
-                              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                              required
-                              minlength="12"
-                              maxlength="35"
-                              class="form-control validate colorLabelLogin"
-                              placeholder="Email"
-                            />
-                            <label
-                              data-error="wrong"
-                              data-success="right"
-                              for="email"
-                            ></label>
-                          </div>
+                                                    <div class="d-flex mt-2">
+                                                        <h4
+                                                            class="modal-title w-100 text-danger mt-3"
+                                                        >
+                                                            Rolling
+                                                        </h4>
+                                                        <h4
+                                                            class="modal-title w-100 mt-3"
+                                                        >
+                                                            Commerce
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                                <button
+                                                    type="button"
+                                                    class="btn-close btnColor position-absolute top-0 end-0 m-3"
+                                                    data-bs-dismiss="modal"
+                                                    aria-label="Close"
+                                                ></button>
+                                            </div>
+                                            <h4
+                                                class="modal-title text-center w-100 mt-3"
+                                            >
+                                                INICIAR SESION
+                                            </h4>
+                                            <form>
+                                                <div class="modal-body mx-3">
+                                                    <div class="md-form">
+                                                        <i
+                                                            class="fas fa-envelope prefix grey-text"
+                                                        ></i>
+                                                        <input
+                                                            type="email"
+                                                            id="email"
+                                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                                            required
+                                                            minlength="12"
+                                                            maxlength="35"
+                                                            class="form-control validate colorLabelLogin"
+                                                            placeholder="Email"
+                                                        />
+                                                        <label
+                                                            data-error="wrong"
+                                                            data-success="right"
+                                                            for="email"
+                                                        ></label>
+                                                    </div>
 
-                          <div class="md-form">
-                            <i class="fas fa-lock prefix grey-text"></i>
-                            <input
-                              type="password"
-                              id="pass"
-                              minlength="8"
-                              maxlength="20"
-                              class="form-control validate colorLabelLogin"
-                              placeholder="Contraseña"
-                            />
-                            <label
-                              data-error="wrong"
-                              data-success="right"
-                              for="pass"
-                            ></label>
-                          </div>
-                        </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                          <button type="submit" class="btn btnLogin">
-                            Iniciar sesión
-                          </button>
-                          <a href="" class="mt-3">Regístrate</a>
-                        </div>
-                      </form>
+                                                    <div class="md-form">
+                                                        <i
+                                                            class="fas fa-lock prefix grey-text"
+                                                        ></i>
+                                                        <input
+                                                            type="password"
+                                                            id="pass"
+                                                            minlength="8"
+                                                            maxlength="20"
+                                                            class="form-control validate colorLabelLogin"
+                                                            placeholder="Contraseña"
+                                                        />
+                                                        <label
+                                                            data-error="wrong"
+                                                            data-success="right"
+                                                            for="pass"
+                                                        ></label>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="modal-footer d-flex justify-content-center"
+                                                >
+                                                    <button
+                                                        type="submit"
+                                                        class="btn btnLogin"
+                                                    >
+                                                        Iniciar sesión
+                                                    </button>
+                                                    <a href="" class="mt-3">Regístrate</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                  </div>
                 </div>
-              </li>
-              <li class="nav-item">
-                <button id="theme-toggler" class="btn">
-                  <i class="bi bi-moon-fill"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="cart_overlay cart_display">
-        <div class="container_cart">
-          <h5 class="mb-0">Carrito</h5>
-          <div class="cart_slider d-flex flex-column">
-            <div
-              class="cart_items d-flex justify-content-between align-items-center"
-            >
-              <div
-                class="cart_image d-flex justify-content-center align-items-center"
-              >
-                <img
-                  src="../images/auricular1.png"
-                  class="w-100"
-                  alt="Auricular"
-                />
-              </div>
-              <div class="cart_desc d-flex flex-column">
-                <p class="cart_item-title mb-0">Astro A30</p>
-                <div class="cart_desc-price d-flex gap-1">
-                  <p class="mb-0">$499</p>
-                  <div class="cart_desc-quantity d-flex">
-                    <span>x1</span>
-                    <span class="price">$499</span>
-                  </div>
+            </nav>
+        </header>
+        <main>
+            <div class="cart_overlay cart_display">
+                <div class="container_cart">
+                    <h5 class="mb-0">Carrito</h5>
+                    <div class="cart_slider d-flex flex-column">
+                        <div
+                            class="cart_items d-flex justify-content-between align-items-center"
+                        >
+                            <div
+                                class="cart_image d-flex justify-content-center align-items-center"
+                            >
+                                <img
+                                    src="../images/auricular1.png"
+                                    class="w-100"
+                                    alt="Auricular"
+                                />
+                            </div>
+                            <div class="cart_desc d-flex flex-column">
+                                <p class="cart_item-title mb-0">Astro A30</p>
+                                <div class="cart_desc-price d-flex gap-1">
+                                    <p class="mb-0">$499</p>
+                                    <div class="cart_desc-quantity d-flex">
+                                        <span>x1</span>
+                                        <span class="price">$499</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                        <div
+                            class="cart_items d-flex justify-content-between align-items-center"
+                        >
+                            <div
+                                class="cart_image d-flex justify-content-center align-items-center"
+                            >
+                                <img
+                                    src="../images/auricular1.png"
+                                    class="w-100"
+                                    alt="Auricular"
+                                />
+                            </div>
+                            <div class="cart_desc d-flex flex-column">
+                                <p class="cart_item-title mb-0">Astro A30</p>
+                                <div class="cart_desc-price d-flex gap-1">
+                                    <p class="mb-0">$499</p>
+                                    <div class="cart_desc-quantity d-flex">
+                                        <span>x1</span>
+                                        <span class="price">$499</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                    </div>
+                    <div
+                        class="cart_total d-flex flex-column justify-content-center align-items-center"
+                    >
+                        <h4 class="mb-0">Total - <span>$499</span></h4>
+                        <button>Comprar</button>
+                    </div>
                 </div>
-              </div>
-              <i class="bi bi-trash"></i>
             </div>
-            <div
-              class="cart_items d-flex justify-content-between align-items-center"
-            >
-              <div
-                class="cart_image d-flex justify-content-center align-items-center"
-              >
-                <img
-                  src="../images/auricular1.png"
-                  class="w-100"
-                  alt="Auricular"
-                />
-              </div>
-              <div class="cart_desc d-flex flex-column">
-                <p class="cart_item-title mb-0">Astro A30</p>
-                <div class="cart_desc-price d-flex gap-1">
-                  <p class="mb-0">$499</p>
-                  <div class="cart_desc-quantity d-flex">
-                    <span>x1</span>
-                    <span class="price">$499</span>
-                  </div>
+            <section class="card mt-4 mb-3 border-0 container">
+                <div class="row g-0">
+                    <div class="col-md-6 col-lg-6">
+                        <div class="mx-3">
+                            <p>En stock 66</p>
+                            <img
+                                src="../images/Auricular.png"
+                                class="img-fluid rounded-3 border-3 shadow"
+                                alt="auricular"
+                            />
+                        </div>
+                        <div class="me-md-3">
+                            <div class="d-flex my-3">
+                                <div class="col-md-4">
+                                    <button class="btn border-0">
+                                        <img
+                                            src="../images/Auricular.png"
+                                            class="img-fluid rounded-3 border-3 shadow"
+                                            alt="auricular"
+                                        />
+                                    </button>
+                                </div>
+                                <div class="col-md-4 mx-2">
+                                    <button class="btn border-0">
+                                        <img
+                                            src="../images/Auricular.png"
+                                            class="img-fluid rounded-3 border-3 shadow"
+                                            alt="auricular"
+                                        />
+                                    </button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn border-0">
+                                        <img
+                                            src="../images/Auricular.png"
+                                            class="img-fluid rounded-3 border-3 shadow"
+                                            alt="auricular"
+                                        />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <div class="card-body my-lg-5 mx-3">
+                            <p class="d-flex justify-content-end me-3">
+                                <i class="bi bi-heart text-danger fs-4"></i>
+                            </p>
+                            <h4>
+                                Auriculares gamer inalámbricos <br />
+                                Astro A30 blanco
+                            </h4>
+                            <p class="display-6">$499</p>
+                            <button class="btn btn-danger mt1 mb-3">
+                                Agregar al carrito
+                            </button>
+                            <p>
+                                ¡Experimentá la adrenalina de sumergirte en la escena de
+                                otra manera! Tener auriculares específicos para jugar
+                                cambia completamente tu experiencia en cada partida. Con
+                                los Astro A30 no te perdés ningún detalle y escuchás el
+                                audio tal y como fue diseñado por los creadores.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <i class="bi bi-trash"></i>
-            </div>
-          </div>
-          <div
-            class="cart_total d-flex flex-column justify-content-center align-items-center"
-          >
-            <h4 class="mb-0">Total - <span>$499</span></h4>
-            <button>Comprar</button>
-          </div>
-        </div>
-      </div>
-      <section class="card mt-4 mb-3 border-0 container">
-        <div class="row g-0">
-          <div class="col-md-6 col-lg-6">
-            <div class="mx-3">
-              <p>En stock 66</p>
-              <img
-                src="../images/Auricular.png"
-                class="img-fluid rounded-3 border-3 shadow"
-                alt="auricular"
-              />
-            </div>
-            <div class="me-md-3">
-              <div class="d-flex my-3">
-                <div class="col-md-4">
-                  <button class="btn border-0">
-                    <img
-                      src="../images/Auricular.png"
-                      class="img-fluid rounded-3 border-3 shadow"
-                      alt="auricular"
-                    />
-                  </button>
+            </section>
+            <section class="container py-3">
+                <h4>Características de Logitech Astro A30</h4>
+                <ul>
+                    <li>Alcance inalámbrico de 15 m.</li>
+                    <li>La batería dura 27 hs.</li>
+                    <li>Modo manos libres incluido.</li>
+                    <li>Con micrófono incorporado</li>
+                    <li>El largo del cable es de 1.5 m.</li>
+                    <li>Sonido superior y sin límites.</li>
+                    <li>Cómodos y prácticos.</li>
+                    <li>
+                        La duración de la batería depende del uso que se le dé al
+                        producto.
+                    </li>
+                    <li>Tamaño de altavoz: 40 mm.</li>
+                </ul>
+            </section>
+            <section class="container pt-4">
+                <h5>Productos similares</h5>
+                <div class="container-card my-3 ps-1">
+                    <div
+                        class="card card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded"
+                    >
+                        <img src="../images/Auricular.png" class="img-fluid" />
+                        <h6 class="pt-2 mb-0">Astro30</h6>
+                        <p class="fw-semibold pb-1 mb-0">$499</p>
+                        <a
+                            href="#"
+                            class="mb-0 text-danger text-decoration-none fw-semibold"
+                            >Ver más</a
+                        >
+                    </div>
+                    <div
+                        class="card card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded"
+                    >
+                        <img src="../images/Auricular.png" class="img-fluid" />
+                        <h6 class="pt-2 mb-0">Astro30</h6>
+                        <p class="fw-semibold pb-1 mb-0">$499</p>
+                        <a
+                            href="#"
+                            class="mb-0 text-danger text-decoration-none fw-semibold"
+                            >Ver más</a
+                        >
+                    </div>
+                    <div
+                        class="card card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded"
+                    >
+                        <img src="../images/Auricular.png" class="img-fluid" />
+                        <h6 class="pt-2 mb-0">Astro30</h6>
+                        <p class="fw-semibold pb-1 mb-0">$499</p>
+                        <a
+                            href="#"
+                            class="mb-0 text-danger text-decoration-none fw-semibold"
+                            >Ver más</a
+                        >
+                    </div>
+                    <div
+                        class="card card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded"
+                    >
+                        <img src="../images/Auricular.png" class="img-fluid" />
+                        <h6 class="pt-2 mb-0">Astro30</h6>
+                        <p class="fw-semibold pb-1 mb-0">$499</p>
+                        <a
+                            href="#"
+                            class="mb-0 text-danger text-decoration-none fw-semibold"
+                            >Ver más</a
+                        >
+                    </div>
+                    <div
+                        class="card card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded"
+                    >
+                        <img src="../images/Auricular.png" class="img-fluid" />
+                        <h6 class="pt-2 mb-0">Astro30</h6>
+                        <p class="fw-semibold pb-1 mb-0">$499</p>
+                        <a
+                            href="#"
+                            class="mb-0 text-danger text-decoration-none fw-semibold"
+                            >Ver más</a
+                        >
+                    </div>
                 </div>
-                <div class="col-md-4 mx-2">
-                  <button class="btn border-0">
-                    <img
-                      src="../images/Auricular.png"
-                      class="img-fluid rounded-3 border-3 shadow"
-                      alt="auricular"
-                    />
-                  </button>
+            </section>
+        </main>
+        <footer class="mt-auto bg-black text-white" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center text-md-start">
+                        <h3 id="h3">INFORMACIÓN</h3>
+                        <ul class="list-unstyled">
+                            <li class="py-1">
+                                <a
+                                    href="../pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Acerca de nosotros</a
+                                >
+                            </li>
+                            <li class="py-1">
+                                <a
+                                    href="../pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Información de entrega</a
+                                >
+                            </li>
+                            <li class="py-1">
+                                <a
+                                    href="../pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Políticas de privacidad</a
+                                >
+                            </li>
+                            <li class="py-1">
+                                <a
+                                    href="../pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Términos y condiciones</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 text-center text-md-start">
+                        <h3 id="h3">MI CUENTA</h3>
+                        <ul class="list-unstyled">
+                            <li class="py-1">
+                                <a
+                                    href="../pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Historial de pedidos</a
+                                >
+                            </li>
+                            <li class="py-1">
+                                <a
+                                    href="../pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Boletín</a
+                                >
+                            </li>
+                            <li class="py-1">
+                                <a
+                                    href="../pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Reembolsos</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 text-center text-md-start">
+                        <h3 id="h3" class="text-decoration-none">BOLETÍN INFORMATIVO</h3>
+                        <p class="text-white text-center text_newsletter text-md-start">
+                            Suscríbete a nuestros boletines ahora y mantente al día.
+                        </p>
+                        <form class="form-footer" id="emailForm">
+                            <div class="form-group">
+                                <input
+                                    type="email"
+                                    class="form-control w-100 input-email"
+                                    id="emailInput"
+                                    placeholder="Ingrese el correo electrónico"
+                                    maxlength="100"
+                                />
+                                <small
+                                    id="emailError"
+                                    class="form-text text-danger"
+                                ></small>
+                            </div>
+                            <button class="btn btn-danger mt-3 w-100" type="submit">
+                                Enviar
+                            </button>
+                        </form>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                  <button class="btn border-0">
-                    <img
-                      src="../images/Auricular.png"
-                      class="img-fluid rounded-3 border-3 shadow"
-                      alt="auricular"
-                    />
-                  </button>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-6">
-            <div class="card-body my-lg-5 mx-3">
-              <p class="d-flex justify-content-end me-3">
-                <i class="bi bi-heart text-danger fs-4"></i>
-              </p>
-              <h4>
-                Auriculares gamer inalámbricos <br />
-                Astro A30 blanco
-              </h4>
-              <p class="display-6">$499</p>
-              <button class="btn btn-danger mt1 mb-3">Agregar al carrito</button>
-              <p>
-                ¡Experimentá la adrenalina de sumergirte en la escena de otra
-                manera! Tener auriculares específicos para jugar cambia
-                completamente tu experiencia en cada partida. Con los Astro A30
-                no te perdés ningún detalle y escuchás el audio tal y como fue
-                diseñado por los creadores.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="container py-3">
-        <h4>Características de Logitech Astro A30</h4>
-        <ul>
-          <li>Alcance inalámbrico de 15 m.</li>
-          <li>La batería dura 27 hs.</li>
-          <li>Modo manos libres incluido.</li>
-          <li>Con micrófono incorporado</li>
-          <li>El largo del cable es de 1.5 m.</li>
-          <li>Sonido superior y sin límites.</li>
-          <li>Cómodos y prácticos.</li>
-          <li>
-            La duración de la batería depende del uso que se le dé al producto.
-          </li>
-          <li>Tamaño de altavoz: 40 mm.</li>
-        </ul>
-      </section>
-      <section class="container pt-4">
-        <h5>Productos similares</h5>
-        <div class="container-card my-3 ps-1">
-          <div
-            class="card card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded"
-          >
-            <img src="../images/Auricular.png" class="img-fluid" />
-            <h6 class="pt-2 mb-0">Astro30</h6>
-            <p class="fw-semibold pb-1 mb-0">$499</p>
-            <a
-              href="#"
-              class="mb-0 text-danger text-decoration-none fw-semibold"
-              >Ver más</a
-            >
-          </div>
-          <div
-            class="card card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded"
-          >
-            <img src="../images/Auricular.png" class="img-fluid" />
-            <h6 class="pt-2 mb-0">Astro30</h6>
-            <p class="fw-semibold pb-1 mb-0">$499</p>
-            <a
-              href="#"
-              class="mb-0 text-danger text-decoration-none fw-semibold"
-              >Ver más</a
-            >
-          </div>
-          <div
-            class="card card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded"
-          >
-            <img src="../images/Auricular.png" class="img-fluid" />
-            <h6 class="pt-2 mb-0">Astro30</h6>
-            <p class="fw-semibold pb-1 mb-0">$499</p>
-            <a
-              href="#"
-              class="mb-0 text-danger text-decoration-none fw-semibold"
-              >Ver más</a
-            >
-          </div>
-          <div
-            class="card card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded"
-          >
-            <img src="../images/Auricular.png" class="img-fluid" />
-            <h6 class="pt-2 mb-0">Astro30</h6>
-            <p class="fw-semibold pb-1 mb-0">$499</p>
-            <a
-              href="#"
-              class="mb-0 text-danger text-decoration-none fw-semibold"
-              >Ver más</a
-            >
-          </div>
-          <div
-            class="card card-similar-product col-12 col-sm-6 col-md-4 col-lg-3 shadow me-3 p-3 mb-5 rounded"
-          >
-            <img src="../images/Auricular.png" class="img-fluid" />
-            <h6 class="pt-2 mb-0">Astro30</h6>
-            <p class="fw-semibold pb-1 mb-0">$499</p>
-            <a
-              href="#"
-              class="mb-0 text-danger text-decoration-none fw-semibold"
-              >Ver más</a
-            >
-          </div>
-        </div>
-      </section>
-    </main>
->>>>>>> d7e7794c7d9a74007e195a33d0531c2f681326ed
-    <script src="../js/app.js"></script>
-    <script src="../js/detail.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+        </footer>
+        <script src="../js/validationFooter.js"></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/detail.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
