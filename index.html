@@ -1,756 +1,800 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>Rollingcommerce</title>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <a class="navbar-brand d-flex align-items-center" href="./index.html">
-            <img
-              class="rounded-circle"
-              src="../images/Logo.jpg"
-              alt=""
-              width="60"
-              height="47"
-            />
-            <span class="header_title"
-              >Rolling<span class="header_title-modified">Commerce</span></span
-            >
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNavDropdown"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#products">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./pages/aboutUs.html">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#footer">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <form class="d-flex" data-form>
-                  <input
-                    class="form-control me-2"
-                    type="text"
-                    placeholder="Buscar productos"
-                    data-search
-                  />
-                  <button class="btn" type="submit" data-button>
-                    <i class="bi bi-search"></i>
-                  </button>
-                </form>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i></a>
-              </li>
-              <li class="nav-item">
-                <button
-                  type="button"
-                  class="btn bi bi-person nav-link"
-                  data-bs-toggle="modal"
-                  data-bs-target="#login"
-                ></button>
-                <div
-                  class="modal fade"
-                  id="login"
-                  tabindex="-1"
-                  role="dialog"
-                  aria-labelledby="myModalLogin"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-dialog-side" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header d-flex justify-content-around">
-                        <div class="text-center mt-5">
-                          <img
-                            src="./images/Logo.jpg"
-                            alt="Logo Rolling commerce"
-                            class="img-fluid imgRollingC"
-                          />
-
-                          <div class="d-flex mt-2">
-                            <h4 class="modal-title w-100 text-danger mt-3">
-                              Rolling
-                            </h4>
-                            <h4 class="modal-title w-100 mt-3">Commerce</h4>
-                          </div>
-                        </div>
-                        <button
-                          type="button"
-                          class="btn-close btnColor position-absolute top-0 end-0 m-3"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <h4 class="modal-title text-center w-100 mt-3">
-                        INICIAR SESION
-                      </h4>
-                      <form id="form-login">
-                        <div class="modal-body mx-3">
-                          <div class="md-form">
-                            <i class="fas fa-envelope prefix grey-text"></i>
-                            <input
-                              type="email"
-                              id="email"
-                              required
-                              class="form-control validate colorLabelLogin"
-                              placeholder="MiEmail@email.com"
-                            />
-                            <label
-                              data-error="wrong"
-                              data-success="right"
-                              for="email"
-                            ></label>
-                          </div>
-
-                          <div class="md-form">
-                            <i class="fas fa-lock prefix grey-text"></i>
-                            <input
-                              type="password"
-                              id="pass"
-                              maxlength="20"
-                              class="form-control validate colorLabelLogin"
-                              placeholder="Contraseña"
-                            />
-                            <label
-                              data-error="wrong"
-                              data-success="right"
-                              for="pass"
-                            ></label>
-                          </div>
-                          <div
-                            class="alert alert-danger mt-3 d-none"
-                            role="alert"
-                            id="msjFormIndex"
-                          ></div>
-                        </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                          <button type="submit" class="btn btnLogin">
-                            Iniciar sesión
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="cart_overlay cart_display">
-        <div class="container_cart">
-          <h5 class="mb-0">Carrito</h5>
-          <div class="cart_slider d-flex flex-column">
-            <div
-              class="cart_items d-flex justify-content-between align-items-center"
-            >
-              <div
-                class="cart_image d-flex justify-content-center align-items-center"
-              >
-                <img
-                  src="./images/auricular1.png"
-                  class="w-100"
-                  alt="Auricular"
-                />
-              </div>
-              <div class="cart_desc d-flex flex-column">
-                <p class="cart_item-title mb-0">Astro A30</p>
-                <div class="cart_desc-price d-flex gap-1">
-                  <p class="mb-0">$499</p>
-                  <div class="cart_desc-quantity d-flex">
-                    <span>x1</span>
-                    <span class="price">$499</span>
-                  </div>
-                </div>
-              </div>
-              <i class="bi bi-trash"></i>
-            </div>
-            <div
-              class="cart_items d-flex justify-content-between align-items-center"
-            >
-              <div
-                class="cart_image d-flex justify-content-center align-items-center"
-              >
-                <img
-                  src="./images/auricular1.png"
-                  class="w-100"
-                  alt="Auricular"
-                />
-              </div>
-              <div class="cart_desc d-flex flex-column">
-                <p class="cart_item-title mb-0">Astro A30</p>
-                <div class="cart_desc-price d-flex gap-1">
-                  <p class="mb-0">$499</p>
-                  <div class="cart_desc-quantity d-flex">
-                    <span>x1</span>
-                    <span class="price">$499</span>
-                  </div>
-                </div>
-              </div>
-              <i class="bi bi-trash"></i>
-            </div>
-          </div>
-          <div
-            class="cart_total d-flex flex-column justify-content-center align-items-center"
-          >
-            <h4 class="mb-0">Total - <span>$499</span></h4>
-            <button>Comprar</button>
-          </div>
-        </div>
-      </div>
-      <div class="container_banner">
-        <div class="banner_circle"></div>
-        <div
-          id="carouselAutoplaying"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div
-                class="banner d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center text-center text-lg-start"
-              >
-                <img
-                  src="./images/nintendoSwitch.png"
-                  class="order-md-1"
-                  alt="Nintendo Switch"
-                />
-                <div
-                  class="banner_features d-md-flex flex-column align-items-md-start text-md-start"
-                >
-                  <h2 class="mb-0">Nintendo Switch</h2>
-                  <p class="carousel_desc">
-                    Es una consola de videojuegos de Nintendo que se lanza en el
-                    mercado en el año 2019. Todo el catálogo de juegos de
-                    Nintendo Switch está disponible en la palma de tu mano.
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-center gap-2 add_cart"
-                  >
-                    <i
-                      class="bi bi-plus d-flex justify-content-center align-items-center"
-                    ></i>
-                    <p class="mb-0 banner_cart">Agregar al carrito</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div
-                class="banner d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center text-center text-lg-start"
-              >
-                <img
-                  src="./images/xbox.png"
-                  class="order-md-1"
-                  alt="Xbox Series S"
-                />
-                <div
-                  class="banner_features d-md-flex flex-column align-items-md-start text-md-start"
-                >
-                  <h2 class="mb-0">Xbox Series S</h2>
-                  <p class="carousel_desc">
-                    La Xbox más pequeña de la historia. Xbox Series S es una
-                    consola de videojuegos de sobremesa de Microsoft que se
-                    lanza en el mercado en el año 2020.
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-center gap-2 add_cart"
-                  >
-                    <i
-                      class="bi bi-plus d-flex justify-content-center align-items-center"
-                    ></i>
-                    <p class="mb-0 banner_cart">Agregar al carrito</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div
-                class="banner d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center text-center text-lg-start"
-              >
-                <img
-                  src="./images/ps5.png"
-                  class="order-md-1"
-                  alt="Playstation 5"
-                />
-                <div
-                  class="banner_features d-md-flex flex-column align-items-md-start text-md-start"
-                >
-                  <h2 class="mb-0">Playstation 5</h2>
-                  <p class="carousel_desc">
-                    El PlayStation 5, o PS5, es la última generación de consolas
-                    de videojuegos de Sony. Diseñada con un aspecto moderno y
-                    elegante, la PS5 ofrece una experiencia de juego de próxima
-                    generación.
-                  </p>
-                  <div
-                    class="d-flex align-items-center justify-content-center gap-2 add_cart"
-                  >
-                    <i
-                      class="bi bi-plus d-flex justify-content-center align-items-center"
-                    ></i>
-                    <p class="mb-0 banner_cart">Agregar al carrito</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section class="container_services">
-        <article class="services">
-          <div class="service">
-            <i class="bi bi-wallet2"></i>
-            <div class="service_desc">
-              <h4 class="mb-0">Reembolso</h4>
-              <p class="mb-0">Devolución del 100% del dinero</p>
-            </div>
-          </div>
-          <div class="service">
-            <i class="bi bi-headset"></i>
-            <div class="service_desc">
-              <h4 class="mb-0">Servicio al cliente 24/7</h4>
-              <p class="mb-0">LLámenos 24/7</p>
-            </div>
-          </div>
-          <div class="service">
-            <i class="bi bi-airplane"></i>
-            <div class="service_desc">
-              <h4 class="mb-0">Envíos gratuitos</h4>
-              <p class="mb-0">En pedidos superiores a $499</p>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section>
-        <article class="container_products_featured">
-          <h3 class="mb-0">Más destacados</h3>
-          <div class="product_slider">
-            <div class="products_featured d-flex justify-content-between">
-              <div class="product_featured one d-flex align-items-end">
-                <div
-                  class="featured_call d-flex justify-content-between align-items-center"
-                >
-                  <h5 class="mb-0">Más vendidos</h5>
-                  <i class="bi bi-arrow-right"></i>
-                  <div class="progress"></div>
-                </div>
-              </div>
-              <div class="product_featured two d-flex align-items-end">
-                <div
-                  class="featured_call d-flex justify-content-between align-items-center"
-                >
-                  <h5 class="mb-0">Consolas</h5>
-                  <i class="bi bi-arrow-right"></i>
-                  <div class="progress"></div>
-                </div>
-              </div>
-              <div class="product_featured three d-flex align-items-end">
-                <div
-                  class="featured_call d-flex justify-content-between align-items-center"
-                >
-                  <h5 class="mb-0">Notebooks</h5>
-                  <i class="bi bi-arrow-right"></i>
-                  <div class="progress"></div>
-                </div>
-              </div>
-              <div class="product_featured four d-flex align-items-end">
-                <div
-                  class="featured_call d-flex justify-content-between align-items-center"
-                >
-                  <h5 class="mb-0">Joysticks</h5>
-                  <i class="bi bi-arrow-right"></i>
-                  <div class="progress"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section id="products">
-        <article class="container_products">
-          <div
-            class="products_filter w-100 d-flex justify-content-between align-items-center"
-          >
-            <h3 id="allProducts" class="mb-0">Todos los productos</h3>
-            <i class="bi bi-sliders"></i>
-          </div>
-          <div
-            class="products d-flex justify-content-between flex-wrap"
-            id="cards"
-          ></div>
-          <div class="filter_overlay vw-100 vh-100 d-flex align-items-end">
-            <div class="container_filter">
-              <div
-                class="filter_cta d-flex justify-content-between align-items-center"
-              >
-                <h4 class="mb-0">Filtros</h4>
-                <p class="filter_accept mb-0">Listo</p>
-              </div>
-              <div class="filters">
-                <div class="filter">
-                  <div class="filter_input d-flex flex-column">
-                    <h5 class="mb-0">Categorías</h5>
-                    <div
-                      class="input d-flex align-items-center gap-1 filter_categories"
-                    >
-                      <input
-                        type="checkbox"
-                        name="headphones"
-                        id="headphones"
-                        data-category="categories"
-                      />
-                      <label for="headphones">Auriculares</label>
-                    </div>
-                    <div
-                      class="input d-flex align-items-center gap-1 filter_categories"
-                    >
-                      <input
-                        type="checkbox"
-                        name="consoles"
-                        id="consoles"
-                        data-category="categories"
-                      />
-                      <label for="consoles">Consolas</label>
-                    </div>
-                    <div
-                      class="input d-flex align-items-center gap-1 filter_categories"
-                    >
-                      <input
-                        type="checkbox"
-                        name="tv"
-                        id="tv"
-                        data-category="categories"
-                      />
-                      <label for="tv">Televisores</label>
-                    </div>
-                    <div
-                      class="input d-flex align-items-center gap-1 filter_categories"
-                    >
-                      <input
-                        type="checkbox"
-                        name="mobiles"
-                        id="mobiles"
-                        data-category="categories"
-                      />
-                      <label for="mobiles">Celulares</label>
-                    </div>
-                    <div
-                      class="input d-flex align-items-center gap-1 filter_categories"
-                    >
-                      <input
-                        type="checkbox"
-                        name="pc"
-                        id="pc"
-                        data-category="categories"
-                      />
-                      <label for="pc">Computadoras</label>
-                    </div>
-                    <div
-                      class="input d-flex align-items-center gap-1 filter_categories"
-                    >
-                      <input
-                        type="checkbox"
-                        name="chairs"
-                        id="chairs"
-                        data-category="categories"
-                      />
-                      <label for="chairs">Sillas</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="filter">
-                  <div class="filter_input d-flex flex-column">
-                    <h5 class="mb-0">Precio</h5>
-                    <div
-                      class="input d-flex align-items-center gap-1 filter_price"
-                    >
-                      <input
-                        type="checkbox"
-                        name="free"
-                        id="free"
-                        class="free"
-                        data-category="price"
-                      />
-                      <label for="free">Gratis</label>
-                    </div>
-                    <div
-                      class="input d-flex align-items-center gap-1 filter_price"
-                    >
-                      <input
-                        type="checkbox"
-                        name="under"
-                        id="under"
-                        class="499"
-                        data-category="price"
-                      />
-                      <label for="under">Hasta $499</label>
-                    </div>
-                    <div
-                      class="input d-flex align-items-center gap-1 filter_price"
-                    >
-                      <input
-                        type="checkbox"
-                        name="medium"
-                        id="medium"
-                        class="799"
-                        data-category="price"
-                      />
-                      <label for="medium">Hasta $799</label>
-                    </div>
-                    <div
-                      class="input d-flex align-items-center gap-1 filter_price"
-                    >
-                      <input
-                        type="checkbox"
-                        name="expensive"
-                        id="expensive"
-                        class="999"
-                        data-category="price"
-                      />
-                      <label for="expensive">Hasta $999</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="filter">
-                  <div class="filter_input d-flex flex-column">
-                    <h5 class="mb-0">Ordenar por</h5>
-                    <div
-                      class="input d-flex align-items-center gap-1 filter_sort"
-                    >
-                      <input
-                        type="checkbox"
-                        name="lower"
-                        id="lower"
-                        data-category="sort"
-                      />
-                      <label for="lower">Menor precio</label>
-                    </div>
-                    <div class="d-flex align-items-center gap-1 filter_sort">
-                      <div class="input">
-                        <input
-                          type="checkbox"
-                          name="more"
-                          id="more"
-                          data-category="sort"
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <script src="
+            https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js
+        "></script>
+        <title>Rollingcommerce</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                        <img
+                            class="rounded-circle"
+                            src="../images/Logo.jpg"
+                            alt=""
+                            width="60"
+                            height="47"
                         />
-                        <label for="more">Mayor precio</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="filter">
-                  <div class="filter_input d-flex flex-column">
-                    <h5 class="mb-0">Descuento</h5>
-                    <div
-                      class="input d-flex align-items-center gap-1 filter_discount"
+                        <span class="header_title"
+                            >Rolling<span class="header_title-modified"
+                                >Commerce</span
+                            ></span
+                        >
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
                     >
-                      <input
-                        type="checkbox"
-                        name="discount"
-                        id="discount"
-                        data-category="discount"
-                      />
-                      <label for="discount">Sí</label>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse justify-content-end"
+                        id="navbarNavDropdown"
+                    >
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#products">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/aboutUs.html"
+                                    >Nosotros</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footer">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <form class="d-flex" data-form>
+                                    <input
+                                        class="form-control me-2"
+                                        type="text"
+                                        placeholder="Buscar productos"
+                                        data-search
+                                    />
+                                    <button class="btn" type="submit" data-button>
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </form>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"
+                                    ><i class="bi bi-cart-fill"></i
+                                ></a>
+                            </li>
+                            <li class="nav-item">
+                                <button
+                                    type="button"
+                                    class="btn bi bi-person nav-link"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#login"
+                                ></button>
+                                <div
+                                    class="modal fade"
+                                    id="login"
+                                    tabindex="-1"
+                                    role="dialog"
+                                    aria-labelledby="myModalLogin"
+                                    aria-hidden="true"
+                                >
+                                    <div
+                                        class="modal-dialog modal-dialog-side"
+                                        role="document"
+                                    >
+                                        <div class="modal-content">
+                                            <div
+                                                class="modal-header d-flex justify-content-around"
+                                            >
+                                                <div class="text-center mt-5">
+                                                    <img
+                                                        src="./images/Logo.jpg"
+                                                        alt="Logo Rolling commerce"
+                                                        class="img-fluid imgRollingC"
+                                                    />
+
+                                                    <div class="d-flex mt-2">
+                                                        <h4
+                                                            class="modal-title w-100 text-danger mt-3"
+                                                        >
+                                                            Rolling
+                                                        </h4>
+                                                        <h4
+                                                            class="modal-title w-100 mt-3"
+                                                        >
+                                                            Commerce
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                                <button
+                                                    type="button"
+                                                    class="btn-close btnColor position-absolute top-0 end-0 m-3"
+                                                    data-bs-dismiss="modal"
+                                                    aria-label="Close"
+                                                ></button>
+                                            </div>
+                                            <h4
+                                                class="modal-title text-center w-100 mt-3"
+                                            >
+                                                INICIAR SESION
+                                            </h4>
+                                            <form id="form-login">
+                                                <div class="modal-body mx-3">
+                                                    <div class="md-form">
+                                                        <i
+                                                            class="fas fa-envelope prefix grey-text"
+                                                        ></i>
+                                                        <input
+                                                            type="email"
+                                                            id="email"
+                                                            required
+                                                            class="form-control validate colorLabelLogin"
+                                                            placeholder="MiEmail@email.com"
+                                                        />
+                                                        <label
+                                                            data-error="wrong"
+                                                            data-success="right"
+                                                            for="email"
+                                                        ></label>
+                                                    </div>
+
+                                                    <div class="md-form">
+                                                        <i
+                                                            class="fas fa-lock prefix grey-text"
+                                                        ></i>
+                                                        <input
+                                                            type="password"
+                                                            id="pass"
+                                                            maxlength="20"
+                                                            class="form-control validate colorLabelLogin"
+                                                            placeholder="Contraseña"
+                                                        />
+                                                        <label
+                                                            data-error="wrong"
+                                                            data-success="right"
+                                                            for="pass"
+                                                        ></label>
+                                                    </div>
+                                                    <div
+                                                        class="alert alert-danger mt-3 d-none"
+                                                        role="alert"
+                                                        id="msjFormIndex"
+                                                    ></div>
+                                                </div>
+                                                <div
+                                                    class="modal-footer d-flex justify-content-center"
+                                                >
+                                                    <button
+                                                        type="submit"
+                                                        class="btn btnLogin"
+                                                    >
+                                                        Iniciar sesión
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="cart_overlay cart_display">
+                <div class="container_cart">
+                    <h5 class="mb-0">Carrito</h5>
+                    <div class="cart_slider d-flex flex-column">
+                        <div
+                            class="cart_items d-flex justify-content-between align-items-center"
+                        >
+                            <div
+                                class="cart_image d-flex justify-content-center align-items-center"
+                            >
+                                <img
+                                    src="./images/auricular1.png"
+                                    class="w-100"
+                                    alt="Auricular"
+                                />
+                            </div>
+                            <div class="cart_desc d-flex flex-column">
+                                <p class="cart_item-title mb-0">Astro A30</p>
+                                <div class="cart_desc-price d-flex gap-1">
+                                    <p class="mb-0">$499</p>
+                                    <div class="cart_desc-quantity d-flex">
+                                        <span>x1</span>
+                                        <span class="price">$499</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                        <div
+                            class="cart_items d-flex justify-content-between align-items-center"
+                        >
+                            <div
+                                class="cart_image d-flex justify-content-center align-items-center"
+                            >
+                                <img
+                                    src="./images/auricular1.png"
+                                    class="w-100"
+                                    alt="Auricular"
+                                />
+                            </div>
+                            <div class="cart_desc d-flex flex-column">
+                                <p class="cart_item-title mb-0">Astro A30</p>
+                                <div class="cart_desc-price d-flex gap-1">
+                                    <p class="mb-0">$499</p>
+                                    <div class="cart_desc-quantity d-flex">
+                                        <span>x1</span>
+                                        <span class="price">$499</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="bi bi-trash"></i>
+                        </div>
                     </div>
                     <div
-                      class="input d-flex align-items-center gap-1 filter_discount"
+                        class="cart_total d-flex flex-column justify-content-center align-items-center"
                     >
-                      <input
-                        type="checkbox"
-                        name="noDiscount"
-                        id="noDiscount"
-                        data-category="discount"
-                      />
-                      <label for="noDiscount">No</label>
+                        <h4 class="mb-0">Total - <span>$499</span></h4>
+                        <button>Comprar</button>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="buttons d-flex gap-2">
-                <button class="button_secondary w-100" disabled data-delete>
-                  Borrar todo
-                </button>
-                <button class="button_primary w-100" data-apply>Aplicar</button>
-              </div>
             </div>
-          </div>
-          <h2 class="mb-0 text_empty text-center d-none">
-            No hay productos disponibles
-          </h2>
-        </article>
-      </section>
-      <section
-        class="container_banner_offers d-flex align-items-center justify-content-center"
-      >
-        <article class="banner_offers">
-          <img
-            src="./images/auricularesBannner.png"
-            class="d-none d-md-block"
-            alt="Auricular"
-          />
-          <div class="banner_title">
-            <h4 class="text-center">OFERTAS</h4>
-            <div class="counter d-flex justify-content-center gap-2">
-              <div
-                class="counter-date counter-day d-flex flex-column align-items-center"
-              >
-                <p class="counter-number mb-0" data-days=""></p>
-                <span>Días</span>
-              </div>
-              <div
-                class="counter-date counter-hours d-flex flex-column align-items-center"
-              >
-                <p class="counter-number mb-0" data-hours=""></p>
-                <span>Horas</span>
-              </div>
-              <div
-                class="counter-date counter-minutes d-flex flex-column align-items-center"
-              >
-                <p class="counter-number mb-0" data-minutes=""></p>
-                <span>Minutos</span>
-              </div>
-              <div
-                class="counter-date counter-seconds d-flex flex-column align-items-center"
-              >
-                <p class="counter-number mb-0" data-seconds=""></p>
-                <span>Segundos</span>
-              </div>
+            <div class="container_banner">
+                <div class="banner_circle"></div>
+                <div
+                    id="carouselAutoplaying"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                >
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div
+                                class="banner d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center text-center text-lg-start"
+                            >
+                                <img
+                                    src="./images/nintendoSwitch.png"
+                                    class="order-md-1"
+                                    alt="Nintendo Switch"
+                                />
+                                <div
+                                    class="banner_features d-md-flex flex-column align-items-md-start text-md-start"
+                                >
+                                    <h2 class="mb-0">Nintendo Switch</h2>
+                                    <p class="carousel_desc">
+                                        Es una consola de videojuegos de Nintendo que se
+                                        lanza en el mercado en el año 2019. Todo el
+                                        catálogo de juegos de Nintendo Switch está
+                                        disponible en la palma de tu mano.
+                                    </p>
+                                    <div
+                                        class="d-flex align-items-center justify-content-center gap-2 add_cart"
+                                    >
+                                        <i
+                                            class="bi bi-plus d-flex justify-content-center align-items-center"
+                                        ></i>
+                                        <p class="mb-0 banner_cart">Agregar al carrito</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div
+                                class="banner d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center text-center text-lg-start"
+                            >
+                                <img
+                                    src="./images/xbox.png"
+                                    class="order-md-1"
+                                    alt="Xbox Series S"
+                                />
+                                <div
+                                    class="banner_features d-md-flex flex-column align-items-md-start text-md-start"
+                                >
+                                    <h2 class="mb-0">Xbox Series S</h2>
+                                    <p class="carousel_desc">
+                                        La Xbox más pequeña de la historia. Xbox Series S
+                                        es una consola de videojuegos de sobremesa de
+                                        Microsoft que se lanza en el mercado en el año
+                                        2020.
+                                    </p>
+                                    <div
+                                        class="d-flex align-items-center justify-content-center gap-2 add_cart"
+                                    >
+                                        <i
+                                            class="bi bi-plus d-flex justify-content-center align-items-center"
+                                        ></i>
+                                        <p class="mb-0 banner_cart">Agregar al carrito</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div
+                                class="banner d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center text-center text-lg-start"
+                            >
+                                <img
+                                    src="./images/ps5.png"
+                                    class="order-md-1"
+                                    alt="Playstation 5"
+                                />
+                                <div
+                                    class="banner_features d-md-flex flex-column align-items-md-start text-md-start"
+                                >
+                                    <h2 class="mb-0">Playstation 5</h2>
+                                    <p class="carousel_desc">
+                                        El PlayStation 5, o PS5, es la última generación
+                                        de consolas de videojuegos de Sony. Diseñada con
+                                        un aspecto moderno y elegante, la PS5 ofrece una
+                                        experiencia de juego de próxima generación.
+                                    </p>
+                                    <div
+                                        class="d-flex align-items-center justify-content-center gap-2 add_cart"
+                                    >
+                                        <i
+                                            class="bi bi-plus d-flex justify-content-center align-items-center"
+                                        ></i>
+                                        <p class="mb-0 banner_cart">Agregar al carrito</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </article>
-      </section>
-    </main>
-    <footer class="mt-auto bg-black text-white" id="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 text-center text-md-start">
-            <h3 id="h3">INFORMACIÓN</h3>
-            <ul class="list-unstyled">
-              <li class="py-1">
-                <a
-                  href="./pages/error404.html"
-                  class="footer-link text-decoration-none text_newsletter"
-                  >Acerca de nosotros</a
-                >
-              </li>
-              <li class="py-1">
-                <a
-                  href="./pages/error404.html"
-                  class="footer-link text-decoration-none text_newsletter"
-                  >Información de entrega</a
-                >
-              </li>
-              <li class="py-1">
-                <a
-                  href="./pages/error404.html"
-                  class="footer-link text-decoration-none text_newsletter"
-                  >Políticas de privacidad</a
-                >
-              </li>
-              <li class="py-1">
-                <a
-                  href="./pages/error404.html"
-                  class="footer-link text-decoration-none text_newsletter"
-                  >Términos y condiciones</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4 text-center text-md-start">
-            <h3 id="h3">MI CUENTA</h3>
-            <ul class="list-unstyled">
-              <li class="py-1">
-                <a
-                  href="./pages/error404.html"
-                  class="footer-link text-decoration-none text_newsletter"
-                  >Historial de pedidos</a
-                >
-              </li>
-              <li class="py-1">
-                <a
-                  href="./pages/error404.html"
-                  class="footer-link text-decoration-none text_newsletter"
-                  >Boletín</a
-                >
-              </li>
-              <li class="py-1">
-                <a
-                  href="./pages/error404.html"
-                  class="footer-link text-decoration-none text_newsletter"
-                  >Reembolsos</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4 text-center text-md-start">
-            <h3 id="h3" class="text-decoration-none">BOLETÍN INFORMATIVO</h3>
-            <p class="text-white text-center text_newsletter text-md-start">
-              Suscríbete a nuestros boletines ahora y mantente al día.
-            </p>
-            <form class="form-footer" id="emailForm">
-              <div class="form-group">
-                <input
-                  type="email"
-                  class="form-control w-100 input-email"
-                  id="emailInput"
-                  placeholder="Ingrese el correo electrónico"
-                  maxlength="100"
-                />
-                <small id="emailError" class="form-text text-danger"></small>
-              </div>
-              <button class="btn btn-danger mt-3 w-100" type="submit">
-                Enviar
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="./js/app.js"></script>
-    <script src="./js/products.js"></script>
-    <script src="./js/cart.js"></script>
-    <script src="./js/index.js" type="module"></script>
-    <script src="./js/addProduct.js" type="module"></script>
-    <script src="./js/validationFooter.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+            <section class="container_services">
+                <article class="services">
+                    <div class="service">
+                        <i class="bi bi-wallet2"></i>
+                        <div class="service_desc">
+                            <h4 class="mb-0">Reembolso</h4>
+                            <p class="mb-0">Devolución del 100% del dinero</p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <i class="bi bi-headset"></i>
+                        <div class="service_desc">
+                            <h4 class="mb-0">Servicio al cliente 24/7</h4>
+                            <p class="mb-0">LLámenos 24/7</p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <i class="bi bi-airplane"></i>
+                        <div class="service_desc">
+                            <h4 class="mb-0">Envíos gratuitos</h4>
+                            <p class="mb-0">En pedidos superiores a $499</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <article class="container_products_featured">
+                    <h3 class="mb-0">Más destacados</h3>
+                    <div class="product_slider">
+                        <div class="products_featured d-flex justify-content-between">
+                            <div class="product_featured one d-flex align-items-end">
+                                <div
+                                    class="featured_call d-flex justify-content-between align-items-center"
+                                >
+                                    <h5 class="mb-0">Más vendidos</h5>
+                                    <i class="bi bi-arrow-right"></i>
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <div class="product_featured two d-flex align-items-end">
+                                <div
+                                    class="featured_call d-flex justify-content-between align-items-center"
+                                >
+                                    <h5 class="mb-0">Consolas</h5>
+                                    <i class="bi bi-arrow-right"></i>
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <div class="product_featured three d-flex align-items-end">
+                                <div
+                                    class="featured_call d-flex justify-content-between align-items-center"
+                                >
+                                    <h5 class="mb-0">Notebooks</h5>
+                                    <i class="bi bi-arrow-right"></i>
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <div class="product_featured four d-flex align-items-end">
+                                <div
+                                    class="featured_call d-flex justify-content-between align-items-center"
+                                >
+                                    <h5 class="mb-0">Joysticks</h5>
+                                    <i class="bi bi-arrow-right"></i>
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section id="products">
+                <article class="container_products">
+                    <div
+                        class="products_filter w-100 d-flex justify-content-between align-items-center"
+                    >
+                        <h3 id="allProducts" class="mb-0">Todos los productos</h3>
+                        <i class="bi bi-sliders"></i>
+                    </div>
+                    <div
+                        class="products d-flex justify-content-between flex-wrap"
+                        id="cards"
+                    ></div>
+                    <div class="filter_overlay vw-100 vh-100 d-flex align-items-end">
+                        <div class="container_filter">
+                            <div
+                                class="filter_cta d-flex justify-content-between align-items-center"
+                            >
+                                <h4 class="mb-0">Filtros</h4>
+                                <p class="filter_accept mb-0">Listo</p>
+                            </div>
+                            <div class="filters">
+                                <div class="filter">
+                                    <div class="filter_input d-flex flex-column">
+                                        <h5 class="mb-0">Categorías</h5>
+                                        <div
+                                            class="input d-flex align-items-center gap-1 filter_categories"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                name="headphones"
+                                                id="headphones"
+                                                data-category="categories"
+                                            />
+                                            <label for="headphones">Auriculares</label>
+                                        </div>
+                                        <div
+                                            class="input d-flex align-items-center gap-1 filter_categories"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                name="consoles"
+                                                id="consoles"
+                                                data-category="categories"
+                                            />
+                                            <label for="consoles">Consolas</label>
+                                        </div>
+                                        <div
+                                            class="input d-flex align-items-center gap-1 filter_categories"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                name="tv"
+                                                id="tv"
+                                                data-category="categories"
+                                            />
+                                            <label for="tv">Televisores</label>
+                                        </div>
+                                        <div
+                                            class="input d-flex align-items-center gap-1 filter_categories"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                name="mobiles"
+                                                id="mobiles"
+                                                data-category="categories"
+                                            />
+                                            <label for="mobiles">Celulares</label>
+                                        </div>
+                                        <div
+                                            class="input d-flex align-items-center gap-1 filter_categories"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                name="pc"
+                                                id="pc"
+                                                data-category="categories"
+                                            />
+                                            <label for="pc">Computadoras</label>
+                                        </div>
+                                        <div
+                                            class="input d-flex align-items-center gap-1 filter_categories"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                name="chairs"
+                                                id="chairs"
+                                                data-category="categories"
+                                            />
+                                            <label for="chairs">Sillas</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter">
+                                    <div class="filter_input d-flex flex-column">
+                                        <h5 class="mb-0">Precio</h5>
+                                        <div
+                                            class="input d-flex align-items-center gap-1 filter_price"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                name="free"
+                                                id="free"
+                                                class="free"
+                                                data-category="price"
+                                            />
+                                            <label for="free">Gratis</label>
+                                        </div>
+                                        <div
+                                            class="input d-flex align-items-center gap-1 filter_price"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                name="under"
+                                                id="under"
+                                                class="499"
+                                                data-category="price"
+                                            />
+                                            <label for="under">Hasta $499</label>
+                                        </div>
+                                        <div
+                                            class="input d-flex align-items-center gap-1 filter_price"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                name="medium"
+                                                id="medium"
+                                                class="799"
+                                                data-category="price"
+                                            />
+                                            <label for="medium">Hasta $799</label>
+                                        </div>
+                                        <div
+                                            class="input d-flex align-items-center gap-1 filter_price"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                name="expensive"
+                                                id="expensive"
+                                                class="999"
+                                                data-category="price"
+                                            />
+                                            <label for="expensive">Hasta $999</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter">
+                                    <div class="filter_input d-flex flex-column">
+                                        <h5 class="mb-0">Ordenar por</h5>
+                                        <div
+                                            class="input d-flex align-items-center gap-1 filter_sort"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                name="lower"
+                                                id="lower"
+                                                data-category="sort"
+                                            />
+                                            <label for="lower">Menor precio</label>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center gap-1 filter_sort"
+                                        >
+                                            <div class="input">
+                                                <input
+                                                    type="checkbox"
+                                                    name="more"
+                                                    id="more"
+                                                    data-category="sort"
+                                                />
+                                                <label for="more">Mayor precio</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter">
+                                    <div class="filter_input d-flex flex-column">
+                                        <h5 class="mb-0">Descuento</h5>
+                                        <div
+                                            class="input d-flex align-items-center gap-1 filter_discount"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                name="discount"
+                                                id="discount"
+                                                data-category="discount"
+                                            />
+                                            <label for="discount">Sí</label>
+                                        </div>
+                                        <div
+                                            class="input d-flex align-items-center gap-1 filter_discount"
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                name="noDiscount"
+                                                id="noDiscount"
+                                                data-category="discount"
+                                            />
+                                            <label for="noDiscount">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttons d-flex gap-2">
+                                <button
+                                    class="button_secondary w-100"
+                                    disabled
+                                    data-delete
+                                >
+                                    Borrar todo
+                                </button>
+                                <button class="button_primary w-100" data-apply>
+                                    Aplicar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="mb-0 text_empty text-center d-none">
+                        No hay productos disponibles
+                    </h2>
+                </article>
+            </section>
+            <section
+                class="container_banner_offers d-flex align-items-center justify-content-center"
+            >
+                <article class="banner_offers">
+                    <img
+                        src="./images/auricularesBannner.png"
+                        class="d-none d-md-block"
+                        alt="Auricular"
+                    />
+                    <div class="banner_title">
+                        <h4 class="text-center">OFERTAS</h4>
+                        <div class="counter d-flex justify-content-center gap-2">
+                            <div
+                                class="counter-date counter-day d-flex flex-column align-items-center"
+                            >
+                                <p class="counter-number mb-0" data-days=""></p>
+                                <span>Días</span>
+                            </div>
+                            <div
+                                class="counter-date counter-hours d-flex flex-column align-items-center"
+                            >
+                                <p class="counter-number mb-0" data-hours=""></p>
+                                <span>Horas</span>
+                            </div>
+                            <div
+                                class="counter-date counter-minutes d-flex flex-column align-items-center"
+                            >
+                                <p class="counter-number mb-0" data-minutes=""></p>
+                                <span>Minutos</span>
+                            </div>
+                            <div
+                                class="counter-date counter-seconds d-flex flex-column align-items-center"
+                            >
+                                <p class="counter-number mb-0" data-seconds=""></p>
+                                <span>Segundos</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer class="mt-auto bg-black text-white" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center text-md-start">
+                        <h3 id="h3">INFORMACIÓN</h3>
+                        <ul class="list-unstyled">
+                            <li class="py-1">
+                                <a
+                                    href="./pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Acerca de nosotros</a
+                                >
+                            </li>
+                            <li class="py-1">
+                                <a
+                                    href="./pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Información de entrega</a
+                                >
+                            </li>
+                            <li class="py-1">
+                                <a
+                                    href="./pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Políticas de privacidad</a
+                                >
+                            </li>
+                            <li class="py-1">
+                                <a
+                                    href="./pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Términos y condiciones</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 text-center text-md-start">
+                        <h3 id="h3">MI CUENTA</h3>
+                        <ul class="list-unstyled">
+                            <li class="py-1">
+                                <a
+                                    href="./pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Historial de pedidos</a
+                                >
+                            </li>
+                            <li class="py-1">
+                                <a
+                                    href="./pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Boletín</a
+                                >
+                            </li>
+                            <li class="py-1">
+                                <a
+                                    href="./pages/error404.html"
+                                    class="footer-link text-decoration-none text_newsletter"
+                                    >Reembolsos</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 text-center text-md-start">
+                        <h3 id="h3" class="text-decoration-none">BOLETÍN INFORMATIVO</h3>
+                        <p class="text-white text-center text_newsletter text-md-start">
+                            Suscríbete a nuestros boletines ahora y mantente al día.
+                        </p>
+                        <form class="form-footer" id="emailForm">
+                            <div class="form-group">
+                                <input
+                                    type="email"
+                                    class="form-control w-100 input-email"
+                                    id="emailInput"
+                                    placeholder="Ingrese el correo electrónico"
+                                    maxlength="100"
+                                />
+                                <small
+                                    id="emailError"
+                                    class="form-text text-danger"
+                                ></small>
+                            </div>
+                            <button class="btn btn-danger mt-3 w-100" type="submit">
+                                Enviar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="./js/app.js"></script>
+        <script src="./js/products.js"></script>
+        <script src="./js/cart.js"></script>
+        <script src="./js/index.js" type="module"></script>
+        <script src="./js/addProduct.js" type="module"></script>
+        <script src="./js/validationFooter.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
