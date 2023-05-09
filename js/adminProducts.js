@@ -4,7 +4,6 @@ import { dataValidate } from "./helpers.js";
 const btnAdd = document.getElementById("btnAdd");
 
 const title = document.getElementById("title");
-const code = document.getElementById("code");
 const image = document.getElementById("image");
 const imagePreviewOne = document.getElementById("image1");
 const imagePreviewTwo = document.getElementById("image2");
@@ -22,8 +21,6 @@ btnAdd.addEventListener("click", showModalProduct);
 form.addEventListener("submit", loadProduct);
 
 let products = localStorage.getItem("listProducts");
-
-// localStorage.setItem("listProducts", JSON.stringify(products));
 
 if (!products) {
   products = [];
@@ -100,15 +97,12 @@ function createCard(product, index) {
 }
 
 function showModalProduct() {
-  //abrir la ventana modal
   modalProduct.show();
-  console.log("aqui vamos a crear una peli");
 }
 
 function loadProduct(e) {
   e.preventDefault();
 
-  console.log("creando el producto");
   let data = dataValidate(
     title.value,
     description.value,
@@ -164,10 +158,6 @@ function cleanProductForm() {
   form.reset();
 }
 
-// function deleteProduct(){
-
-// }
-
 window.deleteProduct = (code) => {
   swal
     .fire({
@@ -182,16 +172,12 @@ window.deleteProduct = (code) => {
     })
     .then((result) => {
       if (result.isConfirmed) {
-        console.log(code);
-        console.log("aqui borro el producto");
         let positionProduct = products.findIndex(
           (product) => product.code === code
         );
-        console.log(positionProduct);
         products.splice(positionProduct, 1);
         saveLocalstorage();
         let productCardData = document.getElementById("productCard");
-        // console.log(productCardData.children[positionProduct]);
         productCardData.removeChild(productCardData.children[positionProduct]);
 
         Swal.fire(

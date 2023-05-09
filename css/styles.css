@@ -776,7 +776,7 @@ main section .container_products .product .bi-heart:hover {
         font-size: 12.8px;
     }
 
-    main section .card {
+    main section .cardProduct {
         width: 180px;
         height: 255px;
     }
