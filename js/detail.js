@@ -31,7 +31,7 @@ productFiltered.map((product) => {
     <img
       src="${image}"
       class="img-fluid rounded-3 border-3 shadow"
-      alt="auricular"
+      alt="${title}"
     />
   </div>
   <div class="me-md-3 w-100">
@@ -48,7 +48,7 @@ productFiltered.map((product) => {
       <div class="col-md-4">
         <button class="btn border-0">
           <img
-            src="${imagePreviewOne}"
+            src="${imagePreviewTwo}"
             class="img-fluid rounded-3 border-3 shadow image_detail"
             alt="${title}"
           />
@@ -76,7 +76,7 @@ productFiltered.map((product) => {
     <p class="display-6">$${price}</p>
     <p class="">${category}</p>
     <p class="">Stock - ${stock}</p>
-    <button class="btn btn-danger mt1 mb-3">
+    <button class="btn btn-danger mt-1 mb-3">
       Agregar al carrito
     </button>
     <p>
