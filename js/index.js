@@ -6,14 +6,16 @@ const userPassword = document.getElementById("pass");
 const msjForm = document.getElementById("msjFormIndex");
 const modalUser = new bootstrap.Modal(document.querySelector("#login"));
 
-const email = "administrador@gmail.com";
-const pass = "admin123";
-let newUser = [];
-
 let listProducts = JSON.parse(localStorage.getItem("listProducts")) || [];
 
-let userInSeesion = sessionStorage.getItem("user");
-console.log(userInSeesion);
+let userInSeesion = JSON.parse(sessionStorage.getItem("user"));
+
+const email = "administrador@gmail.com";
+const pass = "admin123";
+const sessionEmail = userInSeesion[0];
+const sessionPass = userInSeesion[1];
+
+let newUser = [];
 
 formLogin.addEventListener("submit", loadUser);
 
@@ -53,6 +55,15 @@ function loadUser(e) {
         msjForm.innerHTML = "Te llevaremos a tus productos";
         setTimeout(() => {
             msjForm.className = "d-none";
+            changePage();
+        }, 4000);
+    }
+    if (userEmail.value === sessionEmail && userPassword.value === sessionPass) {
+        msjForm.className = "alert alert-info mt-3";
+        msjForm.innerHTML = "Te llevaremos a tus productos";
+        setTimeout(() => {
+            msjForm.className = "d-none";
+            changePage();
         }, 4000);
     } else {
         let data = dataLoginValidate(userEmail.value, userPassword.value);
@@ -80,4 +91,7 @@ function loadUser(e) {
 function saveSessionStorage(user, pass) {
     newUser.push(user, pass);
     sessionStorage.setItem("user", JSON.stringify(newUser));
+}
+function changePage() {
+    window.location.href = window.location.origin + "/pages/admin.html";
 }
