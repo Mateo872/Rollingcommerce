@@ -220,8 +220,8 @@ window.deleteProduct = (code) => {
       text: "No se puede revertir este proceso",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
+      confirmButtonColor: "#ee332c",
+      cancelButtonColor: "#ee332c",
       confirmButtonText: "Eliminar",
       cancelButtonText: "Cancelar",
     })
