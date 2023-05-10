@@ -11,8 +11,18 @@ const productsContainer = document.querySelector("[data-products-container]"),
 const productFiltered = products.filter((product) => product.code === id);
 
 productFiltered.map((product) => {
-  const { image, imagePreviewOne, imagePreviewTwo, imagePreviewThree, title, price, description, characteristics, stock, category } =
-    product;
+  const {
+    image,
+    imagePreviewOne,
+    imagePreviewTwo,
+    imagePreviewThree,
+    title,
+    price,
+    description,
+    characteristics,
+    stock,
+    category,
+  } = product;
 
   productsContainer.innerHTML = `
   <div class="row g-0">
@@ -103,14 +113,14 @@ dataCategory = products.filter(
 );
 
 dataCategory.map((product) => {
-  const { image, title, price, code } = product;
+  const { image, title, price, id } = product;
 
   productsSimilar.innerHTML += `
     <div class="card card-similar-product shadow p-3 rounded d-flex flex-column justify-content-between ">
       <img src="${image}" class="img-fluid" />
       <h6 class="pt-2 mb-0 text-truncate">${title}</h6>
       <p class="fw-semibold pb-1 mb-0">$${price}</p>
-      <a href="../pages/detailProduct.html?id=${code}" class="mb-0 text-danger text-decoration-none fw-semibold">
+      <a href="../pages/detailProduct.html?id=${id}" class="mb-0 text-danger text-decoration-none fw-semibold">
         Ver más
       </a>
       <i class="bi bi-cart"></i>
