@@ -5,6 +5,12 @@ const userEmail = document.getElementById("email");
 const userPassword = document.getElementById("pass");
 const msjForm = document.getElementById("msjFormIndex");
 const modalUser = new bootstrap.Modal(document.querySelector("#login"));
+let userInSeesion = JSON.parse(sessionStorage.getItem("user"));
+let email = "administrador@gmail.com";
+let pass = "admin123";
+let newUser = [];
+
+formLogin.addEventListener("submit", loadUser);
 
 let listProducts = JSON.parse(localStorage.getItem("listProducts")) || [];
 
@@ -39,21 +45,42 @@ function createCard(product) {
 
 function loadUser(e) {
   e.preventDefault();
-
-  let data = dataLoginValidate(userEmail.value, userPassword.value);
-  if (data.length === 0) {
-    Swal.fire(
-      "Felicidades Te Registraste",
-      "Ya puedes acceder a tu cuenta",
-      "success"
-    );
-    formLogin.reset();
-    modalUser.hide();
-  } else {
-    msjForm.className = "alert alert-danger mt-3";
-    msjForm.innerHTML = data;
+  if (userEmail.value === email && userPassword.value === pass) {
+    msjForm.className = "alert alert-info mt-3";
+    msjForm.innerHTML = "Te llevaremos a tus productos";
     setTimeout(() => {
       msjForm.className = "d-none";
+      changePage();
     }, 4000);
+  } else {
+    let data = dataLoginValidate(userEmail.value, userPassword.value);
+
+    if (data.length === 0) {
+      Swal.fire(
+        "Felicidades Te Registraste",
+        "Ya puedes acceder a tu cuenta",
+        "success"
+      );
+      let userMail = userEmail.value;
+      let userPass = userPassword.value;
+      saveSessionStorage(userMail, userPass);
+      formLogin.reset();
+      modalUser.hide();
+    } else {
+      msjForm.className = "alert alert-danger mt-3";
+      msjForm.innerHTML = data;
+      setTimeout(() => {
+        msjForm.className = "d-none";
+      }, 4000);
+    }
   }
+}
+
+function saveSessionStorage(user, pass) {
+  newUser.push(user, pass);
+  sessionStorage.setItem("user", JSON.stringify(newUser));
+}
+
+function changePage() {
+  window.location.href = "./pages/admin.html";
 }
