@@ -9,10 +9,17 @@ let userInSeesion = JSON.parse(sessionStorage.getItem("user"));
 let email = "administrador@gmail.com";
 let pass = "admin123";
 let newUser = [];
+const iconEdit = document.getElementById("iconEdit");
+const iconUser = document.getElementById("iconUser");
 
-formLogin.addEventListener("submit", loadUser);
+let userOn = false;
 
 let listProducts = JSON.parse(localStorage.getItem("listProducts")) || [];
+
+if (userInSeesion) {
+  userOn = true;
+  changeIcon();
+}
 
 formLogin.addEventListener("submit", loadUser);
 
@@ -66,6 +73,8 @@ function loadUser(e) {
       saveSessionStorage(userMail, userPass);
       formLogin.reset();
       modalUser.hide();
+      userOn = true;
+      changeIcon();
     } else {
       msjForm.className = "alert alert-danger mt-3";
       msjForm.innerHTML = data;
@@ -79,8 +88,20 @@ function loadUser(e) {
 function saveSessionStorage(user, pass) {
   newUser.push(user, pass);
   sessionStorage.setItem("user", JSON.stringify(newUser));
+  newUser.push(user, pass);
+  sessionStorage.setItem("user", JSON.stringify(newUser));
 }
 
 function changePage() {
   window.location.href = "./pages/admin.html";
+}
+
+function changeIcon() {
+  if (userOn === true) {
+    iconEdit.className = "nav-item";
+    iconUser.className = "nav-item d-none ";
+  } else {
+    iconEdit.className = "nav-item d-none";
+    iconUser.className = "nav-item ";
+  }
 }
