@@ -97,11 +97,9 @@ function changePage() {
 }
 function changeIcon() {
     if (userOn === true) {
-        console.log("entre a true");
         iconEdit.className = "nav-item";
         iconUser.className = "nav-item d-none ";
     } else {
-        console.log("entre a false");
         iconEdit.className = "nav-item d-none";
         iconUser.className = "nav-item ";
     }
