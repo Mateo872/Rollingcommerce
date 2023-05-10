@@ -32,13 +32,13 @@ function validateCategory(text) {
 }
 
 function validatePrice(value) {
-  let patron = /^[1-9]\d*(\.\d{2})$/;
-  if (patron.test(value)) {
+  if (value.length > 0) {
     return true;
   } else {
     return false;
   }
 }
+
 function validateStock(value) {
   let patron = /^[0-9]{1,3}$/;
   if (patron.test(value)) {

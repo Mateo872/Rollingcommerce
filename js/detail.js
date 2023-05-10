@@ -11,14 +11,23 @@ const productsContainer = document.querySelector("[data-products-container]"),
 const productFiltered = products.filter((product) => product.code === id);
 
 productFiltered.map((product) => {
-  const { image, imagePreviewOne, imagePreviewTwo, imagePreviewThree, title, price, description, characteristics, stock, category } =
-    product;
+  const {
+    image,
+    imagePreviewOne,
+    imagePreviewTwo,
+    imagePreviewThree,
+    title,
+    price,
+    description,
+    characteristics,
+    stock,
+    category,
+  } = product;
 
   productsContainer.innerHTML = `
   <div class="row g-0">
-<div class="col-md-6 col-lg-6">
+<div class="col-md-6 col-lg-6 mt-3">
   <div class="mx-3">
-    <p>En stock 66</p>
     <img
       src="${image}"
       class="img-fluid rounded-3 border-3 shadow"
@@ -58,9 +67,8 @@ productFiltered.map((product) => {
   </div>
 </div>
 <div class="col-md-6 col-lg-6">
-  <div class="card-body my-lg-5 mx-3">
+  <div class="card-body mx-3">
     <p class="d-flex justify-content-end me-3">
-      <i class="bi bi-heart text-danger fs-4"></i>
     </p>
     <h4>
      ${title}
@@ -78,16 +86,22 @@ productFiltered.map((product) => {
 </div>
 </div>
   `;
+  const characteristicsArray = characteristics.split("\n");
+
+  const listCharacteristics = characteristicsArray
+    .map((carac) => carac.trim())
+    .filter((carac) => carac !== "");
+
+  const items = listCharacteristics
+    .map((carac) => `<li>${carac}</li>`)
+    .join("");
 
   productsCharacteristics.innerHTML = `
   <h4>Características de ${title}</h4>
-        <ul>
-          <li>${characteristics[0]}</li>
-          <li>${characteristics[1]}</li>
-          <li>${characteristics[2]}</li>
-          <li>${characteristics[3]}</li>
-        </ul>
-  `;
+  <ul>
+    ${items}
+  </ul>
+`;
 });
 
 let productCategory = [];
