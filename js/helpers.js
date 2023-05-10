@@ -32,7 +32,7 @@ function validateCategory(text) {
 }
 
 function validatePrice(value) {
-  let patron = /^\d*(\.\d)?\d{0,1}$/;
+  let patron = /^[1-9]\d*(\.\d{2})$/;
   if (patron.test(value)) {
     return true;
   } else {

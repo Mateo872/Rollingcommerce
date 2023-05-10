@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
 
+
 :root {
     --color_primary: #EE332C;
     --color_secondary: #000;
@@ -14,6 +15,9 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -35,6 +39,7 @@ header .container-fluid .header_title-modified {
 
 main {
     margin-top: 56px;
+    flex-grow: 1;
 }
 
 section {
