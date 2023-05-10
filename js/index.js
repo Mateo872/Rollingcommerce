@@ -9,12 +9,8 @@ const modalUser = new bootstrap.Modal(document.querySelector("#login"));
 let listProducts = JSON.parse(localStorage.getItem("listProducts")) || [];
 
 let userInSeesion = JSON.parse(sessionStorage.getItem("user"));
-
-const email = "administrador@gmail.com";
-const pass = "admin123";
-const sessionEmail = userInSeesion[0];
-const sessionPass = userInSeesion[1];
-
+let email = "administrador@gmail.com";
+let pass = "admin123";
 let newUser = [];
 
 formLogin.addEventListener("submit", loadUser);
@@ -58,14 +54,15 @@ function loadUser(e) {
             changePage();
         }, 4000);
     }
-    if (userEmail.value === sessionEmail && userPassword.value === sessionPass) {
-        msjForm.className = "alert alert-info mt-3";
-        msjForm.innerHTML = "Te llevaremos a tus productos";
-        setTimeout(() => {
-            msjForm.className = "d-none";
-            changePage();
-        }, 4000);
-    } else {
+    // if (userEmail.value === sessionEmail && userPassword.value === sessionPass) {
+    //     msjForm.className = "alert alert-info mt-3";
+    //     msjForm.innerHTML = "Te llevaremos a tus productos";
+    //     setTimeout(() => {
+    //         msjForm.className = "d-none";
+    //         changePage();
+    //     }, 4000);
+    // }
+    else {
         let data = dataLoginValidate(userEmail.value, userPassword.value);
         if (data.length === 0) {
             Swal.fire(
